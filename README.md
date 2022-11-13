@@ -1,6 +1,7 @@
 # My_PotPlayer64
 Polish
 ========
+PotPlayerPortable-Mod to fork oparty na nieaktywnym już [_MGSV/PotPlayer-Localization_](https://github.com/MGSV/PotPlayer-Localization). Głównym celem tego projektu jest dodanie nowych funkcji i poprawek.
 
 Nadal czekasz na wersję portable? Pobierz archiwum i spakuj swój własny PotPlayer 32/64-bit!
 
@@ -45,6 +46,7 @@ Z indywidualnych przyczyn systemowych, takich jak uprawnienia, itp. możliwe jes
 
 English
 ========
+PotPlayerPortable-Mod is a fork based on the now inactive [_MGSV/PotPlayer-Localization_](https://github.com/MGSV/PotPlayer-Localization). The main focus of this project is adding new features and patches.
 
 Still waiting for the portable version? Download the archive and package your own PotPlayer 32/64-bit!
 
