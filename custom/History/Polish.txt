@@ -3,9 +3,15 @@ Historia wersji PotPlayer
 
 
 ----------------------------------------------------------
-[221117]
+[221208]
 ----------------------------------------------------------
 - Naprawiono błąd powodujący problemy z odtwarzaniem niektórych plików AV1
+- Naprawiono błąd powodujący spadek jakości podczas odtwarzania wideo z przeplotem innym niż i420p
+- Naprawiono błąd powodujący spadek prędkości podczas odtwarzania z niektórymi urządzeniami WaveOut
+- Naprawiono błąd powodujący brak możliwości wyboru napisów przy zbyt wielu plikach z napisami
+- Naprawiono błąd powodujący, że niektóre czasy odtwarzania plików flv były obliczane niepoprawnie
+- Naprawiono błąd powodujący brak możliwości przetwarzania spacji w niektórych japońskich napisach
+- Naprawiono błąd powodujący brak możliwości odczytu niektórych kanałów RSS
 
 ----------------------------------------------------------
 [221102]
