@@ -3,7 +3,7 @@ Historia wersji PotPlayer
 
 
 ----------------------------------------------------------
-[221208]
+[221215]
 ----------------------------------------------------------
 - Naprawiono błąd powodujący problemy z odtwarzaniem niektórych plików AV1
 - Naprawiono błąd powodujący spadek jakości podczas odtwarzania wideo z przeplotem innym niż i420p

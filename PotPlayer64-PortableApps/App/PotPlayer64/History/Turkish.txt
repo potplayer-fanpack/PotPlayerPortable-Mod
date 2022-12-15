@@ -2,8 +2,15 @@
 PotPlayer'ın Versiyon Geçmişi
 
 ----------------------------------------------------------
-[221208]
+[221215]
 ----------------------------------------------------------
+- Fixed the problem that certain AV1 files were not played
+- Fixed an issue where the quality could drop when playing non-i420p interlaced video
+- Fixed an issue that was interrupted when adjusting the speed when playing with a specific WaveOut device
+- Fixed an issue where subtitles could not be selected if there were too many subtitle files
+- Fixed an issue where some flv playback times were calculated incorrectly
+- Fixed a problem where spaces could not be processed in some Japanese subtitles
+- Fixed an issue where some RSS feeds could not be read
 
 ----------------------------------------------------------
 [221102]
