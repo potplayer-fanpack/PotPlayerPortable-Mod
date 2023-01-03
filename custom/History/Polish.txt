@@ -1,6 +1,12 @@
 ﻿
 Historia wersji PotPlayer
 
+----------------------------------------------------------
+[221230]
+----------------------------------------------------------
+- Wprowadzono poprawki, aby odtwarzacz uruchamiał się trochę szybciej podczas pierwszego uruchomienia
+- Naprawiono problem powodujący, że niektóre uszkodzone pliki FLAC nie mogły być odtwarzane
+- Naprawiono problem powolnego odtwarzania podczas odtwarzania niektórych plików z FTP/HTTP
 
 ----------------------------------------------------------
 [221215]
