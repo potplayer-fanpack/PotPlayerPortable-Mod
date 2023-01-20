@@ -50,7 +50,7 @@ PotPlayerPortable-Mod is a fork based on the now inactive [_MGSV/PotPlayer-Local
 
 Still waiting for the portable version? Download the archive and package your own PotPlayer 32/64-bit!
 
-## Spis zawartości
+## Contents
 * [Bin directory](#bin-directory)
 * [Custom directory](#custom-directory)
 * [Unneeded files](#unneeded-files)
