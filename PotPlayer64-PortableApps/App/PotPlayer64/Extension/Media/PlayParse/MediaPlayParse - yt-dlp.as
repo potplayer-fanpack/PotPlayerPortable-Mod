@@ -54,6 +54,7 @@ bool PlayitemCheck(const string &in path)
 	else if (path.find("://drive.google.com/") >= 0) return true;
 	else if (path.find("://www.xnxx.com/") >= 0) return true;
 	else if (path.find("://www.xvideos.com/") >= 0) return true;
+	else if (path.find("://rt.pornhub.com/") >= 0) return true;
 	else if (path.find("://www.pornhub.com/") >= 0) return true;
 	return false;
 }
