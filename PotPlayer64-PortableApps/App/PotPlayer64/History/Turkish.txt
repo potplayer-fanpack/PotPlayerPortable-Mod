@@ -2,8 +2,14 @@
 PotPlayer'ın Versiyon Geçmişi
 
 ----------------------------------------------------------
-[230120]
+[230126]
 ----------------------------------------------------------
++ Added WEBP format to video capture
+
+- Modified to run a little faster when running for the first time
+- Fixed the problem that some corrupted FLAC files could not be played
+- Fixed the problem of playing slowly when playing some FTP/HTTP files
+- Fixed an issue where playback time was incorrectly handled when playing some MP4 files
 
 ----------------------------------------------------------
 [221215]

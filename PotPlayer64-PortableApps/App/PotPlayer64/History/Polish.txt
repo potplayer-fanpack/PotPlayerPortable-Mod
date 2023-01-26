@@ -2,9 +2,9 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[230120]
+[230126]
 ----------------------------------------------------------
-+ Dodano format APNG do przechwytywania wideo
++ Dodano format WEBP do przechwytywania wideo
 
 - Wprowadzono poprawki, aby odtwarzacz uruchamiał się trochę szybciej podczas pierwszego uruchomienia
 - Naprawiono problem powodujący, że niektóre uszkodzone pliki FLAC nie mogły być odtwarzane
