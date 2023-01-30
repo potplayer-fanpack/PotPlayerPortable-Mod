@@ -2,13 +2,13 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[230126]
+[230130]
 ----------------------------------------------------------
 + Dodano format WEBP do przechwytywania wideo
 
-- Wprowadzono poprawki, aby odtwarzacz uruchamiał się trochę szybciej podczas pierwszego uruchomienia
+- Wprowadzono modyfikacje powodujące trochę szybsze uruchamianie się odtwarzacza podczas pierwszego uruchomienia
 - Naprawiono problem powodujący, że niektóre uszkodzone pliki FLAC nie mogły być odtwarzane
-- Naprawiono problem powolnego odtwarzania podczas odtwarzania niektórych plików z FTP/HTTP
+- Naprawiono problem powolnego odtwarzania podczas odtwarzania niektórych plików FTP/HTTP
 - Naprawiono problem powodujący nieprawidłowe przetwarzanie czasu odtwarzania podczas odtwarzania niektórych plików MP4
 
 ----------------------------------------------------------
