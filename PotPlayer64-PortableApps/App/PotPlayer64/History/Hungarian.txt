@@ -4,38 +4,37 @@ PotPlayer verzióelőzmények
 ----------------------------------------------------------
 [230201]
 ----------------------------------------------------------
-+ Added WEBP format to video capture
++ WEBP formátum hozzáadva a videórögzítéshez
 
-- Modified to run a little faster when running for the first time
-- Fixed the problem that some corrupted FLAC files could not be played
-- Fixed the problem of playing slowly when playing some FTP/HTTP files
-- Fixed an issue where playback time was incorrectly handled when playing some MP4 files
+- Kisebb módosítások, hogy első futtatáskor kicsit gyorsabban fusson.
+- Javítva lett egy probléma, amely miatt néhány sérült FLAC fájlt nem lehetett lejátszani.
+- Javítva lett egy probléma, amely miatt lassú volt a lejátszás néhány FTP/HTTP fájl lejátszásakor.
+- Javítva lett egy probléma, amely miatt a lejátszási idő helytelenül volt kezelve néhány MP4 fájl lejátszásakor
 
 ----------------------------------------------------------
 [221215]
 ----------------------------------------------------------
-- Fixed the problem that certain AV1 files were not played
-- Fixed an issue where the quality could drop when playing non-i420p interlaced video
-- Fixed an issue that was interrupted when adjusting the speed when playing with a specific WaveOut device
-- Fixed an issue where subtitles could not be selected if there were too many subtitle files
-- Fixed an issue where some flv playback times were calculated incorrectly
-- Fixed a problem where spaces could not be processed in some Japanese subtitles
-- Fixed an issue where some RSS feeds could not be read
-
+- Javítva lett egy hiba, amely bizonyos AV1 fájlok lejátszásakor jelentkezett
+- Javítva lett egy hiba, amely miatt csökkenhetett a minőség a nem i420p váltottsoros videó lejátszásakor
+- Javítva lett egy hiba, amely miatt egy adott WaveOut eszközzel történő lejátszás során megszakadt a lejátszás a sebesség beállítása közben.
+- Javítva lett egy hiba, amely miatt (túl sok feliratfájl esetén) nem lehetett feliratokat választani.
+- Javítva lett egy hiba, amely az egyes flv lejátszási idők helytelen kiszámítását okozta.
+- Javítva lett egy hiba, amely miatt egyes japán feliratokban szóköz feldolgozási problémák léptek fel.
+- Javítva lett egy hiba, amely miatt egyes RSS hírcsatornákat nem lehetett beolvasni.
 ----------------------------------------------------------
 [221102]
 ----------------------------------------------------------
-- Fixed an error that occurred on certain systems
-- Fixed an issue where the screen was broken when taking a snapshot
-- Improved DASH/HLS playback function
+- Javítottunk egy hibát, amely bizonyos rendszereken jelentkezett
+- Javítottunk egy hibát, amely miatt a képernyőkép megszakadt a pillanatfelvétel készítésekor.
+- Javított DASH/HLS lejátszási funkció
 
 ----------------------------------------------------------
 [220831]
 ----------------------------------------------------------
-- Fixed an issue where there was no sound when playing certain MP4 files
-- Fixed an error that occurred when playing certain files
-- Fixed the problem of slow playback when playing for the first time
-- Improved stability when using DXVA
+- Javítva lett egy hiba, amely miatt bizonyos MP4 fájlok lejátszásakor nem volt hang
+- Javítva lett bizonyos fájlok lejátszásakor jelentkező hiba
+- Javítva lett a lassú lejátszás problémája első alkalommal történő lejátszáskor
+- Javított stabilitás a DXVA használatakor
 
 ----------------------------------------------------------
 [220706]
@@ -53,6 +52,7 @@ PotPlayer verzióelőzmények
 - Javítva lett az av1 dxva copyback lejátszás során jelentkező fekete képernyő megjelenését okozó hiba
 - Javítva lett egy probléma, amely miatt a véletlenszerű lejátszás nem történt meg az első lejátszáskor
 - Javított feldolgozási sebesség a belső színtérben
+- Javítva lett egy hiba, amely lassú navigációt okozott a DXVA copyback funkciónál
 
 ----------------------------------------------------------
 [220420]
