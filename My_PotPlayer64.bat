@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: Dev/Public
-set SOURCE=Public
+set SOURCE=Dev
 
 set WORKDIR=%~dp0
 set TEMPDIR=%WORKDIR%temp
@@ -33,11 +33,14 @@ for /d /r %TEMPDIR%\PotPlayer64 %%i in ($*) do (
     )
 )
 
+echo "Renaming folders"
+move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg4 %TEMPDIR%\PotPlayer64\Module\FFmpeg60
+
 echo "Copying files"
-copy /y %TEMPDIR%\PotPlayer64\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg4\ffcodec64.dll
+copy /y %TEMPDIR%\PotPlayer64\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg60\ffcodec64.dll
 
 echo "Renaming files"
-move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg4\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg4\FFmpeg64.dll
+move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg60\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg60\FFmpeg64.dll
 
 echo "Deleting unneeded folders"
 for /f "delims=" %%i in (%WORKDIR%unneeded-folders.txt) do (

@@ -270,6 +270,21 @@ int GetYouTubeQuality(int iTag)
 	return 0;
 }
 
+ytype GetYouTubeType(int iTag)
+{
+	for (int i = 0, len = youtubeProfiles.size(); i < len; i++)
+	{
+		if (iTag == youtubeProfiles[i].iTag) return youtubeProfiles[i].type;
+	}
+
+	for (int i = 0, len = youtubeProfilesExt.size(); i < len; i++)
+	{
+		if (iTag == youtubeProfilesExt[i].iTag) return youtubeProfilesExt[i].type;
+	}
+
+	return y_unknown;
+}
+
 YOUTUBE_PROFILES getProfile(int iTag, bool ext = false)
 {
 	for (int i = 0, len = youtubeProfiles.size(); i < len; i++)
@@ -346,6 +361,9 @@ class QualityListItem
 	int type3D = 0; // 1:sbs, 2:t&b
 	bool is360 = false;
 	bool isHDR = false;
+	string audioName;
+	string audioCode;
+	int bitrateVal = 0;
 
 	dictionary toDictionary()
 	{
@@ -362,6 +380,9 @@ class QualityListItem
 		ret["type3D"] = type3D;
 		ret["is360"] = is360;
 		ret["isHDR"] = isHDR;
+		ret["audioName"] = audioName;
+		ret["audioCode"] = audioCode;
+		ret["bitrateVal"] = bitrateVal;
 		return ret;
 	}	
 };
@@ -430,8 +451,19 @@ void AppendQualityList(array<dictionary> &QualityList, QualityListItem &item, st
 		for (int i = 0; i < QualityList.size(); i++)
 		{
 			int itag = 0;
+			string audioCode;
 			
-			if (QualityList[i].get("itag", itag) && itag == item.itag)
+			QualityList[i].get("itag", itag);
+			QualityList[i].get("audioCode", audioCode);
+			if (((pPro.type == y_dash_mp4_audio && GetYouTubeType(itag) == y_dash_mp4_audio) || (pPro.type == y_webm_audio && GetYouTubeType(itag) == y_webm_audio)) && audioCode == item.audioCode)
+			{
+				int bitrateVal = 0;
+				
+				QualityList[i].get("bitrateVal", bitrateVal);
+				if (item.bitrateVal > bitrateVal) QualityList[i] = item.toDictionary();
+				return;
+			}		
+			else if (itag == item.itag && audioCode == item.audioCode)
 			{
 				string format, resolution, quality, qualityDetail;
 				
@@ -444,6 +476,7 @@ void AppendQualityList(array<dictionary> &QualityList, QualityListItem &item, st
 				if (quality.size() < item.quality.size()) QualityList[i]["quality"] = item.quality;
 				if (qualityDetail.size() < item.qualityDetail.size()) QualityList[i]["qualityDetail"] = item.qualityDetail;
 				QualityList[i]["url"] = item.url;
+				QualityList[i]["audioCode"] = item.audioCode;
 				return;
 			}
 		}		
@@ -1311,10 +1344,15 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 									JsonValue fps = format["fps"];
 									JsonValue cipher = format["cipher"];
 									JsonValue signatureCipher = format["signatureCipher"];
+									JsonValue audioTrack = format["audioTrack"];
 									
 									if (itag.isInt()) item.itag = itag.asInt();
 									if (width.isInt() && height.isInt()) item.resolution = formatInt(width.asInt()) + "x" + formatInt(height.asInt());
-									if (bitrate.isInt()) item.bitrate = GetBitrateString(bitrate.asInt());
+									if (bitrate.isInt())
+									{
+										item.bitrate = GetBitrateString(bitrate.asInt());
+										item.bitrateVal = bitrate.asInt();
+									}
 									if (quality.isString()) item.quality = quality.asString();
 									if (qualityLabel.isString()) item.qualityDetail = qualityLabel.asString();
 									if (mimeType.isString()) item.format = GetCodecName(HostUrlDecode(mimeType.asString()));
@@ -1346,6 +1384,19 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 
 										int is360;
 										if (MetaData.get("is360", is360)) item.is360 = is360 == 1;
+									}
+									if (audioTrack.isObject())
+									{
+										JsonValue displayName = audioTrack["displayName"];
+										if (displayName.isString()) item.audioName = displayName.asString();
+
+										JsonValue id = audioTrack["id"];
+										if (id.isString())
+										{
+											item.audioCode = id.asString();
+											int p = item.audioCode.find(".");
+											if (p > 0) item.audioCode = item.audioCode.Left(p);
+										}
 									}
 									if (url.isString()) item.url = url.asString();
 									else if (cipher.isString() || signatureCipher.isString())
@@ -1478,6 +1529,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 								int64 bit = parseInt(paramValue);
 
 								item.bitrate = GetBitrateString(bit);
+								item.bitrateVal = bit;
 							}
 							else if (paramHeader == "projection_type")
 							{
