@@ -40,6 +40,7 @@ string YOUTUBE_PL_URL				= "://www.youtube.com/playlist?";
 string YOUTUBE_USER_URL    			= "://www.youtube.com/user/";
 string YOUTUBE_USER_SHORT_URL       = "://www.youtube.com/c/";
 string YOUTUBE_CHANNEL_URL			= "://www.youtube.com/channel/";
+string YOUTUBE_URL_LIBRARY          = "youtube.com/@";
 string YOUTUBE_URL					= "://www.youtube.com/watch?";
 string YOUTUBE_URL2					= "://www.youtube.com/v/";
 string YOUTUBE_URL3					= "://www.youtube.com/embed/";
@@ -1998,9 +1999,10 @@ bool PlaylistCheck(const string &in path)
 	url.replace("https", "");
 	url.replace("http", "");	
 	
-	if (url == YOUTUBE_MP_URL || (url.find(YOUTUBE_MP_URL) >= 0 && url.find("channel/") >= 0)) return false;
+	if (url == YOUTUBE_MP_URL) return false;
 	if (url.find(YOUTUBE_PL_URL) >= 0 || (url.find(YOUTUBE_URL) >= 0 && url.find("&list=") >= 0)) return true;
 	if (url.find(YOUTUBE_USER_URL) >= 0 || url.find(YOUTUBE_CHANNEL_URL) >= 0 || url.find(YOUTUBE_USER_SHORT_URL) >= 0) return true;
+	if (url.find(YOUTUBE_URL_LIBRARY) >= 0) return true;
 	if (url.find(YOUTUBE_MP_URL) >= 0 && url.find("watch?") < 0)
 	{
 		int p = url.find(YOUTUBE_MP_URL);
@@ -2375,7 +2377,7 @@ array<dictionary> PlaylistParse(const string &in path)
 	{	
 		string url = path;		
 		
-		string channelId = HostRegExpParse(url, "www.youtube.com(?:/channel|/c|/user)/([^/]+)");
+		string channelId = HostRegExpParse(url, "www.youtube.com/(?:channel/|c/|user/|@)([^/?&#]+)");
 		if (!channelId.empty())
 		{
 			if (url.find(YOUTUBE_CHANNEL_URL) < 0)
