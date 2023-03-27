@@ -2,13 +2,14 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[230321]
+[230327]
 ----------------------------------------------------------
 + Dodano funkcję GPU Super Resolution do wbudowanego D3D11 Video Renderer 
 
 - Naprawiono błąd powodujący, że wizualizacja audio nie działała, gdy głos był tylko w prawym kanale
 - Naprawiono problem powodujący dziwne przechwytywanie podczas przechwytywania z napisami przy użyciu D3D11 Video Renderer
 - Naprawiono problem powodujący w niektórych sytuacjach brak dźwięku podczas odtwarzania uszkodzonego wideo
+- Naprawiono problem powodujący nie pojawianie się dźwięku w niektórych kodekach flac
 
 ----------------------------------------------------------
 [230207]
