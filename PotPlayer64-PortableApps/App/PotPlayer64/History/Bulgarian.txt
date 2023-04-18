@@ -4,12 +4,12 @@
 ----------------------------------------------------------
 [230405]
 ----------------------------------------------------------
-+ Added GPU Super Resolution function to built-in D3D11 video renderer
++ Добавена е функция GPU Super Resolution към вградения D3D11 видео рендер
 
-- Fixed an issue where audio visualization did not work when only the right channel had voice
-- Fixed a problem that was captured strangely when capturing with subtitles in the D3D11 video renderer
-- Fixed a problem where sound did not come out in certain situations when playing damaged videos
-- Fixed a problem where sound did not come out in certain flac codecs
+- Отстранен е проблем, при който аудио визуализацията не работи, когато само десният канал има звук
+- Отстранен е проблем, при който се заснема странно при заснемане със субтитри в D3D11 видео рендер
+- Отстранен е проблем, при който звукът не излиза в определени ситуации при възпроизвеждане на повредени видеоклипове
+- Отстранен е проблем, при който звукът не излиза в определени flac кодеци
 
 ----------------------------------------------------------
 [230207]
