@@ -2,6 +2,11 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
+[230419]
+----------------------------------------------------------
+- Naprawiono problem braku synchronizacji podczas odtwarzania z kodekiem mjpeg
+
+----------------------------------------------------------
 [230405]
 ----------------------------------------------------------
 + Dodano funkcję GPU Super Resolution do wbudowanego renderera wideo D3D11 
