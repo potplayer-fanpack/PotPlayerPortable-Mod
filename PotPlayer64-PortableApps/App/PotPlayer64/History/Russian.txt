@@ -8,48 +8,51 @@
 ----------------------------------------------------------
 [230405]
 ----------------------------------------------------------
-+ Added GPU Super Resolution function to built-in D3D11 video renderer
++ Добавлена функция GPU Super Resolution во встроенный рендерер видео D3D11
 
-- Fixed an issue where audio visualization did not work when only the right channel had voice
-- Fixed a problem that was captured strangely when capturing with subtitles in the D3D11 video renderer
-- Fixed a problem where sound did not come out in certain situations when playing damaged videos
-- Fixed a problem where sound did not come out in certain flac codecs
+- Исправлена проблема, при которой звук не воспроизводился в некоторых кодеках flac
+- Исправлена проблема, при которой визуализация звука не работала, когда голос был только в правом канале
+- Исправлена проблема, при которой при захвате с субтитрами в видеорендере D3D11 происходил странный захват
+- Исправлена проблема, при которой звук не появлялся в определенных ситуациях при воспроизведении поврежденных видеороликов
+
 
 ----------------------------------------------------------
 [230207]
 ----------------------------------------------------------
-+ Added WEBP format to video capture
++ Добавлен формат WEBP для захвата видео
 
-- Modified to run a little faster when running for the first time
-- Fixed the problem that some corrupted FLAC files could not be played
-- Fixed the problem of playing slowly when playing some FTP/HTTP files
-- Fixed an issue where playback time was incorrectly handled when playing some MP4 files
+- Модифицировано для более быстрого запуска при первом запуске
+- Исправлена проблема медленного воспроизведения при воспроизведении некоторых FTP/HTTP файлов
+- Исправлена проблема, из-за которой некоторые поврежденные файлы FLAC не могли быть воспроизведены
+- Исправлена проблема, при которой время воспроизведения некорректно обрабатывалось при воспроизведении некоторых файлов MP4
 
 ----------------------------------------------------------
 [221215]
 ----------------------------------------------------------
-- Fixed the problem that certain AV1 files were not played
-- Fixed an issue where the quality could drop when playing non-i420p interlaced video
-- Fixed an issue that was interrupted when adjusting the speed when playing with a specific WaveOut device
-- Fixed an issue where subtitles could not be selected if there were too many subtitle files
-- Fixed an issue where some flv playback times were calculated incorrectly
-- Fixed a problem where spaces could not be processed in some Japanese subtitles
-- Fixed an issue where some RSS feeds could not be read
+- Исправлена проблема, из-за которой некоторые файлы AV1 не воспроизводились
+- Исправлена проблема, из-за которой некоторые RSS-каналы не могли быть прочитаны
+- Исправлена проблема, из-за которой пробелы не обрабатывались в некоторых японских субтитрах
+- Исправлена проблема, из-за которой время воспроизведения некоторых файлов flv рассчитывалось неправильно
+- Исправлена проблема, из-за которой субтитры не могли быть выбраны, если имелось слишком много файлов субтитров
+- Исправлена проблема, из-за которой качество могло падать при воспроизведении видео без чересстрочной развертки в формате i420p
+- Исправлена проблема, из-за которой при регулировке скорости при воспроизведении с определенного устройства WaveOut возникали помехи
+
 
 ----------------------------------------------------------
 [221102]
 ----------------------------------------------------------
-- Fixed an error that occurred on certain systems
-- Fixed an issue where the screen was broken when taking a snapshot
-- Improved DASH/HLS playback function
+- Улучшена функция воспроизведения DASH/HLS
+- Исправлена ошибка, возникавшая на некоторых системах
+- Исправлена проблема, из-за которой экран разбивался при создании снимка
+
 
 ----------------------------------------------------------
 [220831]
 ----------------------------------------------------------
-- Исправлена проблема отсутствия звука при воспроизведении некоторых файлов MP4
-- Исправлена проблема медленного воспроизведения при первом запуске
-- Исправлена ошибка при воспроизведении некоторых файлов
 - Улучшена стабильность при использовании DXVA
+- Исправлена ошибка при воспроизведении некоторых файлов
+- Исправлена проблема медленного воспроизведения при первом запуске
+- Исправлена проблема отсутствия звука при воспроизведении некоторых файлов MP4
 
 
 ----------------------------------------------------------
