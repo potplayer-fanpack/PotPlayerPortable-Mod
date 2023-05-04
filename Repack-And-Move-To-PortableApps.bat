@@ -34,10 +34,10 @@ for /d /r %TEMPDIR%\PotPlayer64 %%i in ($*) do (
 )
 
 echo "Copying files"
-copy /y %TEMPDIR%\PotPlayer64\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg4\ffcodec64.dll
+copy /y %TEMPDIR%\PotPlayer64\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg60\ffcodec64.dll
 
 echo "Renaming files"
-move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg4\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg4\FFmpeg64.dll
+move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg60\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg60\FFmpeg64.dll
 
 echo "Deleting unneeded folders"
 for /f "delims=" %%i in (%WORKDIR%unneeded-folders.txt) do (

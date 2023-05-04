@@ -2,54 +2,54 @@
 PotPlayer 版本更新日誌
 
 ----------------------------------------------------------
-[230419]
+[230504]
 ----------------------------------------------------------
 
 ----------------------------------------------------------
 [230405]
 ----------------------------------------------------------
-+ Added GPU Super Resolution function to built-in D3D11 video renderer
++ 新增 GPU 超解析度功能到內建的 D3D11 視訊渲染器
 
-- Fixed an issue where audio visualization did not work when only the right channel had voice
-- Fixed a problem that was captured strangely when capturing with subtitles in the D3D11 video renderer
-- Fixed a problem where sound did not come out in certain situations when playing damaged videos
-- Fixed a problem where sound did not come out in certain flac codecs
+- 修正當只有右聲道有聲音時音訊視覺化不起作用的問題
+- 修正在 D3D11 視訊渲染器中截圖帶有字幕時截圖異常的問題
+- 修正播放損壞影片時某些情況下沒有聲音的問題
+- 修正在某些 flac 編解碼器中沒有聲音的問題
 
 ----------------------------------------------------------
 [230207]
 ----------------------------------------------------------
-+ Added WEBP format to video capture
++ 新增 WEBP 格式到影片錄製
 
-- Modified to run a little faster when running for the first time
-- Fixed the problem that some corrupted FLAC files could not be played
-- Fixed the problem of playing slowly when playing some FTP/HTTP files
-- Fixed an issue where playback time was incorrectly handled when playing some MP4 files
+- 修正使首次執行時啟動更快一些
+- 修正某些損壞的 FLAC 檔案無法播放的問題
+- 修正某些 FTP/HTTP 檔案播放慢的問題
+- 修正播放某些 MP4 檔案時播放時間處理不正確的問題
 
 ----------------------------------------------------------
 [221215]
 ----------------------------------------------------------
-- Fixed the problem that certain AV1 files were not played
-- Fixed an issue where the quality could drop when playing non-i420p interlaced video
-- Fixed an issue that was interrupted when adjusting the speed when playing with a specific WaveOut device
-- Fixed an issue where subtitles could not be selected if there were too many subtitle files
-- Fixed an issue where some flv playback times were calculated incorrectly
-- Fixed a problem where spaces could not be processed in some Japanese subtitles
-- Fixed an issue where some RSS feeds could not be read
+- 修正某些 AV1 檔案無法播放的問題
+- 修正播放非 i420p 隔行掃描影片時品質可能下降的問題
+- 修正使用某些 WaveOut 裝置播放時速度下降的問題
+- 修正字幕檔過多時無法選擇字幕的問題
+- 修正某些 flv 播放時間計算錯誤的問題
+- 修正某些日文字幕無法處理空格的問題
+- 修正某些 RSS 提要無法讀取的問題
 
 ----------------------------------------------------------
 [221102]
 ----------------------------------------------------------
-- Fixed an error that occurred on certain systems
-- Fixed an issue where the screen was broken when taking a snapshot
-- Improved DASH/HLS playback function
+- 修正在某些系統上發生的錯誤
+- 修正建立縮圖時花屏的問題
+- 改善 DASH/HLS 播放功能
 
 ----------------------------------------------------------
 [220831]
 ----------------------------------------------------------
-- Fixed an issue where there was no sound when playing certain MP4 files
-- Fixed an error that occurred when playing certain files
-- Fixed the problem of slow playback when playing for the first time
-- Improved stability when using DXVA
+- 修正播放某些 MP4 檔案時沒有聲音的問題
+- 修正播放某些檔案時發生的錯誤
+- 修正首次播放慢的問題
+- 提高使用 DXVA 播放時的穩定性
 
 --------------------------------------------------------------------------
 [220706]
