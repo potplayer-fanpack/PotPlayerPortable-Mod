@@ -1,6 +1,10 @@
 ﻿----------------------------------------------------------
-[230510]
+[230516]
 ----------------------------------------------------------
+- Fixed an out-of-sync problem when playing with mjpeg codec
+- Fixed a problem where an error occurred when playing with a specific MPEG 2 codec
+- Fixed an issue where the title screen did not appear when playing certain DVDs
+- Fixed the problem that the screen was broken when using certain H264 DXVA
 
 -----------------------------------------------------------------------
 2023/04/10				[230407 / 1.7.21902]

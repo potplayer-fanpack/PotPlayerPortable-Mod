@@ -1653,10 +1653,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 						}
 						
 						JsonValue lengthSeconds = videoDetails["lengthSeconds"];
-						if (lengthSeconds.isString())
-						{
-							MetaData["duration"] = parseInt(lengthSeconds.asString()) * 1000;
-						}
+						if (lengthSeconds.isString()) MetaData["duration"] = parseInt(lengthSeconds.asString()) * 1000;
 
 						JsonValue viewCount = videoDetails["viewCount"];
 						if (viewCount.isString()) MetaData["viewCount"] = viewCount.asString();
@@ -1713,6 +1710,13 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 								}
 							}
 						}
+						
+
+						JsonValue viewCount = playerMicroformatRenderer["viewCount"];
+						if (viewCount.isString()) MetaData["viewCount"] = viewCount.asString();
+
+						JsonValue lengthSeconds = playerMicroformatRenderer["lengthSeconds"];
+						if (lengthSeconds.isString()) MetaData["duration"] = parseInt(lengthSeconds.asString()) * 1000;						
 					}
 
 					JsonValue captions = Root["captions"];

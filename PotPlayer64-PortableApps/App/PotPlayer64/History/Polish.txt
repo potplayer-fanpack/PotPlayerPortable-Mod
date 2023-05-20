@@ -2,12 +2,12 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[230510]
+[230516]
 ----------------------------------------------------------
 - Naprawiono problem powodujący brak synchronizacji podczas odtwarzania z kodekiem mjpeg
-- Naprawiono błąd występujący podczas odtwarzania z określonym kodekiem MPEG 2
+- Naprawiono problem powodujący błąd podczas odtwarzania z określonym kodekiem MPEG 2
 - Naprawiono problem powodujący, że ekran tytułowy nie pojawiał się podczas odtwarzania niektórych płyt DVD
-- Naprawiono problem powodujący zniekształcenia obrazu podczas używania niektórych H264 DXVA
+- Naprawiono problem powodujący zniekształcenia obrazu podczas korzystania z niektórych H264 DXVA
 
 ----------------------------------------------------------
 [230405]
