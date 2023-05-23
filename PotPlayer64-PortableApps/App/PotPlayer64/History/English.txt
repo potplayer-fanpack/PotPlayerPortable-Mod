@@ -2,7 +2,7 @@
 Version History of the PotPlayer
 
 ----------------------------------------------------------
-[230516]
+[230523]
 ----------------------------------------------------------
 - Fixed an out-of-sync problem when playing with mjpeg codec
 - Fixed a problem where an error occurred when playing with a specific MPEG 2 codec

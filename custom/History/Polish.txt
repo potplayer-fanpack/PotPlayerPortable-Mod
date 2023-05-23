@@ -2,7 +2,7 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[230516]
+[230523]
 ----------------------------------------------------------
 - Naprawiono problem powodujący brak synchronizacji podczas odtwarzania z kodekiem mjpeg
 - Naprawiono problem powodujący błąd podczas odtwarzania z określonym kodekiem MPEG 2
