@@ -181,13 +181,29 @@ $}
                 -L'ajust "F5 > General > Múltiples instàncies" no afecta això.
 /current 	:Reprodueix els continguts especificats dins d'una instància existent del programa
                 -L'ajust "F5 > General > Múltiples instàncies" no afecta això.
-/clipboard      :Agrega contingut(s) del porta-papers a la llista de reproducció i inicia la reproducció immediatament.
+/clipboard      :Afegeix contingut(s) del porta-papers a la llista de reproducció i inicia la reproducció immediatament.
 /seek=time      :Inicia la reproducció del contingut especificat/últim reproduït des del punt de temps especificat.
                 -El format de temps és: hh: mm: ss.ms (O especifiqui només segons, ejem. /seek=1800 per començar en el minut 30)
-/user_agent=["]string["] : set user agent string for http(s)
-/referer=["]string["] : set referer string for http(s)
-/headers=["]string["] : set headers string for http(s)
+
+/user_agent=["]string["] : Cadena d'agent d'usuari per a http(s)
+/referer=["]string["] : Cadena de referència per a http(s)
+/headers=["]string["] : Cadena de capçaleres per a http(s)
 config="preset name" -- Utilitza els paràmetres predefinits
+
+Com executar PotPlayer des de la línia d'ordres?
+1) Clic dret a PotPlayerMini64.exe al directori d'instal·lació i seleccioneu "Crear accés directe" del menú
+2) Clic dret al fitxer "PotPlayerMini[64].exe - Accés directe" acabat de crear i seleccioneu "Propietats" del menú
+3) Afegir una ordre específica al final de la línia d'ordres (per exemple "C:\Program Files\Daum\PotPlayer\PotPlayerMini64.exe" /autoplay), i després feu clic a D'acord.
+4) Doble clic a "PotPlayerMini[64].exe — abreviatura", el programa realitzarà l'acció sol·licitada quan s'iniciï.
+
+Exemples:
+PotPlayerMini64.exe "C:\Video\proba.mp4" - reprodueix el fitxer especificat directament
+PotPlayerMini64.exe "C:\Video\proba.mp4" /add - afegeix el fitxer especificat a la llista de reproducció
+PotPlayerMini64.exe /autoplay - reprodueix el darrer fitxer obert
+PotPlayerMini64.exe /filedlg - obre un quadre de diàleg i afegeix els fitxers a la llista de reproducció
+PotPlayerMini64.exe /dvd - obre una unitat de DVD estàndard
+PotPlayerMini64.exe config="HD Pack" - activa els ajustaments indicats (perfil)
+PotPlayerMini64.exe /cd:e - obre la unitat especificada
 $}
 {$POLISH=
 
@@ -293,7 +309,7 @@ Uso : PotPlayerMini64.exe ["contenido"] [/switch]
             	-Comodines (*,?) permitidos.
               	-La configuración "Varios > Al abrir archivos" afecta cuando se especifica un archivo.
 
-- 		:Reproduce medios de stream desde stdin
+- 		:Reproduce stream desde stdin
                 -Ejemplo de uso: youtube-dl.exe -o - -f best[ext=webm] https://www.youtube.com/watch?v=l22sS8DEiVU | PotPlayerMini.exe -
 
 /filedlg        :Diálogo abrir archivo
@@ -317,13 +333,31 @@ Uso : PotPlayerMini64.exe ["contenido"] [/switch]
                 -El ajuste "F5 > General > Múltiples instancias" no afecta esto.
 /current 	:Reproduce los contenidos especificados dentro de una instancia existente del programa
                 -El ajuste "F5 > General > Múltiples instancias" no afecta esto.
-/clipboard      :Agrega contenido(s) del portapapeles a la lista de reproducción e inicia la reproducción inmediatamente.
+/clipboard      :Añadir contenido(s) del portapapeles a la lista de reproducción e inicia la reproducción inmediatamente.
 /seek=time      :Inicia la reproducción del contenido especificado/último reproducido desde el punto de tiempo especificado.
                 -El formato de tiempo es: hh:mm:ss.ms (O especifique solo segundos, ejem. /seek=1800 para comenzar en el minuto 30)
-/user_agent=["]string["] : set user agent string for http(s)
-/referer=["]string["] : set referer string for http(s)
-/headers=["]string["] : set headers string for http(s)
+
+/user_agent=["]string["] : La cadena del agente de usuario para http(s)
+/referer=["]string["] : La cadena de referencia para http(s)
+/headers=["]string["] : La cadena de cabecera para http(s)
 config="preset name" -- Usar los ajustes predefinidos
+
+¿Cómo ejecutar PotPlayer desde la línea de comandos?
+
+1) Clic derecho en PotPlayerMini64.exe en el directorio de instalación y seleccionar "Crear acceso directo" del menú
+2) Clic derecho en el archivo "PotPlayerMini64.exe - Acceso directo" recién creado y seleccionr "Propiedades" del menú
+3) Seleccionar la pestaña "Acceso directo"
+4) Añadir un comando al final de la línea de comandos (por ejemplo "C:\Program Files\Daum\PotPlayer\PotPlayerMini64.exe" /autoplay), y luego clic en Aceptar.
+5) Doble clic "PotPlayerMini64.exe — Acceso directo", el programa realizará la acción solicitada cuando se inicie.
+
+Ejemplos:
+PotPlayerMini64.exe "C:\Video\prueba.mp4" - reproduce el archivo especificado
+PotPlayerMini64.exe "C:\Video\prueba.mp4" /add - añade el archivo  a la lista de reproducción
+PotPlayerMini64.exe /autoplay - reproduce el último archivo abierto
+PotPlayerMini64.exe /filedlg - abre un diálogo y añade los archivos a la lista de reproducción
+PotPlayerMini64.exe /dvd - abre una unidad de DVD estándar
+PotPlayerMini64.exe config="HD Pack" - activa los ajustes indicados (perfil)
+PotPlayerMini64.exe /cd:e - abre la unidad especificada	
 $}
 {$UKRAINIAN=
 
