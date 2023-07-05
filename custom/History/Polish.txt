@@ -2,7 +2,7 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[230628]
+[230705]
 ----------------------------------------------------------
 + Dodano możliwość tłumaczenia napisów niezależnie od wybranych języków
 + Dodano obsługę kodeka g726 do formatu MP4

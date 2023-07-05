@@ -2,8 +2,15 @@
 PotPlayer 版本更新日誌
 
 ----------------------------------------------------------
-[230627]
+[230705]
 ----------------------------------------------------------
++ Added the ability to translate subtitles in addition to selected languages
++ Added support for g726 codec in MP4
++ Added support for ARIB subtitles
+
+- Fixed trackpad scrolling of playlists to be handled smoothly
+- Improved MP4 playback function while downloading
+- Improved raw av1 file playback function
 
 --------------------------------------------------------------------------
 [230523]
