@@ -4,9 +4,9 @@
 ----------------------------------------------------------
 [230705]
 ----------------------------------------------------------
-+ Added the ability to translate subtitles in addition to selected languages
-+ Added support for g726 codec in MP4
-+ Added support for ARIB subtitles
++ Добавена е възможност за превод на субтитри в допълнение към избраните езици
++ Добавена е поддръжка за кодек g726 в MP4
++ Добавена е поддръжка за ARIB субтитри
 
 - Fixed trackpad scrolling of playlists to be handled smoothly
 - Improved MP4 playback function while downloading
@@ -15,10 +15,10 @@
 ----------------------------------------------------------
 [230523]
 ----------------------------------------------------------
-- Fixed an out-of-sync problem when playing with mjpeg codec
-- Fixed a problem where an error occurred when playing with a specific MPEG 2 codec
-- Fixed an issue where the title screen did not appear when playing certain DVDs
-- Fixed the problem that the screen was broken when using certain H264 DXVA
+- Отстранен е проблем с несинхронизирано възпроизвеждане с кодека mjpeg
+- Отстранен е проблем, при който възниква грешка при възпроизвеждане с конкретен MPEG 2 кодек
+- Отстранен е проблем, при който заглавният екран не се появява при възпроизвеждане на някои DVD дискове
+- Отстранен е проблем, който причинява счупване на екрана при възпроизвеждане на някои H264 DXVA
 
 ----------------------------------------------------------
 [230405]
