@@ -2,11 +2,11 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[230714]
+[230721]
 ----------------------------------------------------------
 - Zastosowano poprawkę umożliwiającą zachowanie atrybutów napisów podczas ich tłumaczenia, jeśli to możliwe
-- Naprawiono problem z nieprawidłową obsługą proporcji podczas odtwarzania wideo, w którym zmieniono niektóre proporcje
-- Naprawiono błąd powodujący ucinanie ekranu podczas korzystania z wbudowanego renderera D3D11 po przejściu na monitor o innej rozdzielczości
+- Naprawiono problem polegający na nieprawidłowej obsłudze proporcji podczas odtwarzania niektórych plików wideo ze zmienionymi proporcjami
+- Naprawiono błąd występujący podczas użycia wbudowanego renderera D3D11, który powodował ucinanie ekranu podczas przełączania między monitorami o różnych rozdzielczościach
 
 ----------------------------------------------------------
 [230705]
