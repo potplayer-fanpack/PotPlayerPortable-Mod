@@ -2,19 +2,23 @@
 История версий PotPlayer
 
 ----------------------------------------------------------
-[230721]
+[230818]
 ----------------------------------------------------------
+- When translating subtitles, modify to maintain subtitle properties if possible
+- Fixed an issue where the ratio was not properly handled when playing a video in which some ratios were changed
+- When using the built-in D3D11 renderer, the screen is cut off when the resolution goes beyond another monitor.
+- Fixed an issue that crashed in certain situations
 
 ----------------------------------------------------------
 [230705]
 ----------------------------------------------------------
-+ Added the ability to translate subtitles in addition to selected languages
-+ Added support for g726 codec in MP4
-+ Added support for ARIB subtitles
++ Добавлена возможность перевода субтитров в дополнение к выбранным языкам
++ Добавлена поддержка кодека g726 в MP4
++ Добавлена поддержка субтитров ARIB
 
-- Fixed trackpad scrolling of playlists to be handled smoothly
-- Improved MP4 playback function while downloading
-- Improved raw av1 file playback function
+- Исправлена плавная прокрутка плей-листов с помощью трекпада
+- Улучшена функция воспроизведения MP4 при загрузке
+- Улучшена функция воспроизведения файлов raw av1
 
 ----------------------------------------------------------
 [230523]
