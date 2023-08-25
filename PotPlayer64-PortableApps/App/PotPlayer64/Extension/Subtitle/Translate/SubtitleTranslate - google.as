@@ -271,7 +271,7 @@ string Translate(string Text, string &in SrcLang, string &in DstLang)
 	
 	string enc = HostUrlEncode(Text);
 	
-//	by new API	
+//	by new API
 	if (api_key.length() > 0)
 	{
 		string url = "https://translation.googleapis.com/language/translate/v2?target=" + DstLang + "&q=" + enc;
@@ -297,6 +297,22 @@ string Translate(string Text, string &in SrcLang, string &in DstLang)
 		DstLang = "UTF8";
 		return ret;
 	}	
-
-	return ret;
+	
+// by web page	
+	url = "https://translate.google.com/m?sl=" + SrcLang + "&tl=" + DstLang + "&q=" + enc;
+	ret = HostUrlGetString(url, UserAgent);
+	string find = "<div class=\"result-container\">";
+	int s = ret.find(find);
+	if (s > 0)
+	{
+		s = s + find.length();
+		int e = ret.find("</div>", s);		
+		if (e > s)
+		{
+			SrcLang = "UTF8";
+			DstLang = "UTF8";
+			return ret.substr(s, e - s); 
+		}
+	}
+	return "";
 }
