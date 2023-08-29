@@ -2,7 +2,7 @@
 PotPlayerバージョン情報
 
 ----------------------------------------------------------
-[230825]
+[230829]
 ----------------------------------------------------------
 - When translating subtitles, modify to maintain subtitle properties if possible
 - Fixed an issue where the ratio was not properly handled when playing a video in which some ratios were changed
