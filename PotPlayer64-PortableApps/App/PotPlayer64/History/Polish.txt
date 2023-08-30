@@ -2,7 +2,7 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[230829]
+[230830]
 ----------------------------------------------------------
 - Zastosowano poprawkę umożliwiającą zachowanie właściwości napisów podczas ich tłumaczenia, jeśli to możliwe
 - Naprawiono problem polegający na nieprawidłowej obsłudze proporcji podczas odtwarzania niektórych plików wideo ze zmienionymi proporcjami
