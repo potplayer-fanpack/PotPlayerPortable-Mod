@@ -2,11 +2,16 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[230922]
+[231010]
 ----------------------------------------------------------
-+ Dodano możliwość wyświetlania wielu linii w Przeglądarce napisów 
++ Dodano możliwość wyświetlania wielu linii w Przeglądarce napisów
++ Dodano funkcję odtwarzania kodeka wideo NOTCHLC 
 
 - Wprowadzono modyfikację, aby, jeśli to możliwe, zastosować korekcję kolorów HDR podczas przechwytywania wideo
+- Naprawiono błąd powodujący, że funkcja DTS pass-through nie działała na niektórych systemach
+- Naprawiono błąd powodujący nakładanie się osadzonych napisów podczas odtwarzania plików bez przerw
+- Naprawiono błąd powodujący, że po odtworzeniu nie następowało zakończenie odtwarzania, gdy korzystano z funkcji usuwania powiązanego pliku
+- Naprawiono problem z zawieszaniem się podczas odtwarzania HEVC z DXVA na starych procesorach graficznych Intel
 
 ----------------------------------------------------------
 [230830]

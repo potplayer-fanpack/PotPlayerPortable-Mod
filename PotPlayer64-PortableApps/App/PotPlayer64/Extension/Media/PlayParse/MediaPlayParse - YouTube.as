@@ -1779,6 +1779,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 													}
 												}
 											}
+											if (subname.rfind(" - Default") == subname.length() - 10) subname = subname.substr(0, subname.length() - 10);
 											
 											JsonValue languageCode = captionTrack["languageCode"];
 											
