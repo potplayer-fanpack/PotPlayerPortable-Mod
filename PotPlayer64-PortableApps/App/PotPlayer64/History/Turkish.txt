@@ -2,8 +2,16 @@
 PotPlayer'ın Versiyon Geçmişi
 
 ----------------------------------------------------------
-[231010]
+[231020]
 ----------------------------------------------------------
++ Added the ability to display multiple lines in the subtitle explorer
++ NOTCHLC video codec playback function added
+
+- Modified to apply HDR color correction when capturing video if possible
+- Fixed an issue where the DTS pass-through function did not work on certain systems
+- Fixed an issue where embedded subtitles were displayed overlapping when playing files without interruption.
+- Fixed an issue where playback completion did not occur when using the delete related file function upon completion of playback.
+- Fixed a problem that freezing when playing HEVC with DXVA on old Intel GPUs
 
 ----------------------------------------------------------
 [230830]

@@ -1,44 +1,51 @@
 ﻿
-PotPlayerバージョン情報
+PotPlayer 更新履歴
 
 ----------------------------------------------------------
-[231010]
+[231020]
 ----------------------------------------------------------
++ Added the ability to display multiple lines in the subtitle explorer
++ NOTCHLC video codec playback function added
 
-----------------------------------------------------------
-[230830]
-----------------------------------------------------------
-- When translating subtitles, modify to maintain subtitle properties if possible
-- Fixed an issue where the ratio was not properly handled when playing a video in which some ratios were changed
-- When using the built-in D3D11 renderer, the screen is cut off when the resolution goes beyond another monitor.
-- Fixed an issue that crashed in certain situations
-- Improved stability of built-in video renderer
+- Modified to apply HDR color correction when capturing video if possible
+- Fixed an issue where the DTS pass-through function did not work on certain systems
+- Fixed an issue where embedded subtitles were displayed overlapping when playing files without interruption.
+- Fixed an issue where playback completion did not occur when using the delete related file function upon completion of playback.
+- Fixed a problem that freezing when playing HEVC with DXVA on old Intel GPUs
 
-----------------------------------------------------------
-[230705]
-----------------------------------------------------------
-+ Added the ability to translate subtitles in addition to selected languages
-+ Added support for g726 codec in MP4
-+ Added support for ARIB subtitles
+-----------------------------------------------------------------------
+2023/09/08				[230905 / 1.7.21999]
+-----------------------------------------------------------------------
+・ 字幕のリアルタイム翻訳で、ASS字幕などでも可能な限り属性を維持して対応
+・ 配信や放送などの途中で縦横比（アスペクト比）が変化する場合、追随できていなかった問題を修正
+・ 内蔵D3D11レンダラ使用時、解像度の違う別モニターに移動すると映像の表示領域が不正になった問題を修正
+・ 特定の状況で強制終了した問題を修正
+・ 内蔵ビデオレンダラの安定性を向上
 
-- Fixed trackpad scrolling of playlists to be handled smoothly
-- Improved MP4 playback function while downloading
-- Improved raw av1 file playback function
+-----------------------------------------------------------------------
+2023/07/07				[230707 / 1.7.21953]
+-----------------------------------------------------------------------
+＋ リアルタイム翻訳を指定言語以外の言語に適用する設定を追加
+＋ MP4でG.726 ADPCM音声に対応
+＋ 日本の放送用ARIB字幕に対応
+・ プレイリストのタッチバッドによるスクロール動作を改善
+・ MP4のダウンロード途中／録画進行中の再生を改善
+・ RAW AV1ファイルの再生を改善
 
-----------------------------------------------------------
-[230523]
-----------------------------------------------------------
-- Fixed an out-of-sync problem when playing with mjpeg codec
-- Fixed a problem where an error occurred when playing with a specific MPEG 2 codec
-- Fixed an issue where the title screen did not appear when playing certain DVDs
-- Fixed the problem that the screen was broken when using certain H264 DXVA
+-----------------------------------------------------------------------
+2023/05/31				[230523 / 1.7.21916]
+-----------------------------------------------------------------------
+・ MJPEGコーデックで映像／音声の同期がずれる問題を修正
+・ 特定のMPEG2コーデックで再生エラーになった問題を修正
+・ 特定のDVDでタイトル画面が出力されなかった問題を修正
+・ 特定のH.264をD3Dデコードで再生すると画面が破綻した問題を修正
 
 -----------------------------------------------------------------------
 2023/04/10				[230407 / 1.7.21902]
 -----------------------------------------------------------------------
 ＋ 映像レンダラの設定にGPUによる超解像 Video Super Resolution を追加（内蔵D3D11VRのみ）
 ・ 音声メディアで右チャンネルのみに音が存在する場合、視覚効果が機能しなかった問題を修正
-・ D3D11映像レンダラを使用して映像保存する場合、字幕なども含める設定では正常な画像にならなかった問題を修正
+・ D3D11映像レンダラを使用して静止画像を保存する場合、字幕なども含める設定では正常に出力しなかった問題を修正
 ・ 破損した映像ファイルを再生する場合、特定の状況で音声が出力しなかった問題を修正
 ・ 特定のFLACコーデックが再生できなかった問題を修正
 
