@@ -2,7 +2,7 @@
 История версий PotPlayer
 
 ----------------------------------------------------------
-[231020]
+[231027]
 ----------------------------------------------------------
 + Added the ability to display multiple lines in the subtitle explorer
 + NOTCHLC video codec playback function added

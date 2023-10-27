@@ -2,7 +2,7 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[231020]
+[231027]
 ----------------------------------------------------------
 + Dodano możliwość wyświetlania wielu linii w Przeglądarce napisów
 + Dodano możliwość odtwarzania kodeka wideo NOTCHLC 

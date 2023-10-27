@@ -2,16 +2,16 @@
 PotPlayer 更新履歴
 
 ----------------------------------------------------------
-[231020]
+[231027]
 ----------------------------------------------------------
-+ Added the ability to display multiple lines in the subtitle explorer
-+ NOTCHLC video codec playback function added
-
-- Modified to apply HDR color correction when capturing video if possible
-- Fixed an issue where the DTS pass-through function did not work on certain systems
-- Fixed an issue where embedded subtitles were displayed overlapping when playing files without interruption.
-- Fixed an issue where playback completion did not occur when using the delete related file function upon completion of playback.
-- Fixed a problem that freezing when playing HEVC with DXVA on old Intel GPUs
+＋ 字幕ブラウザの設定で文字の折り返し用に表示行数を追加
+＋ NotchLC映像コーデックに対応
+・ 画像保存で可能ならHDRの色補正が適用されるように修正
+・ DTSパススルーが特定環境で動作しなかった問題を修正
+・ シームレス再生時、内蔵字幕が重複して表示されていた問題を修正
+・ 再生完了でファイルを削除する機能を使用時、再生完了後の終了動作が無効だった問題を修正
+・ HEVCを古いIntel GPUでD3Dデコード再生するとフリーズする問題を修正
+・ 特定のMKVでシーク後に再生が停止した問題を修正
 
 -----------------------------------------------------------------------
 2023/09/08				[230905 / 1.7.21999]
