@@ -2,7 +2,7 @@
 PotPlayer verzióelőzmények
 
 ----------------------------------------------------------
-[231027]
+[231102]
 ----------------------------------------------------------
 + Added the ability to display multiple lines in the subtitle explorer
 + NOTCHLC video codec playback function added
@@ -12,6 +12,7 @@ PotPlayer verzióelőzmények
 - Fixed an issue where embedded subtitles were displayed overlapping when playing files without interruption.
 - Fixed an issue where playback completion did not occur when using the delete related file function upon completion of playback.
 - Fixed a problem that freezing when playing HEVC with DXVA on old Intel GPUs
+- Fixed an issue where certain MKV videos could not be played after searching for them.
 
 ----------------------------------------------------------
 [230830]
