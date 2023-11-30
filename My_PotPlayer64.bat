@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: Dev/Public
-set SOURCE=Public
+set SOURCE=Dev
 
 set WORKDIR=%~dp0
 set TEMPDIR=%WORKDIR%temp

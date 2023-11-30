@@ -2,6 +2,14 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
+[231130]
+----------------------------------------------------------
++ Dodano możliwość wyboru urządzenia podczas przesyłania TTS
++ Naprawiono błąd podczas odtwarzania MPEG 1/2 z DXVA na starszych układach GPU
++ Dodano możliwość wklejenia listy odtwarzania poniżej wybranej pozycji
++ Naprawiono błąd występujący podczas odtwarzania niektórych plików MKV
+
+----------------------------------------------------------
 [231102]
 ----------------------------------------------------------
 + Dodano możliwość wyświetlania wielu linii w Przeglądarce napisów
