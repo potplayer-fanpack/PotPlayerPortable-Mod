@@ -1,15 +1,15 @@
 ﻿
 PotPlayer 版本更新日誌
 
-----------------------------------------------------------
-[231215]
-----------------------------------------------------------
-+ Added the ability to select a device when outputting TTS
+--------------------------------------------------------------------------
+[231219]
+--------------------------------------------------------------------------
++ 新增輸出 TTS 時選擇裝置的功能
 
-- Fixed an error issue when playing MPEG 1/2 with DXVA on older GPUs.
-- Added ability to paste playlist below selected item
-- Fixed an issue where an error occurred when playing certain MKV files
-- Fixed an issue where navigation was not possible when playing certain files
+- 修正在較舊的 GPU 上使用 DXVA 播放 MPEG 1/2 時的錯誤問題
+- 新增將播放清單貼上到所選取項目下方的功能
+- 修正播放某些 MKV 檔案出錯的問題
+- 修正播放某些檔案時無法導航的問題
 
 --------------------------------------------------------------------------
 [231102]

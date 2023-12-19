@@ -2,8 +2,10 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[231215]
+[231219]
 ----------------------------------------------------------
+* Modernizacja czatu
+
 + Dodano możliwość wyboru urządzenia wyjściowego dla TTS
 
 - Naprawiono błąd występujący podczas odtwarzania MPEG 1/2 z DXVA na starszych układach GPU

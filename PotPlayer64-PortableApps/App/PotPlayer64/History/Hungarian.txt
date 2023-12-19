@@ -2,7 +2,7 @@
 PotPlayer verzióelőzmények
 
 ----------------------------------------------------------
-[231215]
+[231219]
 ----------------------------------------------------------
 + Added the ability to select a device when outputting TTS
 
