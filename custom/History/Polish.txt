@@ -2,7 +2,7 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[240103]
+[240110]
 ----------------------------------------------------------
 - Naprawiono błąd, który uniemożliwiał odtwarzanie uszkodzonych plików WAV
 - Naprawiono błąd, który powodował uszkodzenie obrazu podczas odtwarzania niektórych kodeków MPEG4
