@@ -2,13 +2,14 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[240117]
+[240125]
 ----------------------------------------------------------
 - Naprawiono błąd, który uniemożliwiał odtwarzanie uszkodzonych plików WAV
 - Naprawiono błąd, który powodował uszkodzenie obrazu podczas odtwarzania niektórych kodeków MPEG4
 - Naprawiono błąd, w wyniku którego obraz nie pojawiał się podczas odtwarzania niektórych treści wideo w formacie WMV
 - Naprawiono błąd, w wyniku którego niektóre protokoły SRT nie działały
 - Naprawiono błąd występujący podczas odtwarzania niektórych plików TS
+- Naprawiono problem, w wyniku którego w niektórych sytuacjach występował błąd podczas odtwarzania niektórych kodeków VP8/9
 
 ----------------------------------------------------------
 [231220]

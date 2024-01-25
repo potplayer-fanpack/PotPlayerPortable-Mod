@@ -2,18 +2,18 @@
 История версий PotPlayer
 
 ----------------------------------------------------------
-[240117]
+[240125]
 ----------------------------------------------------------
 
 ----------------------------------------------------------
 [231220]
 ----------------------------------------------------------
-+ Added the ability to select a device when outputting TTS
++ Добавлена возможность выбора устройства при выводе TTS
 
-- Fixed an error issue when playing MPEG 1/2 with DXVA on older GPUs.
-- Added ability to paste playlist below selected item
-- Fixed an issue where an error occurred when playing certain MKV files
-- Fixed an issue where navigation was not possible when playing certain files
+- Добавлена возможность вставки плей-листа под выбранные элементы
+- Исправлена ошибка при воспроизведении некоторых файлов MKV
+- Исправлена ошибка при воспроизведении MPEG 1/2 с DXVA на старых GPU
+- Исправлена ошибка невозможности навигации при воспроизведении некоторых файлов
 
 ----------------------------------------------------------
 [231102]
