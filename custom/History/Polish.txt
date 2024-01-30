@@ -9,7 +9,8 @@ Historia wersji PotPlayer
 - Naprawiono błąd, w wyniku którego obraz nie pojawiał się podczas odtwarzania niektórych treści wideo w formacie WMV
 - Naprawiono błąd, w wyniku którego niektóre protokoły SRT nie działały
 - Naprawiono błąd występujący podczas odtwarzania niektórych plików TS
-- Naprawiono problem, w wyniku którego w niektórych sytuacjach występował błąd podczas odtwarzania niektórych kodeków VP8/9
+- Naprawiono bład występujący w niektórych sytuacjach podczas odtwarzania niektórych kodeków VP8/9
+- Naprawiono problem polegający na tym, że odtwarzanie niektórych kodeków VP8/9 powodowało błąd w niektórych sytuacjach
 
 ----------------------------------------------------------
 [231220]
