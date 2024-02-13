@@ -2,8 +2,16 @@
 Историја верзија Пот плејера
 
 ----------------------------------------------------------
-[240202]
+[240213]
 ----------------------------------------------------------
++ Added NVIDIA RTX Video HDR function
+
+- Fixed an issue where damaged WAV files could not be played
+- Fixed an issue where the screen was broken when playing certain MPEG4 codecs
+- Fixed an issue where the screen did not appear when playing certain WMV videos
+- Fixed an issue where certain SRT protocols did not work
+- Fixed an issue where an error occurred when playing certain TS files
+- Fixed an issue where an error occurred in certain situations when playing some VP8/9 codecs.
 
 ----------------------------------------------------------
 [231220]
