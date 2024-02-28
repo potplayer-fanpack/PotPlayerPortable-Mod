@@ -2,9 +2,10 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[240226]
+[240228]
 ----------------------------------------------------------
 + Dodano funkcję NVIDIA RTX Video HDR
++ Dodano możliwość przenoszenia plików do listy odtwarzania
 
 - Naprawiono błąd, który uniemożliwiał odtwarzanie uszkodzonych plików WAV
 - Naprawiono błąd, który powodował uszkodzenie obrazu podczas odtwarzania niektórych kodeków MPEG4

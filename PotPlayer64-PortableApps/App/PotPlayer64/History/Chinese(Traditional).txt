@@ -1,21 +1,23 @@
 ﻿
 PotPlayer 版本更新日誌
 
-----------------------------------------------------------
+--------------------------------------------------------------------------
 [240226]
-----------------------------------------------------------
-+ Added NVIDIA RTX Video HDR function
+--------------------------------------------------------------------------
++ 新增 NVIDIA RTX Video HDR 功能
 
-- Fixed an issue where damaged WAV files could not be played
-- Fixed an issue where the screen was broken when playing certain MPEG4 codecs
-- Fixed an issue where the screen did not appear when playing certain WMV videos
-- Fixed an issue where certain SRT protocols did not work
-- Fixed an issue where an error occurred when playing certain TS files
-- Fixed an issue where an error occurred in certain situations when playing some VP8/9 codecs.
+- 修正無法播放損壞的 WAV 檔案的問題
+- 修正某些 MPEG4 編解碼器播放時花屏的問題
+- 修正播放某些 WMV 影片時畫面不出現的問題
+- 修正某些 SRT 協議不起作用的問題
+- 修正播放某些 TS 檔案時出錯的問題
+- 修正在某些情況下某些 VP8/9 編解碼器播放出錯的問題
 
 --------------------------------------------------------------------------
 [231220]
 --------------------------------------------------------------------------
+* 聊天室全面改版
+
 + 新增輸出 TTS 時選擇裝置的功能
 
 - 修正在較舊的 GPU 上使用 DXVA 播放 MPEG 1/2 時的錯誤問題
