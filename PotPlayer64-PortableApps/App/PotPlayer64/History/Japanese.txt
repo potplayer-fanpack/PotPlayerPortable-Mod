@@ -2,9 +2,10 @@
 PotPlayer 更新履歴
 
 ----------------------------------------------------------
-[240226]
+[240305]
 ----------------------------------------------------------
 + Added NVIDIA RTX Video HDR function
++ Added ability to move files to playlist
 
 - Fixed an issue where damaged WAV files could not be played
 - Fixed an issue where the screen was broken when playing certain MPEG4 codecs

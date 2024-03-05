@@ -33,7 +33,7 @@ string GetVersion()
 
 string GetDesc()
 {
-	return "<a href=\"https://papago.naver.com/\">https://papago.naver.com/</a>";
+	return "<a href=\"https://api.ncloud-docs.com/docs/ai-naver-papagonmt\">https://api.ncloud-docs.com/docs/ai-naver-papagonmt</a>";
 }
 
 string GetLoginTitle()
@@ -101,7 +101,7 @@ string Translate(string Text, string &in SrcLang, string &in DstLang)
 	
 	string Post = "source=" + SrcLang + "&target=" + DstLang + "&text=" + HostUrlEncode(Text);
 	string ret = "";
-	uintptr http = HostOpenHTTP("https://openapi.naver.com/v1/papago/n2mt", UserAgent, SendHeader, Post);
+	uintptr http = HostOpenHTTP("https://naveropenapi.apigw.ntruss.com/nmt/v1/translation", UserAgent, SendHeader, Post);
 	if (http != 0)
 	{
 		string json = HostGetContentHTTP(http);
