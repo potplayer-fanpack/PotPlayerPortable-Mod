@@ -4,15 +4,15 @@
 ----------------------------------------------------------
 [240305]
 ----------------------------------------------------------
-+ Added NVIDIA RTX Video HDR function
-+ Added ability to move files to playlist
++ Добавена е функция NVIDIA RTX Video HDR
++ Добавена е възможност за преместване на файлове в плейлиста (списък за възпроизвеждане)
 
-- Fixed an issue where damaged WAV files could not be played
-- Fixed an issue where the screen was broken when playing certain MPEG4 codecs
-- Fixed an issue where the screen did not appear when playing certain WMV videos
-- Fixed an issue where certain SRT protocols did not work
-- Fixed an issue where an error occurred when playing certain TS files
-- Fixed an issue where an error occurred in certain situations when playing some VP8/9 codecs.
+- Отстранен е  проблем, при който повредени WAV файлове не могат да се възпроизвеждат
+- Отстранен е проблем, при който екранът не работи при възпроизвеждане на определени MPEG4 кодеци
+- Отстранен е проблем, при който екранът не се появява при възпроизвеждане на определени WMV видеоклипове
+- Отстранен е проблем, при който някои SRT протоколи не работят
+- Отстранен е проблем, при който възниква грешка при възпроизвеждане на определени TS файлове
+- Отстранен е проблем, при който възниква грешка в определени ситуации при възпроизвеждане на някои VP8/9 кодеци
 
 ----------------------------------------------------------
 [231220]
