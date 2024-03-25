@@ -1,15 +1,37 @@
-ÔªøPotPlayer End User License Agreement
+PotPlayer 64-bit Beta1 v240325(1.7.22127) + OpenCodec + AviSynth+ & Svp
+
+ZgodnoúÊ: 7 SP1 / 8 / 8.1 / 10 / 11
+
+Licencja: Freeware (wiÍcej informacji poniøej...)
+
+PotPlayer, to darmowy odtwarzacz multimedialny dla systemu Windows majπcy swoje korzenie w The KMPlayer. Cechuje go wysoka jakoúÊ odtwarzania, obs≥uguje wszystkie nowoczesne formaty audio i wideo, posiada wbudowane kodeki, a rozszerzona akceleracja sprzÍtowa wykorzystujπca DXVA, CUDA, QuickSync, zapewnia maksymalnπ wydajnoúÊ z minimalnym uøyciem zasobÛw PC. Wykorzystuje najnowsze renderery wideo, takie jak madVR/HR/EVR oraz koÒcowe przetwarzanie wideo. Do bardziej zaawansowanych funkcji moøna zaliczyÊ p≥ynne odtwarzanie wideo, wybÛr dowolnej karty düwiÍkowej, jeúli jest ich kilka, podglπd scen i zrzuty ekranowe, zapisywanie do zak≥adek ulubionych scen z filmu.
+Zapewnia rÛwnieø obs≥ugÍ rÛønych formatÛw napisÛw tekstowych (.smi, .srt, .mpl, .mdvd...), napisÛw DVD (Vobsub) i Blu-ray, animacji ASS/SSA i tagÛw SMI Ruby, etc.
+
+===========================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Copyright (C) 2006-2024 Kakao Corporation
+
+https://potplayer.daum.net/
+
+Install package updated on 2024-03-25
+
+------------------------------------------------
+
+===========================================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+PotPlayer End User License Agreement
 
 
-Please read the following agreement carefully before installing and using PotPlayer Software (‚ÄúSoftware‚Äù).
+Please read the following agreement carefully before installing and using PotPlayer Software (ìSoftwareî).
 
-The PotPlayer End User License Agreement (the ‚ÄúAgreement‚Äù) is a binding agreement between Kakao Corp (the ‚ÄúCompany‚Äù) and licensee businesses, and individual users. 
+The PotPlayer End User License Agreement (the ìAgreementî) is a binding agreement between Kakao Corp (the ìCompanyî) and licensee businesses, and individual users. 
 
 The Software includes online services using wired and wireless networks, software products included in the services and all combinations of alpha and beta release, freeware and pay versions of such products.
 
-This Software is a freeware product developed for Kakao members, software suppliers and licensed service providers and their users. The user may freely install and use the Software at home, in workplace, and in other places such as internet caf√©s, schools, government offices for the purpose of viewing media files on the User‚Äôs computer. (This Software is not subject to software copyright laws).
+This Software is a freeware product developed for Kakao members, software suppliers and licensed service providers and their users. The user may freely install and use the Software at home, in workplace, and in other places such as internet cafÈs, schools, government offices for the purpose of viewing media files on the Userís computer. (This Software is not subject to software copyright laws).
 
-By clicking on the ‚ÄúI Agree‚Äù button or installing, copying or otherwise using the Software, you will be deemed to have agreed to the terms of this Agreement. If you do not agree to the terms of this Agreement, click the ‚ÄúCancel‚Äù button or do not use (including installing, copying or otherwise using the Software; hereinafter referred to as the same) this Software on your computer.
+By clicking on the ìI Agreeî button or installing, copying or otherwise using the Software, you will be deemed to have agreed to the terms of this Agreement. If you do not agree to the terms of this Agreement, click the ìCancelî button or do not use (including installing, copying or otherwise using the Software; hereinafter referred to as the same) this Software on your computer.
 
 By using this Software, you will be deemed to have read, understood, and agreed to the terms of this Agreement.
 
@@ -25,12 +47,12 @@ Article 2 (Obligations of the Company)
 (2) In the case of any technical errors in its equipment or the Software or losses thereto, the Company will repair or restore such equipment or the Software without delay unless unavoidable circumstances exist in order to provide consistent and stable services.
 (3) If the Company objectively considers any suggestion or complaint submitted by the user to be reasonable, it will immediately handle such suggestion or complaint pursuant to appropriate procedures. However, where it is difficult to immediately handle such suggestion or complaint, the Company will notify the user of the reason for such delay and the expected timeline for handling the suggestion or complaint.
 (4) If there are any updates to the Software, the Company will immediately provide the updated Software to the user. However, certain functions of the Software that have already been provided to the user may not be available depending upon the update status.
-(5) The Company operates a security system to protect the user‚Äôs personal information, and publicly announces and complies with its Privacy Policy.
+(5) The Company operates a security system to protect the userís personal information, and publicly announces and complies with its Privacy Policy.
 
 Article 3 (Obligations of the User)
 (1) The user may not modify, reverse engineer, decompile or disassemble the Software.
 (2) The user may not use, copy, translate, redistribute, retransmit, publish, sell, rent, lease, trade, resell, pledge, offer as security, transfer, change, modify, or expand the Software either in part or in its entirety.
-(3) The user may not use the Software to provide commercial services without the Company‚Äôs prior permission.
+(3) The user may not use the Software to provide commercial services without the Companyís prior permission.
 (4) The user must not infringe the intellectual property rights of the Company or any third party through the use of the Software.
 (4) The user shall comply with this Agreement and any applicable laws and regulations, and refrain from engaging in any conduct that may interfere with the business of the Company or damage its reputation.
 (5) The Company is not liable for any illegal act such as defamation of a third party, distribution or transmission of obscene material and other information contrary to public order and decency, etc. and the result of any breach of this Agreement. The User is solely held liable for such actions.
@@ -41,11 +63,11 @@ Article 4 (Software Copyright)
 (3) The user does not have ownership over the Software, and is only granted the right to use the Software.
 
 Article 5 (Collection and Use of Data and Other Information)
-(1) The Company may collect and use data from the user‚Äôs computer as a part of its product support services which are provided to the user in connection with the Software. Data that may be collected solely include the type of an operating system, type of CPU, memory capacity, type of graphic card, Directx version, media player version, type of webcam and TV reception card used on the user‚Äôs computer.
+(1) The Company may collect and use data from the userís computer as a part of its product support services which are provided to the user in connection with the Software. Data that may be collected solely include the type of an operating system, type of CPU, memory capacity, type of graphic card, Directx version, media player version, type of webcam and TV reception card used on the userís computer.
 (2) The Company will use the collected data mentioned above only for the purpose of improving the Software or providing service or technology that is suitable to the user environment, and will not use such data for any other purposes.
 
 Article 6 (Agreement to the Use of Data Transfer Technology)
-To facilitate the transfer of data streaming, the Company may use a technology which relays data transfer between the users in its services. The user agrees in the Agreement that he or she may relay transfer steaming data to another user and also agree to the receipt of relay transfer of streaming data to another user, through a network device installed on the user‚Äôs computer.
+To facilitate the transfer of data streaming, the Company may use a technology which relays data transfer between the users in its services. The user agrees in the Agreement that he or she may relay transfer steaming data to another user and also agree to the receipt of relay transfer of streaming data to another user, through a network device installed on the userís computer.
 
 Article 7 (Limitation of Liability)
 (1) The Company does not guarantee that the data and other information provided through the Software are accurate or will be in compliance with applicable copyright laws, except for data and information that are directly created or prepared by the Company.
@@ -56,7 +78,7 @@ Article 7 (Limitation of Liability)
 Article 8 (Termination and Damages)
 (1) If a user fails to comply with this Agreement, the Company may terminate this Agreement with the user. Upon such termination, the user must uninstall and delete all copies of the Software and its components from his/her computer.
 (2) The user may, at any time, terminate this Agreement by uninstalling and deleting the Software from his/her computer.
-(3) If the Company incurs any damages due to a user or as a result of a user‚Äôs failure to comply with this Agreement as set forth in Paragraph (1) above, the Company may file a claim for damages against such user. Further, any costs or penalties which have been incurred or imposed as a result of the inappropriate use of the Software by a user prior to the termination of this Agreement with such user will survive the termination of this Agreement and remain outstanding and payable to the Company.
+(3) If the Company incurs any damages due to a user or as a result of a userís failure to comply with this Agreement as set forth in Paragraph (1) above, the Company may file a claim for damages against such user. Further, any costs or penalties which have been incurred or imposed as a result of the inappropriate use of the Software by a user prior to the termination of this Agreement with such user will survive the termination of this Agreement and remain outstanding and payable to the Company.
 
 Article 9 (Additional Rules)
 Any matter that is not stipulated in this Agreement will be governed by applicable law and regulation as well as general commercial practices.
