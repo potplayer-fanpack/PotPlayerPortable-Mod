@@ -21,30 +21,30 @@ if exist %WORKDIR%OpenCodecSetup64.exe (del /q /s /f %WORKDIR%OpenCodecSetup64.e
 %BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotPlayer/Codec/v1/OpenCodecSetup64.exe
 
 echo "Extracting PotPlayerSetup64.exe"
-%BINDIR%\7z.exe x %WORKDIR%PotPlayerSetup64.exe -o%TEMPDIR%\PotPlayer -y
+%BINDIR%\7z.exe x %WORKDIR%PotPlayerSetup64.exe -o%TEMPDIR%\PotPlayer64 -y
 
 echo "Extracting OpenCodecSetup64.exe"
-%BINDIR%\7z.exe x %WORKDIR%OpenCodecSetup64.exe -o%TEMPDIR%\PotPlayer -y
+%BINDIR%\7z.exe x %WORKDIR%OpenCodecSetup64.exe -o%TEMPDIR%\PotPlayer64 -y
 
 echo "Deleting NSIS temporary files"
-for /d /r %TEMPDIR%\PotPlayer %%i in ($*) do (
+for /d /r %TEMPDIR%\PotPlayer64 %%i in ($*) do (
     if exist %%i (
         rd /q /s %%i
     )
 )
 
 echo "Renaming folders"
-move /y %TEMPDIR%\PotPlayer\Module\FFmpeg4 %TEMPDIR%\PotPlayer\Module\FFmpeg60
+move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg4 %TEMPDIR%\PotPlayer64\Module\FFmpeg60
 
 echo "Copying files"
-copy /y %TEMPDIR%\PotPlayer\ffcodec64.dll %TEMPDIR%\PotPlayer\Module\FFmpeg60\ffcodec64.dll
+copy /y %TEMPDIR%\PotPlayer64\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg60\ffcodec64.dll
 
 echo "Renaming files"
-move /y %TEMPDIR%\PotPlayer\Module\FFmpeg60\ffcodec64.dll %TEMPDIR%\PotPlayer\Module\FFmpeg60\FFmpeg64.dll
+move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg60\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg60\FFmpeg64.dll
 
 echo "Deleting unneeded folders"
 for /f "delims=" %%i in (%WORKDIR%unneeded-folders.txt) do (
-    for /d /r %TEMPDIR%\PotPlayer %%a in (%%i) do (
+    for /d /r %TEMPDIR%\PotPlayer64 %%a in (%%i) do (
         if exist %%a (
             rd /q /s %%a
         )
@@ -53,7 +53,7 @@ for /f "delims=" %%i in (%WORKDIR%unneeded-folders.txt) do (
 
 echo "Deleting unneeded files"
 for /f "delims=" %%i in (%WORKDIR%unneeded-files.txt) do (
-    for /d /r %TEMPDIR%\PotPlayer %%a in (%%i) do (
+    for /d /r %TEMPDIR%\PotPlayer64 %%a in (%%i) do (
         if exist %%a (
             del /q /s /f %%a
         )
@@ -61,10 +61,10 @@ for /f "delims=" %%i in (%WORKDIR%unneeded-files.txt) do (
 )
 
 echo "Adding custom folders/files"
-if exist %WORKDIR%custom (xcopy /e /r /y %WORKDIR%custom\* %TEMPDIR%\PotPlayer)
+if exist %WORKDIR%custom (xcopy /e /r /y %WORKDIR%custom\* %TEMPDIR%\PotPlayer64)
 
 echo "Getting PotPlayer version"
-for /f "delims=" %%a in ('%BINDIR%\pev.exe -p %TEMPDIR%\PotPlayer\PotPlayer64.dll') do set VERSION=%%a
+for /f "delims=" %%a in ('%BINDIR%\pev.exe -p %TEMPDIR%\PotPlayer64\PotPlayer64.dll') do set VERSION=%%a
 
 echo "Repacking PotPlayer"
 if exist %WORKDIR%PotPlayer64Portable_%SOURCE%_%VERSION%.zip (del /q /s /f %WORKDIR%PotPlayer64Portable_%SOURCE%_%VERSION%.zip)
