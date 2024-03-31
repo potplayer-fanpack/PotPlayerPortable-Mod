@@ -1,4 +1,4 @@
-PotPlayer 64-bit Beta2 v240326(1.7.22129) + OpenCodec + AviSynth+ & Svp + yt-dlp
+PotPlayer 64-bit Beta3 v240329(1.7.22138) + OpenCodec + AviSynth+ & Svp + yt-dlp
 
 Zgodnoœæ: 7 SP1 / 8 / 8.1 / 10 / 11
 
@@ -7,14 +7,14 @@ Licencja: Freeware (wiêcej informacji poni¿ej...)
 PotPlayer, to darmowy odtwarzacz multimedialny dla systemu Windows maj¹cy swoje korzenie w The KMPlayer. Cechuje go wysoka jakoœæ odtwarzania, obs³uguje wszystkie nowoczesne formaty audio i wideo, posiada wbudowane kodeki, a rozszerzona akceleracja sprzêtowa wykorzystuj¹ca DXVA, CUDA, QuickSync, zapewnia maksymaln¹ wydajnoœæ z minimalnym u¿yciem zasobów PC. Wykorzystuje najnowsze renderery wideo, takie jak madVR/HR/EVR oraz koñcowe przetwarzanie wideo. Do bardziej zaawansowanych funkcji mo¿na zaliczyæ p³ynne odtwarzanie wideo, wybór dowolnej karty dŸwiêkowej, jeœli jest ich kilka, podgl¹d scen i zrzuty ekranowe, zapisywanie do zak³adek ulubionych scen z filmu.
 Zapewnia równie¿ obs³ugê ró¿nych formatów napisów tekstowych (.smi, .srt, .mpl, .mdvd...), napisów DVD (Vobsub) i Blu-ray, animacji ASS/SSA i tagów SMI Ruby, etc.
 
-===========================================
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+===========================================
 
 Copyright (C) 2006-2024 Kakao Corporation
 
 https://potplayer.daum.net/
 
-Install package updated on 2024-03-26
+Install package updated on 2024-03-29
 
 ===========================================
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""

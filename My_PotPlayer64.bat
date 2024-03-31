@@ -18,7 +18,7 @@ if "%SOURCE%"=="Public" (%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotP
 
 echo "Downloading OpenCodecSetup64.exe"
 if exist %WORKDIR%OpenCodecSetup64.exe (del /q /s /f %WORKDIR%OpenCodecSetup64.exe)
-%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotPlayer/Codec/v1/OpenCodecSetup64.exe
+%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotPlayer/Codec/v3/OpenCodecSetup64.exe
 
 echo "Extracting PotPlayerSetup64.exe"
 %BINDIR%\7z.exe x %WORKDIR%PotPlayerSetup64.exe -o%TEMPDIR%\PotPlayer64 -y
@@ -34,13 +34,7 @@ for /d /r %TEMPDIR%\PotPlayer64 %%i in ($*) do (
 )
 
 echo "Renaming folders"
-move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg4 %TEMPDIR%\PotPlayer64\Module\FFmpeg60
-
-echo "Copying files"
-copy /y %TEMPDIR%\PotPlayer64\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg60\ffcodec64.dll
-
-echo "Renaming files"
-move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg60\ffcodec64.dll %TEMPDIR%\PotPlayer64\Module\FFmpeg60\FFmpeg64.dll
+move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg60 %TEMPDIR%\PotPlayer64\Module\FFmpeg61
 
 echo "Deleting unneeded folders"
 for /f "delims=" %%i in (%WORKDIR%unneeded-folders.txt) do (
