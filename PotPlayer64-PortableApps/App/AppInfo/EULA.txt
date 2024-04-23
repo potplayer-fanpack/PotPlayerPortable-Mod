@@ -1,4 +1,4 @@
-PotPlayer 64-bit Beta16 v240422(1.7.22168) + OpenCodec + AviSynth+ & Svp + yt-dlp
+PotPlayer 64-bit Beta18 v240423(1.7.22181) + OpenCodec + AviSynth+ & Svp + yt-dlp
 
 Zgodnoœæ: 7 SP1 / 8 / 8.1 / 10 / 11
 
