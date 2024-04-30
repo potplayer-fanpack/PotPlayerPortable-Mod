@@ -1,4 +1,4 @@
-PotPlayer 64-bit Beta22 v240429(1.7.22197) + OpenCodec + AviSynth+ & Svp + yt-dlp
+PotPlayer 64-bit Beta23 v240430(1.7.22200) + OpenCodec + AviSynth+ & Svp + yt-dlp
 
 Zgodnoœæ: 7 SP1 / 8 / 8.1 / 10 / 11
 
@@ -14,7 +14,7 @@ Copyright (C) 2006-2024 Kakao Corporation
 
 https://potplayer.daum.net/
 
-Install package updated on 2024-04-29
+Install package updated on 2024-04-30
 
 ===========================================
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
