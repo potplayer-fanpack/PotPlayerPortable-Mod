@@ -4,12 +4,12 @@ PotPlayer 版本更新日誌
 ----------------------------------------------------------
 [240509]
 ----------------------------------------------------------
-+ Added Dolby Vision HDR playback function
++ 新增杜比視界(Dolby Vision) HDR 播放功能
 
-- Fixed an issue where the screen did not appear when playing some MP4 files
-- Improved built-in D3D9 renderer stability
-- Fixed an issue where files in compressed files could not be played properly
-- Fixed an issue where the screen was broken after navigation when playing certain MPEG 2 with DXVA
+- 修正播放某些 MP4 檔案時畫面不出現的問題
+- 改善內建 D3D9 渲染器的穩定性
+- 修正壓縮檔中的檔案無法正常播放的問題
+- 修正使用 DXVA 播放某些 MPEG 2 時導航後花屏的問題
 
 --------------------------------------------------------------------------
 [240305]
