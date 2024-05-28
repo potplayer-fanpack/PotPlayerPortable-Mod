@@ -2,10 +2,12 @@
 Історія версій PotPlayer
 
 ----------------------------------------------------------
+[240528]
+----------------------------------------------------------
+
+----------------------------------------------------------
 [240509]
 ----------------------------------------------------------
-+ Added Dolby Vision HDR playback function
-
 - Fixed an issue where the screen did not appear when playing some MP4 files
 - Improved built-in D3D9 renderer stability
 - Fixed an issue where files in compressed files could not be played properly
