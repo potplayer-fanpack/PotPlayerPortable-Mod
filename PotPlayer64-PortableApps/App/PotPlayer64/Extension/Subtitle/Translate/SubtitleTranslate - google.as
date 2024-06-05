@@ -55,7 +55,7 @@ string JsonParseNew(string json)
 {
 	JsonReader Reader;
 	JsonValue Root;
-	string ret = "";	
+	string ret = "";
 	
 	if (Reader.parse(json, Root) && Root.isObject())
 	{
@@ -83,6 +83,32 @@ string JsonParseNew(string json)
 		}
 	} 
 	return ret;
+}
+
+string JsonParse_for_openapi(string json)
+{
+	JsonReader Reader;
+	JsonValue Root;
+	string err_msg = "translate fail :(";
+	// HostPrintUTF8(json);
+
+	if (Reader.parse(json, Root))
+	{
+		string sub_json = Root[0][2].asString();
+		if (Reader.parse(sub_json, Root))
+		{
+			string ans ="";
+			JsonValue translations = Root[1][0][0][5];
+			for (int i = 0, len = translations.size(); i < len; i++)
+			{
+				ans += translations[i][0].asString();
+			}
+			return ans;
+		}
+			
+		return err_msg;
+	} 
+	return err_msg;
 }
 
 array<string> LangTable = 
@@ -196,7 +222,8 @@ array<string> LangTable =
 	"zu"
 };
 
-string UserAgent = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36";
+string UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36";
+string RPC_ID = 'MkEWBc';
 
 string GetTitle()
 {
@@ -262,9 +289,29 @@ array<string> GetDstLangs()
 	return ret;
 }
 
+array<string> split(string str, string delimiter) 
+{
+	array<string> parts;
+	int startPos = 0;
+	while (true) {
+		int index = str.findFirst(delimiter, startPos);
+		if ( index == -1 ) {
+			parts.insertLast( str.substr(startPos) );
+			break;
+		}
+		else {
+			parts.insertLast( str.substr(startPos, index - startPos) );
+			startPos = index + delimiter.length();
+		}
+	}
+	return parts;
+}
+
 string Translate(string Text, string &in SrcLang, string &in DstLang)
 {
 //HostOpenConsole();	// for debug
+
+	string UNICODE_RLE = "\u202B";
 	
 	if (SrcLang.length() <= 0) SrcLang = "auto";
 	SrcLang.MakeLower();
@@ -281,18 +328,54 @@ string Translate(string Text, string &in SrcLang, string &in DstLang)
 		string ret = JsonParseNew(text);		
 		if (ret.length() > 0)
 		{
+			if (DstLang == "fa" || DstLang == "ar" || DstLang == "he") ret = UNICODE_RLE + ret;
 			SrcLang = "UTF8";
 			DstLang = "UTF8";
 			return ret;
 		}	
 	}
 	
-//	by old API
-	string url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + SrcLang + "&tl=" + DstLang + "&dt=t&q=" + enc;
-	string text = HostUrlGetString(url, UserAgent);
-	string ret = JsonParseOld(text);
+// use open api(for free)
+	string url = "https://translate.google.com/_/TranslateWebserverUi/data/batchexecute?rpcids=" + RPC_ID + "&bl=boq_translate-webserver_20221005.09_p0&soc-app=1&soc-platform=1&soc-device=1&rt=c";
+
+	string post_data1 = "[[[\"MkEWBc\",\"[[\\\"";
+	string post_data2 = "\\\",\\\""+SrcLang+"\\\",\\\""+DstLang+"\\\",true],[null]]\",null,\"generic\"]]]";
+	Text.replace("\\","\\\\");
+	Text.replace("\"","\\\"");
+	Text.replace("\\","\\\\");
+	Text.replace("\"","\\\"");
+	Text.replace("\n","\\\\n");
+	Text.replace("\r","\\\\r");
+	Text.replace("\t","\\\\t");
+	string enc_text = Text;
+	string post_data = "f.req="+HostUrlEncode(post_data1+enc_text+post_data2);
+
+	string SendHeader = "Content-Type: application/x-www-form-urlencoded";
+	
+	string text = HostUrlGetString(url, UserAgent, SendHeader, post_data);
+	
+	text.replace("\n","");
+	int start_pos = text.findFirst("[[", 0);
+	int end_pos = text.findLast("]]", -1);
+	text=text.substr(start_pos, end_pos - start_pos);
+	end_pos = text.findLast("]]", -1);
+	text=text.substr(0, end_pos+2);
+	string ret = JsonParse_for_openapi(text);
 	if (ret.length() > 0)
 	{
+		if (DstLang == "fa" || DstLang == "ar" || DstLang == "he") ret = UNICODE_RLE + ret;
+		SrcLang = "UTF8";
+		DstLang = "UTF8";
+		return ret;
+	}	
+	
+//	by old API
+	url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + SrcLang + "&tl=" + DstLang + "&dt=t&q=" + enc;
+	text = HostUrlGetString(url, UserAgent);
+	ret = JsonParseOld(text);
+	if (ret.length() > 0)
+	{
+		if (DstLang == "fa" || DstLang == "ar" || DstLang == "he") ret = UNICODE_RLE + ret;
 		SrcLang = "UTF8";
 		DstLang = "UTF8";
 		return ret;
