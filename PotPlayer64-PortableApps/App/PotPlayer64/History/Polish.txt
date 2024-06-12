@@ -2,13 +2,13 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[240605]
+[240611]
 ----------------------------------------------------------
 + Dodano możliwość ustawienia czcionki dla informacji o odtwarzaniu (OSD)
 + Dodano możliwość nadawania nazw albumom w warunkach automatycznego wyboru konfiguracji
 + Dodano możliwość przejścia do poprzedniej/następnej sekcji na liście powtarzania sekcji
 + Dodano możliwość nie czekania na synchronizację pionową
-+ Dodano funkcję kontroli multimediów systemowych
++ Dodano funkcję sterowania multimediami systemowymi
 
 - Zmodyfikowano skórkę WindowFrame, aby była ładniejsza
 - Zmodyfikowano format napisów wyświetlanych w nazwie wbudowanych napisów

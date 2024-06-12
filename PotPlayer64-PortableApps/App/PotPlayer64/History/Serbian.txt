@@ -2,8 +2,17 @@
 Историја верзија Пот плејера
 
 ----------------------------------------------------------
-[240605]
+[240611]
 ----------------------------------------------------------
++ Added the ability to set the font for OSD playback information 
++ Added the ability to name albums in environment management automatic conditions 
++ Added the ability to go to the previous/next section in the section repeat list 
++ Added ability to not wait for vertical sync 
++ Added system media transport control function
+
+- Modified the window border skin to be prettier. 
+- Modified the subtitle format to be displayed in the name of the built-in subtitles. 
+- Fixed an issue where frame steps did not work properly in the built-in video renderer.
 
 ----------------------------------------------------------
 [240509]

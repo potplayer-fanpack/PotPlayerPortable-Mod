@@ -17,7 +17,6 @@
  - 이 프로그램에 사용된 Database 라이브러리는 http://www.sqlite.org에서 사용하였습니다.
  - 이 프로그램에 사용된 Script 라이브러리는 http://www.angelcode.com/angelscript에서 사용하였습니다.
  - 이 프로그램에 사용된 json 라이브러리는 http://jsoncpp.sourceforge.net에서 사용하였습니다.
- - 이 프로그램에 사용된 json 라이브러리는 https://github.com/Tencent/rapidjson에서 사용하였으며, 라이센스는 'MIT License'를 따릅니다.
  - 이 프로그램에 사용된 base64 라이브러리는 https://github.com/ReneNyffenegger/cpp-base64에서 사용하였으며, 라이센스는 'zlib License'를 따릅니다.
  - 이 프로그램에 사용된 글꼴 출력은 FreeType(http://www.freetype.org)를 사용 하였습니다.
  - 이 프로그램의 설치 파일은 NSIS(http://nsis.sourceforge.net)를 사용하여 제작되었으며, NSIS의 라이센스는 'zlib/libpng License'를 따릅니다.
@@ -111,7 +110,7 @@ $}
  - Program ten bez zgody właściciela praw autorskich nie może być wykorzystywany do celów komercyjnych w jakiejkolwiek postaci.
 
 * Informacja o prawach autorskich
- - Program zawiera dekoder FFmpeg (http://ffmpeg.org) i jest on używany zgodnie z licencją LGPL. Plik licencji LGPL LGPL.TXT znajduje się w folderze instalacyjnym. Zmodyfikowane źródła FFmpeg można pobrać z http://get.daum.net/devel/ffmpeg.zip
+ - Program zawiera dekoder FFmpeg (http://ffmpeg.org) i jest on używany zgodnie z licencją LGPL. Plik licencji LGPL.TXT znajduje się w folderze instalacyjnym. Zmodyfikowane źródła FFmpeg można pobrać z http://get.daum.net/devel/ffmpeg.zip
  - Używana w tym programie biblioteka kompresji zlib opiera się na opublikowanych plikach źródłowych (http://www.zlib.net) zgodnie z licencją 'zlib License'.
  - Program ten korzysta z publicznego źródła biblioteki rar z http://www.rarlab.com
  - Program wykorzystuje do png bibliotekę libpng (http://www.libpng.org) zgodnie z licencją 'zlib/png License'.
@@ -120,9 +119,11 @@ $}
  - Program wykorzystuje bibliotekę MediaInfo z (http://mediaarea.net)
  - Program wykorzystuje bibliotekę Database z http://www.sqlite.org
  - Program wykorzystuje bibliotekę Angel Script z http://www.angelcode.com/angelscript
+ - Program wykorzystuje bibliotekę json z http://jsoncpp.sourceforge.net.
+ - Program wykorzystuje bibliotekę base64 pochodzącą z https://github.com/ReneNyffenegger/cpp-base64, a licencja jest zgodna z 'zlib License'.
  - Program wykorzystuje bibliotekę renderowania czcionek FreeType z (http://www.freetype.org)
  - Pliki instalacyjne tego programu zostały wykonane przy pomocy NSIS (http://nsis.sourceforge.net) zgodnie z licencją NSIS 'zlib / libpng License'.
- - Autorem tłumaczenia na język polski jest Adam Malich (https://potplayerclub.pl)
+ - Autorem tłumaczenia na język polski jest Adam Malich (http://potplayerclub.pl)
  - Prawa autorskie (C) do tego oprogramowania należą do Kakao Co., Ltd. (http://www.kakao.com)
 $}
 {$RUSSIAN=
