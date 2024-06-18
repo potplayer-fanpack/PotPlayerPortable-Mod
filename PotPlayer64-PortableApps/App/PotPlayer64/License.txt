@@ -110,7 +110,7 @@ $}
  - Program ten bez zgody właściciela praw autorskich nie może być wykorzystywany do celów komercyjnych w jakiejkolwiek postaci.
 
 * Informacja o prawach autorskich
- - Program zawiera dekoder FFmpeg (http://ffmpeg.org) i jest on używany zgodnie z licencją LGPL. Plik licencji LGPL.TXT znajduje się w folderze instalacyjnym. Zmodyfikowane źródła FFmpeg można pobrać z http://get.daum.net/devel/ffmpeg.zip
+ - Program zawiera dekoder FFmpeg (http://ffmpeg.org) i jest on używany zgodnie z licencją LGPL. Plik licencji LGPL LGPL.TXT znajduje się w folderze instalacyjnym. Zmodyfikowane źródła FFmpeg można pobrać z http://get.daum.net/devel/ffmpeg.zip
  - Używana w tym programie biblioteka kompresji zlib opiera się na opublikowanych plikach źródłowych (http://www.zlib.net) zgodnie z licencją 'zlib License'.
  - Program ten korzysta z publicznego źródła biblioteki rar z http://www.rarlab.com
  - Program wykorzystuje do png bibliotekę libpng (http://www.libpng.org) zgodnie z licencją 'zlib/png License'.
@@ -119,11 +119,9 @@ $}
  - Program wykorzystuje bibliotekę MediaInfo z (http://mediaarea.net)
  - Program wykorzystuje bibliotekę Database z http://www.sqlite.org
  - Program wykorzystuje bibliotekę Angel Script z http://www.angelcode.com/angelscript
- - Program wykorzystuje bibliotekę json z http://jsoncpp.sourceforge.net.
- - Program wykorzystuje bibliotekę base64 pochodzącą z https://github.com/ReneNyffenegger/cpp-base64, a licencja jest zgodna z 'zlib License'.
  - Program wykorzystuje bibliotekę renderowania czcionek FreeType z (http://www.freetype.org)
  - Pliki instalacyjne tego programu zostały wykonane przy pomocy NSIS (http://nsis.sourceforge.net) zgodnie z licencją NSIS 'zlib / libpng License'.
- - Autorem tłumaczenia na język polski jest Adam Malich (http://potplayerclub.pl)
+ - Autorem tłumaczenia na język polski jest Adam Malich (https://potplayerclub.pl)
  - Prawa autorskie (C) do tego oprogramowania należą do Kakao Co., Ltd. (http://www.kakao.com)
 $}
 {$RUSSIAN=

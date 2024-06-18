@@ -2,7 +2,7 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[240611]
+[240618]
 ----------------------------------------------------------
 + Dodano możliwość ustawienia czcionki dla informacji o odtwarzaniu (OSD)
 + Dodano możliwość nadawania nazw albumom w warunkach automatycznego wyboru konfiguracji

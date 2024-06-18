@@ -2,7 +2,7 @@
 Version History of the PotPlayer
 
 ----------------------------------------------------------
-[240611]
+[240618]
 ----------------------------------------------------------
 + Added the ability to set the font for OSD playback information 
 + Added the ability to name albums in environment management automatic conditions 
