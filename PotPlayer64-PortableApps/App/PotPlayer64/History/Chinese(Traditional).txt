@@ -4,15 +4,15 @@ PotPlayer 版本更新日誌
 ----------------------------------------------------------
 [240618]
 ----------------------------------------------------------
-+ Added the ability to set the font for OSD playback information 
-+ Added the ability to name albums in environment management automatic conditions 
-+ Added the ability to go to the previous/next section in the section repeat list 
-+ Added ability to not wait for vertical sync 
-+ Added system media transport control function
++ 新增設定 OSD 播放資訊字型的功能
++ 新增在自動的配置管理中命名專輯的功能
++ 新增在循環清單中轉到上一個/下一個的功能
++ 新增關閉垂直同步的功能
++ 新增系統媒體傳輸控制項功能
 
-- Modified the window border skin to be prettier. 
-- Modified the subtitle format to be displayed in the name of the built-in subtitles. 
-- Fixed an issue where frame steps did not work properly in the built-in video renderer.
+- 修正視窗邊框面板使更美觀
+- 修正嵌入字幕名稱中顯示字幕格式的問題
+- 修正內建視訊渲染器中影格(幀)同步無法正常運作的問題
 
 ----------------------------------------------------------
 [240509]

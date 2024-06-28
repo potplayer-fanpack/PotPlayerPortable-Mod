@@ -1,61 +1,59 @@
 ﻿
 PotPlayer 更新履歴
 
-----------------------------------------------------------
-[240618]
-----------------------------------------------------------
-+ Added the ability to set the font for OSD playback information 
-+ Added the ability to name albums in environment management automatic conditions 
-+ Added the ability to go to the previous/next section in the section repeat list 
-+ Added ability to not wait for vertical sync 
-+ Added system media transport control function
+-----------------------------------------------------------------------
+2024/06/20				[240618 / 1.7.22260]
+-----------------------------------------------------------------------
+＋ 画面表示情報の設定で、詳細情報のフォントを分離
+＋ 環境構成の管理設定で、自動切換条件にPotPlayerのアルバム名を追加
+＋ 映像設定に垂直同期(VSync)の待機処理に関する項目を追加
+＋ 全般設定で、Windowsのロック画面にPotPlayerで再生中のUIを表示する項目を追加（SMTC対応）
+・ Windows標準のウィンドウ枠を持つスキンで、タイトルバーを持たない上部枠の表示を改善
+・ 内蔵字幕の名前に字幕形式の表記を追加
+・ 内蔵の映像レンダラでフレーム送りが不安定だった問題を修正
 
-- Modified the window border skin to be prettier. 
-- Modified the subtitle format to be displayed in the name of the built-in subtitles. 
-- Fixed an issue where frame steps did not work properly in the built-in video renderer.
+-----------------------------------------------------------------------
+2024/05/28				[240509 / 1.7.22233]
+-----------------------------------------------------------------------
+＋ 区間リピートのメニューに、複数区間における次／前への移動コマンドを追加（28日版）
+・ 特定のMP4ファイル再生で映像が出力しなかった問題を修正
+・ 内蔵D3D9映像レンダラの安定性を改善
+・ 圧縮ファイル内の特定のメディアファイル再生に失敗することがあった問題を修正
+・ 特定のMPEG2をD3D9デコーダで再生時、シークすると映像が破綻することがあった問題を修正
 
-----------------------------------------------------------
-[240509]
-----------------------------------------------------------
-- Fixed an issue where the screen did not appear when playing some MP4 files
-- Improved built-in D3D9 renderer stability
-- Fixed an issue where files in compressed files could not be played properly
-- Fixed an issue where the screen was broken after navigation when playing certain MPEG 2 with DXVA
+-----------------------------------------------------------------------
+2024/03/15				[240315 / 1.7.22129]
+-----------------------------------------------------------------------
+＋ NVIDIA RTX Video HDR の設定を追加
+＋ プレイリストメニューにファイルのフォルダを移動させるコマンドを追加
+・ 破損したWAVファイルを再生できなかった問題を修正
+・ 特定のMPEG4コーデック再生で映像が破綻していた問題を修正
+・ 特定のWMV再生で映像が出力しなかった問題を修正
+・ 特定のSRTプロトコルが動作しなかった問題を修正
+・ 特定のTSファイル再生でエラーが発生した問題を修正
+・ 特定のVP8/9再生時に特定の状況でエラーが発生した問題を修正
 
-----------------------------------------------------------
-[240305]
-----------------------------------------------------------
-+ Added NVIDIA RTX Video HDR function
-+ Added ability to move files to playlist
+-----------------------------------------------------------------------
+2024/01/02				[231220 / 1.7.22077]
+-----------------------------------------------------------------------
+＊ チャット機能のフロントエンドを改変
+＋ TTSの設定に音声出力デバイスの選択を追加
+＋ プレイリストのメニューに、選択項目の下へ貼り付けるコマンドを追加
+・ 古いGPUのD3DデコーダでMPEG1/2を再生するとエラーが発生する問題を修正
+・ 特定のMKVファイル再生でエラーが発生した問題を修正
+・ 特定のファイル再生でシークできなかった問題を修正
 
-- Fixed an issue where damaged WAV files could not be played
-- Fixed an issue where the screen was broken when playing certain MPEG4 codecs
-- Fixed an issue where the screen did not appear when playing certain WMV videos
-- Fixed an issue where certain SRT protocols did not work
-- Fixed an issue where an error occurred when playing certain TS files
-- Fixed an issue where an error occurred in certain situations when playing some VP8/9 codecs.
-
-----------------------------------------------------------
-[231220]
-----------------------------------------------------------
-+ Added the ability to select a device when outputting TTS
-
-- Fixed an error issue when playing MPEG 1/2 with DXVA on older GPUs.
-- Added ability to paste playlist below selected item
-- Fixed an issue where an error occurred when playing certain MKV files
-- Fixed an issue where navigation was not possible when playing certain files
-
-----------------------------------------------------------
-[231102]
-----------------------------------------------------------
+-----------------------------------------------------------------------
+2023/11/14				[231113 / 1.7.22038]
+-----------------------------------------------------------------------
 ＋ 字幕ブラウザの設定で文字の折り返し用に表示行数を追加
 ＋ NotchLC映像コーデックに対応
 ・ 画像保存で可能ならHDRの色補正が適用されるように修正
-・ DTSパススルーが特定環境で動作しなかった問題を修正
+・ DTS音声のパススルーが特定環境で動作しなかった問題を修正
 ・ シームレス再生時、内蔵字幕が重複して表示されていた問題を修正
 ・ 再生完了でファイルを削除する機能を使用時、再生完了後の終了動作が無効だった問題を修正
 ・ HEVCを古いIntel GPUでD3Dデコード再生するとフリーズする問題を修正
-・ 特定のMKVでシーク後に再生が停止した問題を修正
+・ 特定のMKVでシーク後に再生できなくなった問題を修正
 
 -----------------------------------------------------------------------
 2023/09/08				[230905 / 1.7.21999]

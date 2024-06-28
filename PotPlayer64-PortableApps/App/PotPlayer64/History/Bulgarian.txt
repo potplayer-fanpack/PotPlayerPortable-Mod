@@ -4,15 +4,15 @@
 ----------------------------------------------------------
 [240618]
 ----------------------------------------------------------
-+ Added the ability to set the font for OSD playback information 
-+ Added the ability to name albums in environment management automatic conditions 
-+ Added the ability to go to the previous/next section in the section repeat list 
-+ Added ability to not wait for vertical sync 
-+ Added system media transport control function
++ Добавена е възможност за задаване на шрифта за информацията за възпроизвеждане в екранното меню (OSD)
++ Добавена е възможност за задаване на имена на албуми в автоматичните условия за управление на средата
++ Добавена е възможност за преминаване към предишния/следващия раздел в списъка с повторения на разделите
++ Добавена възможност да не се чака за вертикална синхронизация
++ Добавена е функция за контрол на медийния контрол на системата
 
-- Modified the window border skin to be prettier. 
-- Modified the subtitle format to be displayed in the name of the built-in subtitles. 
-- Fixed an issue where frame steps did not work properly in the built-in video renderer.
+- Променен е облика на рамката на прозореца, за да бъде по-красива.
+- Променен е форматът на субтитрите, който да се показва в името на вградените субтитри.
+- Отстранен е проблем, при който кадровите стъпки не работят правилно във вградения видео рендер.
 
 ----------------------------------------------------------
 [240509]
