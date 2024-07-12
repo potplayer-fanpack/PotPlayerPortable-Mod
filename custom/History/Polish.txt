@@ -2,9 +2,15 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[240705]
+[240712]
 ----------------------------------------------------------
 + Dodano WEBP do przechwytywania wideo
++ Dodano możliwość ustawienia sekundowego lub krótszego opóźnienia dla filtrów źródła obrazu
+
+- Naprawiono błąd, w wyniku którego ustawienia rozmiaru ikony skrótu nie były odzwierciedlane
+- Naprawiono błąd powodujący, że w niektórych sytuacjach ustawienie 'Nie dodawaj duplikatów plików' było resetowane
+- Naprawiono błąd, w wyniku którego niektóre kodeki były podczas odtwarzania rozpoznawane jako wideo z przeplotem
+- Naprawiono błąd powstający podczas dekodowania przy użyciu libVPX 8/9
 
 ----------------------------------------------------------
 [240618]
