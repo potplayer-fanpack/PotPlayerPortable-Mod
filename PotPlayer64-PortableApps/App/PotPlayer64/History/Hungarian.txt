@@ -2,112 +2,121 @@
 PotPlayer verzióelőzmények
 
 ----------------------------------------------------------
-[240719]
+[240807]
 ----------------------------------------------------------
++ WEBP hozzáadása a videórögzítéshez
++ Új lehetőség a késleltetési idő másodpercre vagy annál rövidebbre állítására a képforrásszűrőben 
+
+- Kijavítottunk egy hibát, amely miatt a parancsikon méretbeállításai nem tükröződtek 
+- Kijavítottunk egy hibát, amely miatt a Ne adjon hozzá fájlmásolatokat beállítás bizonyos helyzetekben visszaállt
+- Kijavítottunk egy hibát, amely miatt a videót váltott sorosként ismerte fel egy adott kódekkel való lejátszás során
+- Kijavítottuk a libVPX 8/9-es dekódolás során jelentkező hibát
+- Kijavítottunk egy hibát, amely miatt a navigáció rendellenesen működött az MP4 streamelés során
+- Kijavítottunk egy hibát, amely miatt bizonyos FLV-fájlok böngészése lassú volt
 
 ----------------------------------------------------------
 [240618]
 ----------------------------------------------------------
-+ Added the ability to set the font for OSD playback information 
-+ Added the ability to name albums in environment management automatic conditions 
-+ Added the ability to go to the previous/next section in the section repeat list 
-+ Added ability to not wait for vertical sync 
-+ Added system media transport control function
++ Új képesség az OSD lejátszási információk betűtípusának beállítására 
++ Új képesség az albumok elnevezésére a környezetkezelés automatikus feltételeiben 
++ Új képesség az előző/következő részre lépésre a szakaszismétlési listában
++ Új ne várjon a függőleges szinkronizálásra funkció 
++ Új rendszer médiaátvitel vezérlési funkció
 
-- Modified the window border skin to be prettier. 
-- Modified the subtitle format to be displayed in the name of the built-in subtitles. 
-- Fixed an issue where frame steps did not work properly in the built-in video renderer.
+- Módosítva lett az ablakszegély felülete, hogy még szebb legyen 
+- Módosítva lett a beépített feliratok nevében megjelenítendő feliratformátum 
+- Kijavítottunk egy hibát, amely miatt a képkocka léptetések nem működtek megfelelően a beépített videómegjelenítőben
 
 ----------------------------------------------------------
 [240509]
 ----------------------------------------------------------
-- Fixed an issue where the screen did not appear when playing some MP4 files
-- Improved built-in D3D9 renderer stability
-- Fixed an issue where files in compressed files could not be played properly
-- Fixed an issue where the screen was broken after navigation when playing certain MPEG 2 with DXVA
+- Kijavítottunk egy hibát, amely miatt a képernyő nem jelent meg egyes MP4-fájlok lejátszásakor
+- Továbbfejlesztettük a beépített D3D9 megjelenítő stabilitását
+- Kijavítottunk egy hibát, amely miatt a tömörített fájlokban lévő fájlokat nem lehetett megfelelően lejátszani
+- Kijavítottunk egy hibát, amely miatt a képernyő összeomlott a navigáció után bizonyos MPEG 2 DXVA-val való lejátszásakor
 
 ----------------------------------------------------------
 [240305]
 ----------------------------------------------------------
-+ Added NVIDIA RTX Video HDR function
-+ Added ability to move files to playlist
++ NVIDIA RTX Video HDR funkció hozzáadva
++ Új lehetőség a fájlok lejátszási listára helyezésére
 
-- Fixed an issue where damaged WAV files could not be played
-- Fixed an issue where the screen was broken when playing certain MPEG4 codecs
-- Fixed an issue where the screen did not appear when playing certain WMV videos
-- Fixed an issue where certain SRT protocols did not work
-- Fixed an issue where an error occurred when playing certain TS files
-- Fixed an issue where an error occurred in certain situations when playing some VP8/9 codecs.
+- Kijavítottunk egy hibát, amely miatt a sérült WAV-fájlokat nem lehetett lejátszani
+- Kijavítottunk egy hibát, amely miatt a képernyő összeomlott bizonyos MPEG4 kódekek lejátszásakor
+- Kijavítottunk egy hibát, amely miatt a képernyő nem jelent meg bizonyos WMV-videók lejátszásakor
+- Kijavítottunk egy hibát, amely miatt bizonyos SRT protokollok nem működtek
+- Kijavítottunk egy hibát, amely miatt hiba történt bizonyos TS-fájlok lejátszásakor
+- Kijavítottunk egy hibát, amely miatt hiba lépett fel bizonyos helyzetekben egyes VP8/9 kódekek lejátszásakor
 
 ----------------------------------------------------------
 [231220]
 ----------------------------------------------------------
-+ Added the ability to select a device when outputting TTS
++ Új képesség az eszköz kiválasztására a TTS kiadásakor
 
-- Fixed an error issue when playing MPEG 1/2 with DXVA on older GPUs.
-- Added ability to paste playlist below selected item
-- Fixed an issue where an error occurred when playing certain MKV files
-- Fixed an issue where navigation was not possible when playing certain files
+- Kijavítottunk egy hibát, amely a DXVA-val való MPEG 1/2 lejátszáskor jelentkezett a régebbi GPU-kon
+- Új lehetőség a lejátszási lista beillesztésére a kiválasztott elem alá
+- Kijavítottunk egy hibát, amely bizonyos MKV-fájlok lejátszásakor hibát okozott
+- Kijavítottunk egy hibát, amely miatt bizonyos fájlok lejátszásakor nem lehetett navigálni
 
 ----------------------------------------------------------
 [231102]
 ----------------------------------------------------------
-+ Added the ability to display multiple lines in the subtitle explorer
-+ NOTCHLC video codec playback function added
++ Több sor megjelenítési lehetőség a feliratkezelőben
++ NOTCHLC videókódek lejátszási funkció
 
-- Modified to apply HDR color correction when capturing video if possible
-- Fixed an issue where the DTS pass-through function did not work on certain systems
-- Fixed an issue where embedded subtitles were displayed overlapping when playing files without interruption.
-- Fixed an issue where playback completion did not occur when using the delete related file function upon completion of playback.
-- Fixed a problem that freezing when playing HEVC with DXVA on old Intel GPUs
-- Fixed an issue where certain MKV videos could not be played after searching for them.
+- Módosítva, hogy lehetőség szerint HDR színkorrekciót alkalmazzon a videó rögzítésekor
+- Javítva lett egy probléma, amely miatt a DTS pass-through funkció nem működött bizonyos rendszereken
+- Javítva lett egy probléma, amely miatt a beágyazott feliratok átfedésben jelentek meg a fájlok megszakítás nélküli lejátszásakor
+- Javítva lett egy probléma, amely miatt a lejátszás befejezése nem valósult meg, a lejátszás befejezésekor a kapcsolódó fájl törlése funkció használata esetén
+- Javítva lett egy probléma, amely miatt lefagyás történt a HEVC lejátszásakor DXVA-val a régi Intel GPU-kon
+- Javítva lett egy probléma, amely miatt bizonyos MKV-videókat nem lehetett lejátszani a keresés után
 
 ----------------------------------------------------------
 [230830]
 ----------------------------------------------------------
-- When translating subtitles, modify to maintain subtitle properties if possible
-- Fixed an issue where the ratio was not properly handled when playing a video in which some ratios were changed
-- When using the built-in D3D11 renderer, the screen is cut off when the resolution goes beyond another monitor.
-- Fixed an issue that crashed in certain situations
-- Improved stability of built-in video renderer
+- Feliratok fordításakor lehetőség szerint módosítsa a felirat tulajdonságait
+- Javítva lett a hiba, amely miatt az arányokat nem lehetett megfelelően kezelni az olyan videók lejátszásakor, amelyekben bizonyos arányok megváltoztak
+- A beépített D3D11 renderelő használatakor a képernyő megvágásra került, amikor a felbontás túlmutatott egy másik monitoron
+- Javítva lett egy probléma, amely bizonyos helyzetekben összeomlást idézett elő
+- A beépített videómegjelenítő stabilitásának javítása
 
 ----------------------------------------------------------
 [230705]
 ----------------------------------------------------------
-+ Added the ability to translate subtitles in addition to selected languages
-+ Added support for g726 codec in MP4
-+ Added support for ARIB subtitles
++ Felirat fordítási lehetőség a kiválasztott nyelveken kívül
++ Új g726 kódek támogatás az MP4-ben
++ ARIB feliratok támogatása
 
-- Fixed trackpad scrolling of playlists to be handled smoothly
-- Improved MP4 playback function while downloading
-- Improved raw av1 file playback function
+- Javított érintőpad görgetés a lejátszási listákhoz a gördülékenyebb kezelés érdekében
+- Javított MP4 lejátszási funkció letöltés közben
+- Javított raw av1 fájl lejátszási funkció
 
 ----------------------------------------------------------
 [230523]
 ----------------------------------------------------------
-- Fixed an out-of-sync problem when playing with mjpeg codec
-- Fixed a problem where an error occurred when playing with a specific MPEG 2 codec
-- Fixed an issue where the title screen did not appear when playing certain DVDs
-- Fixed the problem that the screen was broken when using certain H264 DXVA
+- Javítva lett az mjpeg kódekkel való lejátszáskor jelentkező nincs szinkronban probléma 
+- Javítva lett egy probléma, amely miatt hiba lépett fel bizonyos MPEG 2 kódekkel való lejátszáskor
+- Javítva lett egy probléma, amely miatt bizonyos DVD-k lejátszásakor nem jelent meg a cím képernyő
+- Javítva lett egy probléma, amely bizonyos H264 DXVA-k használatakor a képernyő összeomlását okozta
 
 ----------------------------------------------------------
 [230405]
 ----------------------------------------------------------
-+ Added GPU Super Resolution function to built-in D3D11 video renderer
++ GPU szuperfelbontás funkció hozzáadva a beépített D3D11 videómegjelenítőhöz
 
-- Fixed an issue where audio visualization did not work when only the right channel had voice
-- Fixed a problem that was captured strangely when capturing with subtitles in the D3D11 video renderer
-- Fixed a problem where sound did not come out in certain situations when playing damaged videos
-- Fixed a problem where sound did not come out in certain flac codecs
+- Javítva lett egy probléma, amely miatt a hangvizualizáció nem működött, ha csak a jobb csatornán volt hang
+- Javítva lett egy probléma, amely miatt rögzítési hiba lépett fel a D3D11 videómegjelenítőben történő feliratozáskor
+- Javítva lett egy probléma, amely miatt nem volt hang bizonyos helyzetekben a sérült videók lejátszásakor
+- Javítva lett egy probléma, amely miatt nem volt hang bizonyos flac kódekeknél
 
 ----------------------------------------------------------
 [230207]
 ----------------------------------------------------------
 + WEBP formátum hozzáadva a videórögzítéshez
 
-- Kisebb módosítások, hogy első futtatáskor kicsit gyorsabban fusson.
-- Javítva lett egy probléma, amely miatt néhány sérült FLAC fájlt nem lehetett lejátszani.
-- Javítva lett egy probléma, amely miatt lassú volt a lejátszás néhány FTP/HTTP fájl lejátszásakor.
+- Kisebb módosítások, hogy első futtatáskor kicsit gyorsabban fusson
+- Javítva lett egy probléma, amely miatt néhány sérült FLAC fájlt nem lehetett lejátszani
+- Javítva lett egy probléma, amely miatt lassú volt a lejátszás néhány FTP/HTTP fájl lejátszásakor
 - Javítva lett egy probléma, amely miatt a lejátszási idő helytelenül volt kezelve néhány MP4 fájl lejátszásakor
 
 ----------------------------------------------------------
@@ -115,16 +124,16 @@ PotPlayer verzióelőzmények
 ----------------------------------------------------------
 - Javítva lett egy hiba, amely bizonyos AV1 fájlok lejátszásakor jelentkezett
 - Javítva lett egy hiba, amely miatt csökkenhetett a minőség a nem i420p váltottsoros videó lejátszásakor
-- Javítva lett egy hiba, amely miatt egy adott WaveOut eszközzel történő lejátszás során megszakadt a lejátszás a sebesség beállítása közben.
-- Javítva lett egy hiba, amely miatt (túl sok feliratfájl esetén) nem lehetett feliratokat választani.
-- Javítva lett egy hiba, amely az egyes flv lejátszási idők helytelen kiszámítását okozta.
-- Javítva lett egy hiba, amely miatt egyes japán feliratokban szóköz feldolgozási problémák léptek fel.
-- Javítva lett egy hiba, amely miatt egyes RSS hírcsatornákat nem lehetett beolvasni.
+- Javítva lett egy hiba, amely miatt egy adott WaveOut eszközzel történő lejátszás során megszakadt a lejátszás a sebesség beállítása közben
+- Javítva lett egy hiba, amely miatt (túl sok feliratfájl esetén) nem lehetett feliratokat választani
+- Javítva lett egy hiba, amely az egyes flv lejátszási idők helytelen kiszámítását okozta
+- Javítva lett egy hiba, amely miatt egyes japán feliratokban szóköz feldolgozási problémák léptek fel
+- Javítva lett egy hiba, amely miatt egyes RSS hírcsatornákat nem lehetett beolvasni
 ----------------------------------------------------------
 [221102]
 ----------------------------------------------------------
 - Javítottunk egy hibát, amely bizonyos rendszereken jelentkezett
-- Javítottunk egy hibát, amely miatt a képernyőkép megszakadt a pillanatfelvétel készítésekor.
+- Javítottunk egy hibát, amely miatt a képernyőkép megszakadt a pillanatfelvétel készítésekor
 - Javított DASH/HLS lejátszási funkció
 
 ----------------------------------------------------------
@@ -167,7 +176,7 @@ PotPlayer verzióelőzmények
 + Új képesség a külső fejezetek txt formátumban történő betöltésére
 
 - Az egérmutatók elrejtésének jobb kezelése
-- Javítottuk azt a problémát, amikor a lejátszási listában a mappafigyelő funkció nem működött.
+- Javítottuk azt a problémát, amikor a lejátszási listában a mappafigyelő funkció nem működött
 - Javítottuk a feliratozási idők kombinálását, amikor azok átfedésben voltak egymással
 
 ----------------------------------------------------------

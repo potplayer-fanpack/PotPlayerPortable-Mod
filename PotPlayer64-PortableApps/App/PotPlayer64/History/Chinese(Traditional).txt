@@ -2,8 +2,17 @@
 PotPlayer 版本更新日誌
 
 ----------------------------------------------------------
-[240719]
+[240807]
 ----------------------------------------------------------
++ Add WEBP to video capture 
++ Added ability to set delay time to seconds or less in image source filter 
+
+- Fixed an issue where the size settings of the shortcut icon were not reflected. 
+- Fixed an issue where the Do not add duplicate files setting was reset in certain situations. 
+- Fixed an issue where the video was recognized as interlaced when playing with a specific codec. 
+- Fixed an error issue when decoding with libVPX 8/9
+- Fixed an issue where navigation occurred abnormally when playing MP4 streaming.
+- Fixed an issue where browsing certain FLV files was slow
 
 ----------------------------------------------------------
 [240618]

@@ -15,13 +15,13 @@ Nadal czekasz na wersję portable? Pobierz archiwum i spakuj swój własny PotPl
 
 ## Katalog bin
 Wszystkie pliki znajdujące się w tym katalogu są programami wykonywalnymi, które potrzebne są do poprawnego działania.
-- [_7-Zip 22.01 (2022-07-15)_](https://www.7-zip.org/) - pliki 7z.exe i 7z.dll
+- [_7-Zip 24.07 (2024-06-19)_](https://www.7-zip.org/) - pliki 7z.exe i 7z.dll
 - [_wget-1.20-win64_](https://eternallybored.org/misc/wget/) - plik wget.exe
 - [_The PE file analysis toolkit_](https://github.com/merces/pev) - plik pev.exe
 
 ## Katalog custom
 W tym katalogu należy umieszczać wszystkie niestandardowe pliki PotPlayer - należy zwrócić uwagę na zachowanie struktury katalogów, np. jak poniżej：
-- Module\FFmpeg4\FFmpeg64.dll # biblioteka z pakietu OpenCodec
+- Module\FFmpeg61\FFmpeg64.dll # biblioteka z pakietu OpenCodec
 - Skins\YouTube_TitleBar_Slim_ha2.dsf # skórka
 - PotIcons64.dll # niestandardowe ikony
 - PotPlayerMini64.ini # plik ustawień dla wersji portable
@@ -60,13 +60,13 @@ Still waiting for the portable version? Download the archive and package your ow
 
 ## Bin directory
 All files in this directory are executable programs that are needed for proper operation.
-- [_7-Zip 22.01 (2022-07-15)_](https://www.7-zip.org/) - 7z.exe and 7z.dll files
+- [_7-Zip 24.07 (2024-06-19)_](https://www.7-zip.org/) - 7z.exe and 7z.dll files
 - [_wget-1.20-win64_](https://eternallybored.org/misc/wget/) - wget.exe file
 - [_The PE file analysis toolkit_](https://github.com/merces/pev) - pev.exe file
 
 ## Custom directory
 Place all custom PotPlayer files in this directory - be sure to maintain the directory structure, such as the following：
-- Module\FFmpeg4\FFmpeg64.dll # library from the OpenCodec package
+- Module\FFmpeg61\FFmpeg64.dll # library from the OpenCodec package
 - Skins\YouTube_TitleBar_Slim_ha2.dsf # skin
 - PotIcons64.dll # custom icons
 - PotPlayerMini64.ini # settings file for the portable version

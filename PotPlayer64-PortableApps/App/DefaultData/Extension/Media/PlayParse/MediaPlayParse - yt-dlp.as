@@ -1,5 +1,5 @@
 ﻿/*
-	yt-dlp media parse (Thanks to "http://www.dvbsupport.net")
+	yt-dlp media parse (get link only)
 */
 
 bool useDebugPrint = false;
@@ -33,7 +33,6 @@ void DebugPrint(string text)
 bool FileExist(string path)
 {
 	uintptr pFile = HostFileOpen(path);
-
 	if (pFile == 0)
 	{
 		return false;
@@ -45,25 +44,169 @@ bool FileExist(string path)
 	}
 }
 
+string playerDir = "";
+
+string GetPlayerDir()
+{
+	if (!playerDir.isEmpty()) return playerDir;
+
+	string dir = ".\\";
+
+	if (!FileExist(dir + "PotPlayerMini.exe"))
+	{
+		if (!FileExist(dir + "PotPlayerMini64.exe"))
+		{
+			if (!FileExist(dir + "PotPlayer.exe"))
+			{
+				if (!FileExist(dir + "PotPlayer64.exe"))
+				{
+					dir = "";
+				}
+			}
+		}
+	}
+
+	if (!dir.isEmpty())
+	{
+		playerDir = dir;
+		return playerDir;
+	}
+
+	string path = "";
+	string mark = HostHashMD5(formatInt(HostGetTickCount()));
+	string xml  = HostExecuteProgram("cmd.exe", "/A /Q /C (@ECHO " + mark + ") && (WMIC.exe PROCESS GET CommandLine, ExecutablePath, ParentProcessId, ProcessId /FORMAT:RAWXML)");
+
+	XMLDocument doc;
+
+	if (doc.Parse(xml))
+	{
+		uint playerId = 0;
+		array<uint> ids;
+		array<string> paths;
+
+		XMLElement root = doc.RootElement();
+		if (root.isValid() && (root.Name() == "COMMAND"))
+		{
+			XMLElement results = root.FirstChildElement("RESULTS");
+			while (results.isValid())
+			{
+				XMLElement cim = results.FirstChildElement("CIM");
+				if (cim.isValid())
+				{
+					XMLElement instance = cim.FirstChildElement("INSTANCE");
+					while (instance.isValid())
+					{
+						string commandLine = "";
+						string executablePath = "";
+
+						uint parentProcessId = 0;
+						uint processId = 0;
+
+						XMLElement value;
+
+						XMLElement property = instance.FirstChildElement("PROPERTY");
+						while (property.isValid())
+						{
+							XMLAttribute attr = property.FindAttribute("NAME");
+							if (attr.isValid())
+							{
+								string attrName = attr.Value();
+
+								if (attrName == "CommandLine")
+								{
+									value = property.FirstChildElement("VALUE");
+									if (value.isValid()) commandLine = value.asString();
+								}
+								else if (attrName == "ExecutablePath")
+								{
+									value = property.FirstChildElement("VALUE");
+									if (value.isValid()) executablePath = value.asString();
+								}
+								else if (attrName == "ParentProcessId")
+								{
+									value = property.FirstChildElement("VALUE");
+									if (value.isValid()) parentProcessId = value.asUInt();
+								}
+								else if (attrName == "ProcessId")
+								{
+									value = property.FirstChildElement("VALUE");
+									if (value.isValid()) processId = value.asUInt();
+								}
+							}
+
+							property = property.NextSiblingElement();
+						}
+
+						if (!commandLine.isEmpty() && !executablePath.isEmpty() && (parentProcessId != 0) && (processId != 0))
+						{
+							if ((playerId == 0) && (commandLine.find(mark) > -1))
+							{
+								playerId = parentProcessId;
+							}
+
+								ids.insertLast(processId);
+								paths.insertLast(executablePath);
+							}
+
+							instance = instance.NextSiblingElement();
+						}
+					}
+
+					results = results.NextSiblingElement();
+				}
+
+				XMLElement element = doc.FirstChildElement("RESULTS");
+			}
+
+			if (playerId != 0)
+			{
+				int n = ids.find(playerId);
+				if (n > -1) path = paths[n];
+			}
+		}
+
+	if (FileExist(path))
+	{
+		playerDir = path.substr(0, path.findLast("\\") + 1);
+	}
+	else
+	{
+		return "";
+	}
+	return playerDir;
+}
+
 string GetFilePath()
 {
-	string path = "Extension\\yt-dlp.exe";
-
+	string path = GetPlayerDir() + "Extension\\yt-dlp_win\\yt-dlp.exe";
 	if (!FileExist(path))
 	{
-		path = "Extension\\yt-dlp_min.exe";
-
+		path = GetPlayerDir() + "Extension\\yt-dlp.exe";
 		if (!FileExist(path))
 		{
-			path = "Extension\\yt-dlp_x86.exe";
-
+			path = GetPlayerDir() + "Extension\\yt-dlp_min.exe";
 			if (!FileExist(path))
 			{
-				path = "Extention\\yt-dlp_x86.exe"; // for some older versions...
-
+				path = GetPlayerDir() + "Extension\\yt-dlp_x86.exe";
 				if (!FileExist(path))
 				{
-					return "";
+					path = GetPlayerDir() + "Extention\\yt-dlp_win\\yt-dlp.exe"; // for some older versions...
+					if (!FileExist(path))
+					{
+						path = GetPlayerDir() + "Extention\\yt-dlp.exe";
+						if (!FileExist(path))
+						{
+							path = GetPlayerDir() + "Extention\\yt-dlp_min.exe"; 
+							if (!FileExist(path))
+							{
+								path = GetPlayerDir() + "Extention\\yt-dlp_x86.exe";
+								if (!FileExist(path))
+								{
+									return "";
+								}
+							}
+						}
+					}
 				}
 			}
 		}
@@ -77,17 +220,19 @@ bool PlayitemCheck(const string &in path)
 	if (path.find("://www.youtube.com/") >= 0) return true;
 	if (path.find("://youtu.be/") >= 0) return true;
 	if (path.find("://yewtu.be/") >= 0) return true;
-	if (path.find("://www.imdb.com/") >= 0) return true;
-	if (path.find("://www.filmweb.pl/") >= 0) return true;
-	if (path.find("://www.dailymotion.com/") >= 0) return true;
-	if (path.find("://twitter.com/") >= 0) return true;
-	if (path.find("://www.facebook.com/") >= 0) return true;
-	if (path.find("://drive.google.com/") >= 0) return true;
+	if (path.find("://rutube.ru/") >= 0) return true;
+	if (path.find("://smotrim.ru/") >= 0) return true;
+	if (path.find("://ok.ru/") >= 0) return true;
+	if (path.find("://vk.com/") >= 0) return true;
+	if (path.find("://vkplay.live/") >= 0) return true;
+	if (path.find("://live.vkplay.ru/") >= 0) return true;
+	if (path.find("://dzen.ru/") >= 0) return true;
+	if (path.find("://www.ntv.ru/") >= 0) return true;
+	if (path.find("://www.tvigle.ru/") >= 0) return true;
+	if (path.find("://goodgame.ru/") >= 0) return true;
 	if (path.find("://www.twitch.tv/") >= 0) return true;
 	if (path.find("://clips.twitch.tv/") >= 0) return true;
-	if (path.find("://trovo.live/") >= 0) return true;
-	if (path.find("://wasd.tv/") >= 0) return true;
-	if (path.find("://rumble.com/") >= 0) return true;
+	if (path.find("://kick.com/") >= 0) return true;
 	if (path.find("://vimeo.com/") >= 0) return true;
 	if (path.find("://www.tiktok.com/") >= 0) return true;
 	if (path.find("://www.xnxx.com/") >= 0) return true;
@@ -95,18 +240,17 @@ bool PlayitemCheck(const string &in path)
 	if (path.find("://rt.pornhub.com/") >= 0) return true;
 	if (path.find("://www.pornhub.com/") >= 0) return true;
 	return false;
-
 }
 
 string PlayitemParse(const string &in path, dictionary &MetaData, array<dictionary> &QualityList)
 {
-	string ytdlp = GetFilePath();
 	string useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
 
-	string json = HostExecuteProgram(ytdlp, " --user-agent \"" + useragent + "\" --no-check-certificates --no-playlist --all-subs -J -- \"" + path + "\"");
+	string json = HostExecuteProgram(GetFilePath(), " --user-agent \"" + useragent + "\" --no-check-certificates --no-playlist --all-subs -J -- \"" + path + "\"");
 	string ret;
 
-	DebugPrint("HostFileOpen: " + ytdlp);
+	DebugPrint("PlayerDir: " + GetPlayerDir());
+	DebugPrint("HostFileOpen: " + GetFilePath());
 	DebugPrint("URL: " + path);
 	DebugPrint("PlayitemParse: " + json);
 	
