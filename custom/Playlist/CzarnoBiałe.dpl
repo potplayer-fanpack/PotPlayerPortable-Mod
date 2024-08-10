@@ -1,13 +1,15 @@
 ﻿DAUMPLAYLIST
 playname=https://www.youtube.com/watch?v=nuGkgkgWZO8
-playtime=0
+playtime=166
 topindex=0
 saveplaypos=1
 1*file*https://www.youtube.com/watch?v=nuGkgkgWZO8
-1*title*[Private video]
-1*duration2*None
-1*author*None
-1*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
+1*title*ZEJŚCIE DO PIEKŁA - POLSKI FILM SENSACYJNY HD WYSTĘPUJĄ WITOLD PYRKOSZ EWA KRZYŻEWSKA LEON NIEMCZYK
+1*duration2*4994101
+1*author*Logan Rainwood
+1*thumbnail*https://i.ytimg.com/vi_webp/nuGkgkgWZO8/default.webp?v=5fedac35
+1*start*166
+1*date*2020-12-31
 2*file*https://www.youtube.com/watch?v=-lO_IZaOgeY
 2*title*W chlopskie rece 1946
 2*duration2*1719000
@@ -70,7 +72,6 @@ saveplaypos=1
 13*thumbnail*https://i.ytimg.com/vi/qP-WLNoRJLk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDzqIJphdJXAgLd7rTJksanm8N-bA
 14*file*https://www.youtube.com/watch?v=tnLudw4zkR4
 14*title*[Deleted video]
-14*duration2*None
 14*author*None
 14*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 15*file*https://www.youtube.com/watch?v=sNx38Z1fmKk
@@ -160,7 +161,6 @@ saveplaypos=1
 31*thumbnail*https://i.ytimg.com/vi/X11RFrwtHL8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCK0PQx-1AD3QEV0xr4VDVDcAuKBA
 32*file*https://www.youtube.com/watch?v=orwtzhAoJRs
 32*title*[Private video]
-32*duration2*None
 32*author*None
 32*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 33*file*https://www.youtube.com/watch?v=ijeOoq8RXF4
@@ -385,7 +385,6 @@ saveplaypos=1
 76*thumbnail*https://i.ytimg.com/vi/QTRvV5o47eE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBQg2rR1yv9ltjSs9Qi_6gSJLsUWQ
 77*file*https://www.youtube.com/watch?v=f_b9accs5jo
 77*title*[Deleted video]
-77*duration2*None
 77*author*None
 77*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 78*file*https://www.youtube.com/watch?v=NfwDuAuww0Q
@@ -445,7 +444,6 @@ saveplaypos=1
 88*thumbnail*https://i.ytimg.com/vi/9oW6WL-vA-A/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgXChIMA8=&rs=AOn4CLCQoefuAN-gx1AQlSsiIKwEc0AeyA
 89*file*https://www.youtube.com/watch?v=HfzpVerrd8c
 89*title*[Private video]
-89*duration2*None
 89*author*None
 89*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 90*file*https://www.youtube.com/watch?v=aXWg79ksfUo
@@ -480,7 +478,6 @@ saveplaypos=1
 95*thumbnail*https://i.ytimg.com/vi/BPdB_Of_vm0/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLCeBYsswX8g0CqVot6dBs4FWrKrHQ
 96*file*https://www.youtube.com/watch?v=qqGLbTctnfo
 96*title*[Deleted video]
-96*duration2*None
 96*author*None
 96*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 97*file*https://www.youtube.com/watch?v=bVmBcXjVL3c
@@ -525,7 +522,6 @@ saveplaypos=1
 104*thumbnail*https://i.ytimg.com/vi/m3b_fqU7sVY/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDNKogWho6v1abJhQA0DlxtkcxslA
 105*file*https://www.youtube.com/watch?v=TI_5mNP5gsY
 105*title*[Private video]
-105*duration2*None
 105*author*None
 105*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 106*file*https://www.youtube.com/watch?v=Yh2CbfRq0rk
@@ -575,7 +571,6 @@ saveplaypos=1
 114*thumbnail*https://i.ytimg.com/vi/R3Tsymg_quE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCcPGsTyS9HT2CuupCQxRIjXLK8_w
 115*file*https://www.youtube.com/watch?v=jOse5JTRuFM
 115*title*[Private video]
-115*duration2*None
 115*author*None
 115*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 116*file*https://www.youtube.com/watch?v=NK9eD78yHvE
@@ -605,7 +600,6 @@ saveplaypos=1
 120*thumbnail*https://i.ytimg.com/vi/tWPb5XHYK7k/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AHwA4AC6AKKAgwIABABGGUgZShlMA8=&rs=AOn4CLAh1Of2vkK2pEwvkqIZCxzuvWwXzw
 121*file*https://www.youtube.com/watch?v=v3NFib63D8o
 121*title*[Deleted video]
-121*duration2*None
 121*author*None
 121*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 122*file*https://www.youtube.com/watch?v=DcjrUYKlebg
@@ -630,7 +624,6 @@ saveplaypos=1
 125*thumbnail*https://i.ytimg.com/vi/_QgTaHtrwiw/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AG-A4AC6AKKAgwIABABGGEgYShhMA8=&rs=AOn4CLDFDXDn7hJ3Lr2NIaXD1hW8vnA8MQ
 126*file*https://www.youtube.com/watch?v=LnzkMrINv88
 126*title*[Private video]
-126*duration2*None
 126*author*None
 126*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 127*file*https://www.youtube.com/watch?v=FIGoUFH65VM
@@ -680,7 +673,6 @@ saveplaypos=1
 135*thumbnail*https://i.ytimg.com/vi/DTsh7c1Dl6c/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAyEuTDNiNfeHHO_OBNBrpeHjNzXw
 136*file*https://www.youtube.com/watch?v=SzgL3Tv17SI
 136*title*[Private video]
-136*duration2*None
 136*author*None
 136*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 137*file*https://www.youtube.com/watch?v=0cECcZRhnzQ
@@ -730,7 +722,6 @@ saveplaypos=1
 145*thumbnail*https://i.ytimg.com/vi/6kPWc8G0ScQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDOGzZwAQ10F4EtcNzlFCNvYKthYA
 146*file*https://www.youtube.com/watch?v=lROt4Guer-Q
 146*title*[Private video]
-146*duration2*None
 146*author*None
 146*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 147*file*https://www.youtube.com/watch?v=m9hhK7p4E6c
@@ -820,7 +811,6 @@ saveplaypos=1
 163*thumbnail*https://i.ytimg.com/vi/dZ6Si-1uHOw/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgYihSMA8=&rs=AOn4CLB0DbT-USLIhocX6xMorBeVtEX6Tw
 164*file*https://www.youtube.com/watch?v=b5H18rTuffE
 164*title*[Private video]
-164*duration2*None
 164*author*None
 164*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 165*file*https://www.youtube.com/watch?v=iUT0e5sZyEw
@@ -850,7 +840,6 @@ saveplaypos=1
 169*thumbnail*https://i.ytimg.com/vi/AwchXF0tsbs/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDMA4OMc0w3JqrC48am4up0623ShA
 170*file*https://www.youtube.com/watch?v=uDyqQZ8b4Kk
 170*title*[Private video]
-170*duration2*None
 170*author*None
 170*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 171*file*https://www.youtube.com/watch?v=mAriqaHFHRA
@@ -870,7 +859,6 @@ saveplaypos=1
 173*thumbnail*https://i.ytimg.com/vi/l3vyVbHv680/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-BIAC0AOKAgwIABABGGEgYShhMA8=&rs=AOn4CLA6mbzH2bJCp6pNwYB7ji0Yj_ugbQ
 174*file*https://www.youtube.com/watch?v=ZRs4VyBwpb0
 174*title*[Deleted video]
-174*duration2*None
 174*author*None
 174*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 175*file*https://www.youtube.com/watch?v=LdAb3-j9F3A
@@ -930,7 +918,6 @@ saveplaypos=1
 185*thumbnail*https://i.ytimg.com/vi/MMdc2vx7fFw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBpkk_BrRZCcpfb0cuTTVvnKpmt8w
 186*file*https://www.youtube.com/watch?v=l58FF2518BE
 186*title*[Private video]
-186*duration2*None
 186*author*None
 186*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 187*file*https://www.youtube.com/watch?v=_yQphzZZieU
@@ -955,7 +942,6 @@ saveplaypos=1
 190*thumbnail*https://i.ytimg.com/vi/4Z0rnRA8vic/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCBZ7QyrjBJqsyjKSUhSUxGNpuD9Q
 191*file*https://www.youtube.com/watch?v=JcwqX2wrzUs
 191*title*[Private video]
-191*duration2*None
 191*author*None
 191*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 192*file*https://www.youtube.com/watch?v=8Roca2EIIwc
@@ -990,7 +976,6 @@ saveplaypos=1
 197*thumbnail*https://i.ytimg.com/vi/Qm3LKFqLY4o/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC5IZ4pUF3w0wTDZMDqMeu8LL6BIw
 198*file*https://www.youtube.com/watch?v=sedqPtymzS8
 198*title*[Deleted video]
-198*duration2*None
 198*author*None
 198*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 199*file*https://www.youtube.com/watch?v=C01R48IiH7o
@@ -1045,7 +1030,6 @@ saveplaypos=1
 208*thumbnail*https://i.ytimg.com/vi/3tO31b_C0Q8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA4lw8pIDVqMrmnsxnpRNNBliw2Ow
 209*file*https://www.youtube.com/watch?v=N6yqeYXZLFo
 209*title*[Deleted video]
-209*duration2*None
 209*author*None
 209*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 210*file*https://www.youtube.com/watch?v=TkK8TvPEVu8
@@ -1070,7 +1054,6 @@ saveplaypos=1
 213*thumbnail*https://i.ytimg.com/vi/m1mePv2oRzA/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLA9mPxYXkOfQh3JH1Y1gQa-u89bnQ
 214*file*https://www.youtube.com/watch?v=aCT_GZNgl-M
 214*title*[Private video]
-214*duration2*None
 214*author*None
 214*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 215*file*https://www.youtube.com/watch?v=Ti8YSCPTFBw
@@ -1085,12 +1068,10 @@ saveplaypos=1
 216*thumbnail*https://i.ytimg.com/vi/TEA27vkTT5I/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBGDqp0KGGhSVuY7dS9eZM3x_CGRg
 217*file*https://www.youtube.com/watch?v=5DJv7KQEeWw
 217*title*[Deleted video]
-217*duration2*None
 217*author*None
 217*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 218*file*https://www.youtube.com/watch?v=EcesBzsGncI
 218*title*[Private video]
-218*duration2*None
 218*author*None
 218*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 219*file*https://www.youtube.com/watch?v=LclcRB9LiYg
@@ -1105,7 +1086,6 @@ saveplaypos=1
 220*thumbnail*https://i.ytimg.com/vi/8LJIQXgc2EU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLAV8vaFUnOie0iwc_MNEJr4F3i76A
 221*file*https://www.youtube.com/watch?v=SdYVoyPa_Hw
 221*title*[Private video]
-221*duration2*None
 221*author*None
 221*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 222*file*https://www.youtube.com/watch?v=w3kQx2g2L_0
@@ -1125,7 +1105,6 @@ saveplaypos=1
 224*thumbnail*https://i.ytimg.com/vi/RDUkumC1K2k/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-A4ACgAOKAgwIABABGGUgZShlMA8=&rs=AOn4CLC5yueUAAZ15wBr8oKGa71ZYmhtJA
 225*file*https://www.youtube.com/watch?v=wyqte-RXV_c
 225*title*[Private video]
-225*duration2*None
 225*author*None
 225*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 226*file*https://www.youtube.com/watch?v=EHab9tZWgv4
@@ -1210,7 +1189,6 @@ saveplaypos=1
 241*thumbnail*https://i.ytimg.com/vi/kCgpXx9cSuM/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AHUBoAC2AOKAgwIABABGGogaihqMA8=&rs=AOn4CLApyJxIJjuZv8fETXA_y2j1G3-vuw
 242*file*https://www.youtube.com/watch?v=pJcsfe35PHI
 242*title*[Private video]
-242*duration2*None
 242*author*None
 242*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 243*file*https://www.youtube.com/watch?v=Ik4r72vE-YE
@@ -1250,7 +1228,6 @@ saveplaypos=1
 249*thumbnail*https://i.ytimg.com/vi/VJMZAnV2R20/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDC-YQAWhIjyyk8hv0_DiKrv7nwhw
 250*file*https://www.youtube.com/watch?v=dHIBrht2QNg
 250*title*[Private video]
-250*duration2*None
 250*author*None
 250*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 251*file*https://www.youtube.com/watch?v=GH_tyad3ipI
@@ -1335,7 +1312,6 @@ saveplaypos=1
 266*thumbnail*https://i.ytimg.com/vi/Y_LJp52G_sQ/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AHuA4AC6AKKAgwIABABGGUgZShlMA8=&rs=AOn4CLB-j9-HthN6y2uSGPgoPuJerKHFTw
 267*file*https://www.youtube.com/watch?v=u-nQKlxyVbE
 267*title*[Private video]
-267*duration2*None
 267*author*None
 267*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 268*file*https://www.youtube.com/watch?v=3gR4XZu-pJY
@@ -1345,7 +1321,6 @@ saveplaypos=1
 268*thumbnail*https://i.ytimg.com/vi/3gR4XZu-pJY/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLA0nTWNF4WtG-FcZiPtG0oLWPyJ8g
 269*file*https://www.youtube.com/watch?v=tr0hvQ1NMsA
 269*title*[Deleted video]
-269*duration2*None
 269*author*None
 269*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 270*file*https://www.youtube.com/watch?v=1nTf-LOqt90
@@ -1375,7 +1350,6 @@ saveplaypos=1
 274*thumbnail*https://i.ytimg.com/vi/j5At3YBgLKU/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDMicP6D2BmmcboOCaBVj3hc7GgNA
 275*file*https://www.youtube.com/watch?v=ZT3WyiD905s
 275*title*[Private video]
-275*duration2*None
 275*author*None
 275*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 276*file*https://www.youtube.com/watch?v=pVGHk9c5MCQ
@@ -1390,12 +1364,10 @@ saveplaypos=1
 277*thumbnail*https://i.ytimg.com/vi/5SwqmdC9zDY/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AHeA4AC6AKKAgwIABABGGUgZShlMA8=&rs=AOn4CLBYkExKLhKs2Bikv4bOQ9SkjO1zuA
 278*file*https://www.youtube.com/watch?v=EK0csjdx0tE
 278*title*[Private video]
-278*duration2*None
 278*author*None
 278*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 279*file*https://www.youtube.com/watch?v=bIv0opXek2E
 279*title*[Private video]
-279*duration2*None
 279*author*None
 279*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 280*file*https://www.youtube.com/watch?v=VzeBQZSNZFs
@@ -1435,7 +1407,6 @@ saveplaypos=1
 286*thumbnail*https://i.ytimg.com/vi/3klEnniklxU/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH4A4AC6AKKAgwIABABGGUgZShlMA8=&rs=AOn4CLCquiXEY_HxZWCAgnN5XUtzWCTwug
 287*file*https://www.youtube.com/watch?v=TyuEy-kKcQo
 287*title*[Private video]
-287*duration2*None
 287*author*None
 287*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 288*file*https://www.youtube.com/watch?v=XyGzx5YEo28
@@ -1495,12 +1466,10 @@ saveplaypos=1
 298*thumbnail*https://i.ytimg.com/vi/_YFjP_GE37U/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDcxi0IyzdKsrRiQxuBWR1xVpRfKQ
 299*file*https://www.youtube.com/watch?v=EiABNxl1lXw
 299*title*[Private video]
-299*duration2*None
 299*author*None
 299*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 300*file*https://www.youtube.com/watch?v=IVEuFs92zZQ
 300*title*[Private video]
-300*duration2*None
 300*author*None
 300*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 301*file*https://www.youtube.com/watch?v=MxZQ93a4t2E
@@ -1525,7 +1494,6 @@ saveplaypos=1
 304*thumbnail*https://i.ytimg.com/vi/BbOAfb1BVr8/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-BIAC4AOKAgwIABABGGUgZShlMA8=&rs=AOn4CLAa2ZfISbFjwQkRYoy4t17ipoMyOA
 305*file*https://www.youtube.com/watch?v=sr5o1gg_jaQ
 305*title*[Deleted video]
-305*duration2*None
 305*author*None
 305*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 306*file*https://www.youtube.com/watch?v=W0nyd-587-k
@@ -1540,7 +1508,6 @@ saveplaypos=1
 307*thumbnail*https://i.ytimg.com/vi/MKXhOSAZvUI/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH6BIAC4AOKAgwIABABGGEgYShhMA8=&rs=AOn4CLCXcnK6QHghrH44ShNC6YtqeXUz0g
 308*file*https://www.youtube.com/watch?v=OJI_fCqSNDc
 308*title*[Private video]
-308*duration2*None
 308*author*None
 308*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 309*file*https://www.youtube.com/watch?v=Aj32MPP_fq8
@@ -1550,7 +1517,6 @@ saveplaypos=1
 309*thumbnail*https://i.ytimg.com/vi/Aj32MPP_fq8/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AHgBIAC4AOKAgwIABABGEkgZShCMA8=&rs=AOn4CLDW25aJlehMe6CfKhRVPYlNoTCOeQ
 310*file*https://www.youtube.com/watch?v=mCKgfbxgFMw
 310*title*[Private video]
-310*duration2*None
 310*author*None
 310*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 311*file*https://www.youtube.com/watch?v=cVzWwOe8ch0
@@ -1570,7 +1536,6 @@ saveplaypos=1
 313*thumbnail*https://i.ytimg.com/vi/NwEjPumqJLE/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB75gLc9u2Fy7oFatuY61rRtbGqBA
 314*file*https://www.youtube.com/watch?v=puA-AG9hKyQ
 314*title*[Private video]
-314*duration2*None
 314*author*None
 314*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 315*file*https://www.youtube.com/watch?v=ML7FqDekpfA
@@ -1620,7 +1585,6 @@ saveplaypos=1
 323*thumbnail*https://i.ytimg.com/vi/etlFrxGthS8/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLAFboyt8NKxhWvR58hb84cgRsng9g
 324*file*https://www.youtube.com/watch?v=f8cCtloKW1c
 324*title*[Private video]
-324*duration2*None
 324*author*None
 324*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 325*file*https://www.youtube.com/watch?v=vaGV2HUdmpg
@@ -1630,7 +1594,6 @@ saveplaypos=1
 325*thumbnail*https://i.ytimg.com/vi/vaGV2HUdmpg/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AGaBIAC6AKKAgwIABABGGUgZShlMA8=&rs=AOn4CLA7MDTFv2XB8pG1AQCAp-zB8IvJuA
 326*file*https://www.youtube.com/watch?v=LuiowVytGWM
 326*title*[Private video]
-326*duration2*None
 326*author*None
 326*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 327*file*https://www.youtube.com/watch?v=HkwG9xRR8Wc
@@ -1640,7 +1603,6 @@ saveplaypos=1
 327*thumbnail*https://i.ytimg.com/vi/HkwG9xRR8Wc/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-BIAC4AOKAgwIABABGGQgZChkMA8=&rs=AOn4CLDS3IlI-bcJ8lqxKr34UkD9uLeqAg
 328*file*https://www.youtube.com/watch?v=_NShW8sK0x8
 328*title*[Private video]
-328*duration2*None
 328*author*None
 328*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 329*file*https://www.youtube.com/watch?v=PXphzmnpPz8
@@ -1650,12 +1612,10 @@ saveplaypos=1
 329*thumbnail*https://i.ytimg.com/vi/PXphzmnpPz8/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBAJ7ZQ-bkWbF1vwdIvc_AOcAdNuQ
 330*file*https://www.youtube.com/watch?v=PmIiS-8SLxs
 330*title*[Deleted video]
-330*duration2*None
 330*author*None
 330*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 331*file*https://www.youtube.com/watch?v=q2PlX8JKJcs
 331*title*[Private video]
-331*duration2*None
 331*author*None
 331*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 332*file*https://www.youtube.com/watch?v=7Bmov9J2d7E
@@ -1665,12 +1625,10 @@ saveplaypos=1
 332*thumbnail*https://i.ytimg.com/vi/7Bmov9J2d7E/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AH-BIAC4AOKAgwIABABGGUgZShlMA8=&rs=AOn4CLDx9vTcgSEi6CAB_Dz0wGJam0m5Dg
 333*file*https://www.youtube.com/watch?v=OlMDfo9jbZY
 333*title*[Private video]
-333*duration2*None
 333*author*None
 333*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 334*file*https://www.youtube.com/watch?v=kyH78fyC9sA
 334*title*[Private video]
-334*duration2*None
 334*author*None
 334*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 335*file*https://www.youtube.com/watch?v=ANvRMnDlk8E
@@ -1705,7 +1663,6 @@ saveplaypos=1
 340*thumbnail*https://i.ytimg.com/vi/oNH8Cp_ujyQ/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AHiA4AC6AKKAgwIABABGGIgYihiMA8=&rs=AOn4CLCjgQitD5MqLq6bT9TkFRVucNR1Rg
 341*file*https://www.youtube.com/watch?v=jN3nYq9LpM8
 341*title*[Private video]
-341*duration2*None
 341*author*None
 341*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 342*file*https://www.youtube.com/watch?v=LX24GIA2lnI
@@ -1715,7 +1672,6 @@ saveplaypos=1
 342*thumbnail*https://i.ytimg.com/vi/LX24GIA2lnI/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AHuBIAC4AOKAgwIABABGGUgZShlMA8=&rs=AOn4CLDDsx-lSTBgRShFxq5bZzhVTUJISw
 343*file*https://www.youtube.com/watch?v=8hVVBVUnUYA
 343*title*[Private video]
-343*duration2*None
 343*author*None
 343*thumbnail*https://i.ytimg.com/img/no_thumbnail.jpg
 344*file*https://www.youtube.com/watch?v=b8lFnFFwwdg
@@ -1798,4 +1754,3 @@ saveplaypos=1
 359*duration2*7438000
 359*author*Grywitek
 359*thumbnail*https://i.ytimg.com/vi/VBomGYej2Jk/hqdefault.jpg?sqp=-oaymwE1CKgBEF5IVfKriqkDKAgBFQAAiEIYAXABwAEG8AEB-AHWBIAC4AOKAgwIABABGGcgZyhnMA8=&rs=AOn4CLC8rgk0W2GvHtHZNlBy8zW2tcST0Q
-

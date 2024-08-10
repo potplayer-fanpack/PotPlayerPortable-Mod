@@ -2,4 +2,3 @@ $0
 $PLUGINSDIR
 AviSynth
 Html
-PxShader
