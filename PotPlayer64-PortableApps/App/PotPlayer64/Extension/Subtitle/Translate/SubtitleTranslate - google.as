@@ -89,8 +89,6 @@ string JsonParse_for_openapi(string json)
 {
 	JsonReader Reader;
 	JsonValue Root;
-	string err_msg = "translate fail :(";
-	// HostPrintUTF8(json);
 
 	if (Reader.parse(json, Root))
 	{
@@ -105,10 +103,8 @@ string JsonParse_for_openapi(string json)
 			}
 			return ans;
 		}
-			
-		return err_msg;
 	} 
-	return err_msg;
+	return "";
 }
 
 array<string> LangTable = 
@@ -337,42 +333,45 @@ string Translate(string Text, string &in SrcLang, string &in DstLang)
 	
 // use open api(for free)
 	string url = "https://translate.google.com/_/TranslateWebserverUi/data/batchexecute?rpcids=" + RPC_ID + "&bl=boq_translate-webserver_20221005.09_p0&soc-app=1&soc-platform=1&soc-device=1&rt=c";
-
 	string post_data1 = "[[[\"MkEWBc\",\"[[\\\"";
-	string post_data2 = "\\\",\\\""+SrcLang+"\\\",\\\""+DstLang+"\\\",true],[null]]\",null,\"generic\"]]]";
-	Text.replace("\\","\\\\");
-	Text.replace("\"","\\\"");
-	Text.replace("\\","\\\\");
-	Text.replace("\"","\\\"");
-	Text.replace("\n","\\\\n");
-	Text.replace("\r","\\\\r");
-	Text.replace("\t","\\\\t");
+	string post_data2 = "\\\",\\\"" + SrcLang + "\\\",\\\"" + DstLang + "\\\",true],[null]]\",null,\"generic\"]]]";
 	string enc_text = Text;
-	string post_data = "f.req="+HostUrlEncode(post_data1+enc_text+post_data2);
-
+	enc_text.replace("\\","\\\\");
+	enc_text.replace("\"","\\\"");
+	enc_text.replace("\\","\\\\");
+	enc_text.replace("\"","\\\"");
+	enc_text.replace("\n","\\\\n");
+	enc_text.replace("\r","\\\\r");
+	enc_text.replace("\t","\\\\t");
+	
+	string post_data = "f.req=" + HostUrlEncode(post_data1 + enc_text + post_data2);
 	string SendHeader = "Content-Type: application/x-www-form-urlencoded";
-	
 	string text = HostUrlGetString(url, UserAgent, SendHeader, post_data);
-	
 	text.replace("\n","");
 	int start_pos = text.findFirst("[[", 0);
 	int end_pos = text.findLast("]]", -1);
-	text=text.substr(start_pos, end_pos - start_pos);
-	end_pos = text.findLast("]]", -1);
-	text=text.substr(0, end_pos+2);
-	string ret = JsonParse_for_openapi(text);
-	if (ret.length() > 0)
+	if (start_pos >= 0 && end_pos > start_pos)
 	{
-		if (DstLang == "fa" || DstLang == "ar" || DstLang == "he") ret = UNICODE_RLE + ret;
-		SrcLang = "UTF8";
-		DstLang = "UTF8";
-		return ret;
-	}	
+		text = text.substr(start_pos, end_pos - start_pos);
+		end_pos = text.findLast("]]", -1);
+		if (end_pos > 0)
+		{
+			text = text.substr(0, end_pos + 2);
+			string ret = JsonParse_for_openapi(text);
+			if (ret.length() > 0)
+			{
+				if (DstLang == "fa" || DstLang == "ar" || DstLang == "he") ret = UNICODE_RLE + ret;
+				SrcLang = "UTF8";
+				DstLang = "UTF8";
+				return ret;
+			}
+		}
+	}
 	
 //	by old API
 	url = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + SrcLang + "&tl=" + DstLang + "&dt=t&q=" + enc;
 	text = HostUrlGetString(url, UserAgent);
-	ret = JsonParseOld(text);
+	string ret = JsonParseOld(text);
 	if (ret.length() > 0)
 	{
 		if (DstLang == "fa" || DstLang == "ar" || DstLang == "he") ret = UNICODE_RLE + ret;

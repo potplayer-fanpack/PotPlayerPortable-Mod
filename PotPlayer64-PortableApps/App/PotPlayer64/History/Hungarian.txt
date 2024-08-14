@@ -2,7 +2,7 @@
 PotPlayer verzióelőzmények
 
 ----------------------------------------------------------
-[240809]
+[240814]
 ----------------------------------------------------------
 + WEBP hozzáadása a videórögzítéshez
 + Új lehetőség a késleltetési idő másodpercre vagy annál rövidebbre állítására a képforrásszűrőben 

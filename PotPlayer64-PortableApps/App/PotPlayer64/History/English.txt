@@ -2,10 +2,11 @@
 Version History of the PotPlayer
 
 ----------------------------------------------------------
-[240809]
+[240814]
 ----------------------------------------------------------
-+ Add WEBP to video capture 
++ Added WEBP to video capture 
 + Added ability to set delay time to seconds or less in image source filter 
++ Added auto-run feature when system starts
 
 - Fixed an issue where the size settings of the shortcut icon were not reflected. 
 - Fixed an issue where the Do not add duplicate files setting was reset in certain situations. 
