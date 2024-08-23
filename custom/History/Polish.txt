@@ -2,7 +2,7 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
-[240816]
+[240823]
 ----------------------------------------------------------
 + Dodano WEBP do przechwytywania wideo
 + Dodano możliwość ustawienia sekundowego lub krótszego opóźnienia dla filtrów źródła obrazu
