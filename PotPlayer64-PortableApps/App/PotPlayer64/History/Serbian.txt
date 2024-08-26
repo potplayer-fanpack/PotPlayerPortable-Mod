@@ -2,7 +2,7 @@
 Историја верзија Пот плејера
 
 ----------------------------------------------------------
-[240823]
+[240827]
 ----------------------------------------------------------
 + Added WEBP to video capture 
 + Added ability to set delay time to seconds or less in image source filter 
