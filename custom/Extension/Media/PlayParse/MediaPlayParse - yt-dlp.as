@@ -56,13 +56,7 @@ string GetPlayerDir()
 	{
 		if (!FileExist(dir + "PotPlayerMini64.exe"))
 		{
-			if (!FileExist(dir + "PotPlayer.exe"))
-			{
-				if (!FileExist(dir + "PotPlayer64.exe"))
-				{
-					dir = "";
-				}
-			}
+			dir = "";
 		}
 	}
 
@@ -178,28 +172,28 @@ string GetPlayerDir()
 
 string GetFilePath()
 {
-	string path = GetPlayerDir() + "Extension\\yt-dlp_win\\yt-dlp.exe";
+	string path = GetPlayerDir() + "Extension\\Data\\yt-dlp_win\\yt-dlp.exe";
 	if (!FileExist(path))
 	{
-		path = GetPlayerDir() + "Extension\\yt-dlp.exe";
+		path = GetPlayerDir() + "Extension\\Data\\yt-dlp.exe";
 		if (!FileExist(path))
 		{
-			path = GetPlayerDir() + "Extension\\yt-dlp_min.exe";
+			path = GetPlayerDir() + "Extension\\Data\\yt-dlp_min.exe";
 			if (!FileExist(path))
 			{
-				path = GetPlayerDir() + "Extension\\yt-dlp_x86.exe";
+				path = GetPlayerDir() + "Extension\\Data\\yt-dlp_x86.exe";
 				if (!FileExist(path))
 				{
-					path = GetPlayerDir() + "Extention\\yt-dlp_win\\yt-dlp.exe"; // for some older versions...
+					path = GetPlayerDir() + "Extention\\Data\\yt-dlp_win\\yt-dlp.exe"; // for some older versions...
 					if (!FileExist(path))
 					{
-						path = GetPlayerDir() + "Extention\\yt-dlp.exe";
+						path = GetPlayerDir() + "Extention\\Data\\yt-dlp.exe";
 						if (!FileExist(path))
 						{
-							path = GetPlayerDir() + "Extention\\yt-dlp_min.exe"; 
+							path = GetPlayerDir() + "Extention\\Data\\yt-dlp_min.exe";
 							if (!FileExist(path))
 							{
-								path = GetPlayerDir() + "Extention\\yt-dlp_x86.exe";
+								path = GetPlayerDir() + "Extention\\Data\\yt-dlp_x86.exe";
 								if (!FileExist(path))
 								{
 									return "";
@@ -219,7 +213,8 @@ bool PlayitemCheck(const string &in path)
 	path.MakeLower();
 	if (path.find("://www.youtube.com/") >= 0) return true;
 	if (path.find("://youtu.be/") >= 0) return true;
-	if (path.find("://yewtu.be/") >= 0) return true;
+	if (path.find("://youtube.com/") >= 0) return true;
+	if (path.find("://m.youtube.com/") >= 0) return true;
 	if (path.find("://rutube.ru/") >= 0) return true;
 	if (path.find("://smotrim.ru/") >= 0) return true;
 	if (path.find("://ok.ru/") >= 0) return true;
@@ -228,13 +223,14 @@ bool PlayitemCheck(const string &in path)
 	if (path.find("://live.vkplay.ru/") >= 0) return true;
 	if (path.find("://dzen.ru/") >= 0) return true;
 	if (path.find("://www.ntv.ru/") >= 0) return true;
-	if (path.find("://www.tvigle.ru/") >= 0) return true;
 	if (path.find("://goodgame.ru/") >= 0) return true;
 	if (path.find("://www.twitch.tv/") >= 0) return true;
 	if (path.find("://clips.twitch.tv/") >= 0) return true;
 	if (path.find("://kick.com/") >= 0) return true;
-	if (path.find("://vimeo.com/") >= 0) return true;
 	if (path.find("://www.tiktok.com/") >= 0) return true;
+	if (path.find("://vimeo.com/") >= 0) return true;
+	if (path.find("://yewtu.be/") >= 0) return true;
+	if (path.find("://piped.video/") >= 0) return true;
 	if (path.find("://www.xnxx.com/") >= 0) return true;
 	if (path.find("://www.xvideos.com/") >= 0) return true;
 	if (path.find("://rt.pornhub.com/") >= 0) return true;
@@ -245,7 +241,6 @@ bool PlayitemCheck(const string &in path)
 string PlayitemParse(const string &in path, dictionary &MetaData, array<dictionary> &QualityList)
 {
 	string useragent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64)";
-
 	string json = HostExecuteProgram(GetFilePath(), " --user-agent \"" + useragent + "\" --no-check-certificates --no-playlist --all-subs -J -- \"" + path + "\"");
 	string ret;
 
@@ -253,7 +248,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 	DebugPrint("HostFileOpen: " + GetFilePath());
 	DebugPrint("URL: " + path);
 	DebugPrint("PlayitemParse: " + json);
-	
+
 	if (!json.empty())
 	{
 		JsonReader reader;
@@ -262,10 +257,10 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 		if (reader.parse(json, root) && root.isObject())
 		{
 			JsonValue formats = root["formats"];
-			
+
 			if (formats.isArray())
 			{
-				JsonValue url = root["url"];				
+				JsonValue url = root["url"];
 				if (url.isString()) ret = url.asString();
 
 				JsonValue title = root["title"];
@@ -273,10 +268,10 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 
 				JsonValue id = root["id"];
 				if (id.isString()) MetaData["vid"] = id.asString();
-				
+
 				JsonValue ext = root["ext"];
 				if (ext.isString()) MetaData["fileExt"] = ext.asString();
-				
+
 				JsonValue uploader = root["uploader"];
 				if (uploader.isString()) MetaData["author"] = uploader.asString();
 				else
@@ -289,7 +284,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 						if (extractor_key.isString()) MetaData["author"] = extractor_key.asString();
 					}
 				}
-				
+
 				JsonValue description = root["description"];
 				if (description.isString()) MetaData["content"] = description.asString();
 
@@ -303,21 +298,21 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 				if (view_count.isString()) MetaData["viewCount"] = view_count.asString();
 				else if (view_count.isUInt()) MetaData["viewCount"] = formatInt(view_count.asUInt());
 
-				JsonValue like_count = root["like_count"];
-				if (like_count.isString()) MetaData["likeCount"] = like_count.asString();
-				else if (like_count.isUInt()) MetaData["likeCount"] = formatInt(like_count.asUInt());
-				
+				// JsonValue like_count = root["like_count"];
+				// if (like_count.isString()) MetaData["likeCount"] = like_count.asString();
+				// else if (like_count.isUInt()) MetaData["likeCount"] = formatInt(like_count.asUInt());
+
 				// JsonValue dislike_count = root["dislike_count"];
 				// if (dislike_count.isString()) MetaData["dislikeCount"] = dislike_count.asString();
-				// else if (dislike_count.isUInt()) MetaData["dislikeCount"] = formatInt(like_count.asUInt());				
-				
+				// else if (dislike_count.isUInt()) MetaData["dislikeCount"] = formatInt(like_count.asUInt());
+
 				JsonValue upload_date = root["upload_date"];
 				if (upload_date.isString()) MetaData["date"] = upload_date.asString();
 
 				for(int j = 0, len = formats.size(); j < len; j++)
 				{
 					JsonValue format = formats[j];
-				
+
 					JsonValue protocol = format["protocol"];
 					if (!protocol.isString()) continue;
 					string _protocol = protocol.asString();
@@ -326,7 +321,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 					JsonValue url = format["url"];
 					if (!url.isString()) continue;
 					if (ret.empty()) ret = url.asString();
-					
+
 					if (@QualityList !is null)
 					{
 						JsonValue ext = format["ext"];
@@ -368,22 +363,22 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 						JsonValue tbr = format["tbr"];
 						if (tbr.isDouble()) _tbr = tbr.asDouble();
 						else if (tbr.isUInt()) _tbr = tbr.asUInt();
-						
+
 						dictionary item;
 						item["url"] = url.asString();
 						item["format"] = _ext;
 						if (_width > 0 && _height > 0) item["resolution"] = formatInt(_width) + "×" + formatInt(_height);
-						
+
 						string bitrate;
 						if (_tbr > 0) bitrate = HostFormatBitrate(_tbr * 1000);
 						else if (_vbr > 0 && _abr > 0) bitrate = HostFormatBitrate((_abr + _vbr) * 1000);
 						else if (_vbr > 0) bitrate = HostFormatBitrate(_vbr * 1000);
 						else if (_abr > 0) bitrate = HostFormatBitrate(_abr * 1000);
-						
+
 						int itag = 0;
 						JsonValue format_id = format["format_id"];
 						if (format_id.isUInt()) itag = format_id.asUInt();
-						
+
 						string quality;
 						if (_vcodec == "none") // audio only...
 						{
@@ -402,7 +397,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 							if (_acodec == "none") // video only...
 							{
 								if (itag <= 0 || HostExistITag(itag))
-								{							
+								{
 									itag = HostGetITag(_height, 0, _ext == "mp4", _ext == "webm" || _ext == "m3u8");
 									if (itag < 0) itag = HostGetITag(_height, 0, true, true);
 								}
@@ -411,7 +406,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 							else
 							{
 								if (itag <= 0 || HostExistITag(itag))
-								{							
+								{
 									if (_height > 0 && _abr < 1) _abr = 1;
 									itag = HostGetITag(_height, _abr, _ext == "mp4", _ext == "webm" || _ext == "m3u8");
 									if (itag < 0) itag = HostGetITag(_height, _abr, true, true);
@@ -425,7 +420,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 							}
 							JsonValue fmt = format["format"];
 							if (fmt.isString())
-							{							
+							{
 								string str = fmt.asString();
 								if (quality.empty())
 								{
@@ -433,7 +428,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 									int p = quality.find(" ");
 									if (p > 0) quality = quality.substr(0, p);
 								}
-								
+
 								int p = str.find("HDR");
 								if (p > 0) item["isHDR"] = true;
 							}
@@ -446,7 +441,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 						if (_fps > 0) item["fps"] = _fps;
 
 						while (HostExistITag(itag)) itag++;
-						HostSetITag(itag);					
+						HostSetITag(itag);
 						item["itag"] = itag;
 
 						QualityList.insertLast(item);
@@ -454,21 +449,21 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 				}
 
 				if (@QualityList !is null)
-				{				
+				{
 					JsonValue requested_subtitles = root["requested_subtitles"];
 					if (requested_subtitles.isObject())
 					{
-						array<dictionary> subtitle;					
+						array<dictionary> subtitle;
 						array<string> lang_names = requested_subtitles.getKeys();
-						
+
 						for(int j = 0, len = lang_names.size(); j < len; j++)
 						{
 							JsonValue sub = requested_subtitles[lang_names[j]];
-						
+
 							if (sub.isObject())
 							{
 								JsonValue url = sub["url"];
-							
+
 								if (url.isString())
 								{
 									dictionary item;
@@ -476,7 +471,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 									item["name"] = lang_names[j];
 									item["langCode"] = lang_names[j];
 									item["url"] = url.asString();
-									subtitle.insertLast(item);								
+									subtitle.insertLast(item);
 								}
 							}
 						}
@@ -486,6 +481,6 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 			}
 		}
 	}
-	
+
 	return ret;
 }
