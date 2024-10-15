@@ -3,12 +3,14 @@ Historia wersji PotPlayer
 
 
 ----------------------------------------------------------
-[240925]
+[241015]
 ----------------------------------------------------------
 + Dodano możliwość dostosowania prędkości odtwarzania po naciśnięciu przycisku myszki
 
+- Naprawiono błąd, w wyniku którego czasy odtwarzania niektórych plików MPEG TS były nieprawidłowe
 - Naprawiono błąd, który powodował migotanie ekranu podczas odtwarzania niektórych plików MPEG TS
 - Naprawiono błąd, który powodował nieprawidłowe wyświetlanie niektórych napisów ASS/SSA
+- Naprawiono błąd, który powodował nieprawidłowe działanie podczas odtwarzania bardzo długich plików
 
 ----------------------------------------------------------
 [240827]

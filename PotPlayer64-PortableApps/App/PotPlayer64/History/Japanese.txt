@@ -2,8 +2,14 @@
 PotPlayer 更新履歴
 
 ----------------------------------------------------------
-[240919]
+[241015]
 ----------------------------------------------------------
++ Added the ability to adjust playback speed when pressing the mouse button
+
+- Fixed an issue where certain MPEG TS playback times were abnormal
+- Fixed the problem of screen breaking when playing certain MPEG TS
+- Fixed the problem of certain ASS/SSA subtitles appearing strangely
+- Fixed an issue that caused abnormal operation when playing very long files.
 
 ----------------------------------------------------------
 [240827]
