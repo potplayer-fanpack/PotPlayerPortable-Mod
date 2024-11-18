@@ -27,6 +27,7 @@
 /clipboard        : 클립보드의 항목으로 재생
 /seek=hh:mm:ss.ms : 지정된 시간으로 재생 시작
 /sub=["]자막 파일["] : 같이 열 자막 파일 지정
+/aud=["]자막 파일["] : 같이 열 오디오 파일 지정
 /user_agent=["]문자열["] : http(s) 열기 시 사용할 user agent
 /referer=["]문자열["] : http(s) 열기 시 사용할 reference
 /headers=["]문자열["] : http(s) 열기 시 사용할 추가적인 정보
@@ -831,6 +832,7 @@ Usage: PotPlayerMini64.exe ["content"] [/switch]
 /seek=time      :Starts playback of the specified/last played content from the specified time point.
                 -time format is: hh:mm:ss.ms (OR specify seconds only e.g. /seek=1800 to start at 30th min)
 /sub="subfile"  :Loads the specified subtitle(s) from the specified paths or URLs.
+/aud="audiofile":Loads the specified audio(s) from the specified paths or URLs.
 /user_agent="ua":Sets user agent header for HTTP(S) requests.
 /referer="ref"  :Sets referer header for HTTP(S) requests.
 /headers="hdrs" :Appends the specified header(s) to HTTP(S) requests.

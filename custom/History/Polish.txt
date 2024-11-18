@@ -3,11 +3,15 @@ Historia wersji PotPlayer
 
 
 ----------------------------------------------------------
-[241108]
+[241118]
 ----------------------------------------------------------
 + Dodano możliwość generowania napisów z głosu przy użyciu funkcji Whisper
++ Dodano możliwość otwierania audio z wykorzystaniem opcji wiersza polecenia
++ Dodano możliwość ustawienia luminancji monitora na HDR 2084
 
 - Naprawiono błąd, który powodował, że niektóre teksty MP3 nie były wyświetlane
+- Naprawiono błąd, który uniemożliwiał odtwarzanie plików graficznych WEBP
+- Naprawiono spowolnione odtwarzanie niektórych plików MPEG TS
 
 ----------------------------------------------------------
 [241015]
