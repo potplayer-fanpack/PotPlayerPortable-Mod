@@ -243,7 +243,8 @@ Użycie: PotPlayerMini64.exe ["zawartość"] [/przełącznik]
 /clipboard       : Dołącza zawartość (pliki/foldery/URL) ze schowka do listy odtwarzania i natychmiast rozpoczyna odtwarzanie
 /seek=time       : Rozpoczyna odtwarzanie określonej / ostatnio odtwarzanej zawartości od określonego momentu
                    - format czasu to: hh:mm:ss.ms (LUB można określić tylko sekundy, np. /seek=1800, aby rozpocząć od 30 minuty)
-/sub="subfile"   : Wczytuje określone napisy z podanych ścieżek lub adresów URL
+/sub="subfile"   : Wczytuje określone pliki z napisami ze wskazanych ścieżek lub adresów URL
+/aud="audiofile" : Wczytuje określone pliki audio ze wskazanych ścieżek lub adresów URL
 /user_agent="ua" : Ustawia nagłówek user agent dla zapytań http(s)
 /referer="ref"   : Ustawia nagłówek odwołania dla zapytań http(s)
 /headers="hdrs"  : Dołącza określone nagłówki do zapytań http(s)
