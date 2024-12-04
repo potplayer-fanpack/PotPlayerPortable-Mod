@@ -2,8 +2,16 @@
 Историја верзија Пот плејера
 
 ----------------------------------------------------------
-[241127]
+[241204]
 ----------------------------------------------------------
++ Added the ability to generate subtitles from voice using Whisper
++ Added the ability to open audio together in command line options
++ Added the ability to set monitor luminance in HDR 2084
+
+- Fixed an issue where WEBP image files could not be played
+- Fixed an issue where certain MP3 lyrics did not appear
+- Fixed an issue where certain MPEG TS files were playing slowly
+- Fixed an issue where certain files were displayed in black when playing.
 
 ----------------------------------------------------------
 [241015]

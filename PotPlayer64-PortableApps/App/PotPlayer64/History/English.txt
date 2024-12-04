@@ -2,7 +2,7 @@
 Version History of the PotPlayer
 
 ----------------------------------------------------------
-[241127]
+[241204]
 ----------------------------------------------------------
 + Added the ability to generate subtitles from voice using Whisper
 + Added the ability to open audio together in command line options
