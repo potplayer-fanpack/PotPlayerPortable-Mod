@@ -2,7 +2,7 @@
 PotPlayer 更新履歴
 
 ----------------------------------------------------------
-[241204]
+[241211]
 ----------------------------------------------------------
 + Added the ability to generate subtitles from voice using Whisper
 + Added the ability to open audio together in command line options

@@ -1038,7 +1038,7 @@ string GetVideoJson(string videoId, bool isLive)
 {
 	string userAgent, headers, postData;
 
-	if (false)
+	if (isLive)
 	{
 		userAgent = "com.google.android.apps.youtube.vr.oculus/1.60.19 (Linux; U; Android 12L; eureka-user Build/SQ3A.220605.009.A1) gzip";
 		headers = "X-YouTube-Client-Name: 28\r\n"
