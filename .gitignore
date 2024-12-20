@@ -6,3 +6,14 @@ My_PotPlayer64_Public_*.zip
 My_PotPlayer64_Dev_*.zip
 OpenCodecSetup64.exe
 PotPlayerSetup64.exe
+
+# Extensions
+/custom/Extension/PropertiesMedia/PlayParse/AMediaPlayParse - YouTubeMod.as
+/custom/Extension/PropertiesMedia/PlayParse/AMediaPlayParse - YouTubeMod.ico
+/custom/Extension/Data/
+/custom/Extension/Data/YouTubeMod/
+/custom/Extension/Data/YouTubeMod/config.cfg
+/custom/Extension/Data/Curl/
+/custom/Extension/Data/Curl/cacert.pem
+/custom/Extension/Data/Curl/curl.exe
+/custom/Extension/Data/Cookies/
