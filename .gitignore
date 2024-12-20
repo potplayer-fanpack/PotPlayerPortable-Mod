@@ -8,8 +8,8 @@ OpenCodecSetup64.exe
 PotPlayerSetup64.exe
 
 # Extensions
-/custom/Extension/PropertiesMedia/PlayParse/AMediaPlayParse - YouTubeMod.as
-/custom/Extension/PropertiesMedia/PlayParse/AMediaPlayParse - YouTubeMod.ico
+/custom/Extension/Media/PlayParse/MediaPlayParse - YouTubeMod.as
+/custom/Extension/Media/PlayParse/MediaPlayParse - YouTubeMod.ico
 /custom/Extension/Data/
 /custom/Extension/Data/YouTubeMod/
 /custom/Extension/Data/YouTubeMod/config.cfg
