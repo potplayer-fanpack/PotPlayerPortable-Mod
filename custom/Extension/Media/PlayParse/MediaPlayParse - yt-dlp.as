@@ -172,28 +172,28 @@ string GetPlayerDir()
 
 string GetFilePath()
 {
-	string path = GetPlayerDir() + "Extension\\Data\\yt-dlp_win\\yt-dlp.exe";
+	string path = GetPlayerDir() + "Extension\\Lib\\yt-dlp_win\\yt-dlp.exe";
 	if (!FileExist(path))
 	{
-		path = GetPlayerDir() + "Extension\\Data\\yt-dlp.exe";
+		path = GetPlayerDir() + "Extension\\Lib\\yt-dlp.exe";
 		if (!FileExist(path))
 		{
-			path = GetPlayerDir() + "Extension\\Data\\yt-dlp_min.exe";
+			path = GetPlayerDir() + "Extension\\Lib\\yt-dlp_min.exe";
 			if (!FileExist(path))
 			{
-				path = GetPlayerDir() + "Extension\\Data\\yt-dlp_x86.exe";
+				path = GetPlayerDir() + "Extension\\Lib\\yt-dlp_x86.exe";
 				if (!FileExist(path))
 				{
-					path = GetPlayerDir() + "Extention\\Data\\yt-dlp_win\\yt-dlp.exe"; // for some older versions...
+					path = GetPlayerDir() + "Extention\\Lib\\yt-dlp_win\\yt-dlp.exe"; // for some older versions...
 					if (!FileExist(path))
 					{
-						path = GetPlayerDir() + "Extention\\Data\\yt-dlp.exe";
+						path = GetPlayerDir() + "Extention\\Lib\\yt-dlp.exe";
 						if (!FileExist(path))
 						{
-							path = GetPlayerDir() + "Extention\\Data\\yt-dlp_min.exe";
+							path = GetPlayerDir() + "Extention\\Lib\\yt-dlp_min.exe";
 							if (!FileExist(path))
 							{
-								path = GetPlayerDir() + "Extention\\Data\\yt-dlp_x86.exe";
+								path = GetPlayerDir() + "Extention\\Lib\\yt-dlp_x86.exe";
 								if (!FileExist(path))
 								{
 									return "";
