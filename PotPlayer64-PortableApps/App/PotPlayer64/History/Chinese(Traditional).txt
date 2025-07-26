@@ -1,46 +1,87 @@
 ﻿
 PotPlayer 版本更新日誌
 
-----------------------------------------------------------
+------------------------------------------------------------------------
+[250625]
+------------------------------------------------------------------------
++ 新增可選擇 HDR 色調映射類型的功能  
++ Whisper 新增 VAD (語音活動檢測)功能  
+
+- 修正特定情況下發生錯誤的問題  
+- 修正某些 MP3 歌詞無法顯示的問題  
+- 修正某些字幕背景被裁切的問題  
+- 修正部分影片旋轉無法正確處理的問題  
+- 改善損壞 MKV 檔案的播放功能
+
+--------------------------------------------------------------------------
+[250514]
+--------------------------------------------------------------------------
++ 新增可調整字幕字型處理方式的功能
+
+- 改善 Whisper 附加選項的處理
+- 改善 D3D11 H/W HDR 處理
+- 修正特定條件下出現黑畫面的問題
+
+--------------------------------------------------------------------------
+[250313]
+--------------------------------------------------------------------------
+- 修復了某些電腦停止播放 10-bit HEVC 影片的問題
+- 修復了 Whisper Faster 在 NVIDIA 5000 系列 GPU 上無法運作的問題
+- 修復了某些 ASS/SSA 字幕無法正常運作的問題
+
+--------------------------------------------------------------------------
+[250226]
+--------------------------------------------------------------------------
++ 新增使用 libass 輸出 ASS/SSA 字幕的功能
++ 新增 Faster-Whisper-XXL 到 Whisper 引擎
++ 新增更新 Whisper 引擎的功能
++ 新增生成帶字幕音訊時儲存與影片同名稱字幕的功能
+
+- 修正某些情況下錄製影片時螢幕顏色異常的問題
+- 修正某些情況下發生記憶體洩漏的問題
+- 修正某些 ASS/SSA 字幕顏色異常的問題
+- 提高 ASS/SSA 字幕渲染速度
+
+--------------------------------------------------------------------------
 [241211]
-----------------------------------------------------------
-+ Added the ability to generate subtitles from voice using Whisper
-+ Added the ability to open audio together in command line options
-+ Added the ability to set monitor luminance in HDR 2084
+--------------------------------------------------------------------------
++ 新增使用 Whisper 從語音生成字幕的功能
++ 新增使用命令列選項開啟音訊的功能
++ 新增為 HDR 2084 設定顯示器亮度的功能
 
-- Fixed an issue where WEBP image files could not be played
-- Fixed an issue where certain MP3 lyrics did not appear
-- Fixed an issue where certain MPEG TS files were playing slowly
-- Fixed an issue where certain files were displayed in black when playing.
+- 修正 WEBP 圖片檔案無法播放的問題
+- 修正某些 MP3 歌詞不出現的問題
+- 修正某些 MPEG TS 檔案播放緩慢的問題
+- 修正播放某些檔案時黑屏的問題
 
-----------------------------------------------------------
+--------------------------------------------------------------------------
 [241015]
-----------------------------------------------------------
-+ Added the ability to adjust playback speed when pressing the mouse button
+--------------------------------------------------------------------------
++ 新增按下滑鼠按鍵時調整播放速度的功能
 
-- Fixed an issue where certain MPEG TS playback times were abnormal
-- Fixed the problem of screen breaking when playing certain MPEG TS
-- Fixed the problem of certain ASS/SSA subtitles appearing strangely
-- Fixed an issue that caused abnormal operation when playing very long files.
+- 修正某些 MPEG TS 播放時間異常的問題
+- 修正播放某些 MPEG TS 時出現花屏的問題
+- 修正某些 ASS/SSA 字幕出現異常的問題
+- 修正播放超長檔案時導致操作異常的問題
 
-----------------------------------------------------------
+--------------------------------------------------------------------------
 [240827]
-----------------------------------------------------------
-+ Added WEBP to video capture 
-+ Added ability to set delay time to seconds or less in image source filter 
-+ Added auto-run feature when system starts
+--------------------------------------------------------------------------
++ 新增 WEBP 格式到影像截取
++ 新增在影像來源濾鏡中將延遲時間設定為秒或更短的功能
++ 新增系統啟動時自動執行功能
 
-- Fixed an issue where the size settings of the shortcut icon were not reflected. 
-- Fixed an issue where the Do not add duplicate files setting was reset in certain situations. 
-- Fixed an issue where the video was recognized as interlaced when playing with a specific codec. 
-- Fixed an error issue when decoding with libVPX 8/9
-- Fixed an issue where navigation occurred abnormally when playing MP4 streaming.
-- Fixed an issue where browsing certain FLV files was slow
-- Improved subtitle display speed
+- 修正捷徑圖示的大小設定無法反映的問題
+- 修正在某些情況下過濾重複檔案設定被重置的問題
+- 修正使用某些編解碼機播放時影片被識別為隔行掃描的問題
+- 修正使用 libVPX 8/9 解碼時出現錯誤的問題
+- 修正播放 MP4 串流時導航異常的問題
+- 修正瀏覽某些 FLV 檔案速度緩慢的問題
+- 提高字幕輸出速度
 
-----------------------------------------------------------
+--------------------------------------------------------------------------
 [240618]
-----------------------------------------------------------
+--------------------------------------------------------------------------
 + 新增設定 OSD 播放資訊字型的功能
 + 新增在自動的配置管理中命名專輯的功能
 + 新增在循環清單中轉到上一個/下一個的功能
@@ -51,9 +92,9 @@ PotPlayer 版本更新日誌
 - 修正嵌入字幕名稱中顯示字幕格式的問題
 - 修正內建視訊渲染器中影格(幀)同步無法正常運作的問題
 
-----------------------------------------------------------
+--------------------------------------------------------------------------
 [240509]
-----------------------------------------------------------
+--------------------------------------------------------------------------
 - 修正播放某些 MP4 檔案時畫面不出現的問題
 - 改善內建 D3D9 渲染器的穩定性
 - 修正壓縮檔中的檔案無法正常播放的問題

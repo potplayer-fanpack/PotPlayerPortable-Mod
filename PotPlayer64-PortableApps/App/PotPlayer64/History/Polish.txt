@@ -2,6 +2,47 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
+[250625]
+----------------------------------------------------------
++ Dodano funkcję umożliwiającą wybór metody mapowania tonów HDR
++ Dodano funkcję VAD do Whisper
+
+- Naprawiono błąd, który występował w niektórych sytuacjach
+- Naprawiono błąd, który powodował, że niektóre teksty MP3 nie mogły być wyświetlane
+- Naprawiono błąd, w wyniku którego niektóre tła napisów były ucinane
+- Naprawiono błąd, który powodował, że obracanie niektórych obrazów nie było obsługiwane
+- Ulepszono funkcję odtwarzania uszkodzonych plików MKV
+
+----------------------------------------------------------
+[250514]
+----------------------------------------------------------
++ Dodano możliwość zmiany obsługi czcionki napisów
+
+- Ulepszono obsługę opcji dodatkowych Whisper
+- Ulepszono przetwarzanie HDR D3D11 H/W
+- Naprawiono problem powodujący w pewnych warunkach pojawianie się czarnego ekranu
+
+----------------------------------------------------------
+[250313]
+----------------------------------------------------------
+- Naprawiono problem, w wyniku którego niektóre komputery przestawały odtwarzać wideo HEVC 10-bit
+- Naprawiono problem, w wyniku którego Whisper Faster nie działał na procesorach graficznych NVIDIA serii 5000
+- Naprawiono problem, w wyniku którego niektóre napisy ASS/SSA nie działały prawidłowo
+
+----------------------------------------------------------
+[250226]
+----------------------------------------------------------
++ Dodano możliwość generowania napisów ASS/SSA przy użyciu libass
++ Dodano Faster-Whisper-XXL do silnika Whisper
++ Dodano możliwość aktualizacji silnika Whisper
++ Dodano możliwość zapisywania napisów o tej samej nazwie co wideo podczas tworzenia napisów z audio
+
+- Naprawiono błąd powodujący, że kolor ekranu był nieprawidłowy w niektórych sytuacjach podczas przechwytywania wideo
+- Naprawiono problem powodujący wycieki pamięci w niektórych sytuacjach
+- Naprawiono problem powodujący, że niektóre napisy ASS/SSA miały dziwne kolory
+- Poprawiono prędkość renderowania napisów ASS/SSA
+
+----------------------------------------------------------
 [241211]
 ----------------------------------------------------------
 + Dodano możliwość generowania napisów z głosu przy użyciu funkcji Whisper

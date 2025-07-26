@@ -2,6 +2,45 @@
 Историја верзија Пот плејера
 
 ----------------------------------------------------------
+[250625]
+----------------------------------------------------------
++ Added ability to select HDR tone mapping type 
++ Added VAD function to Whisper 
+
+- Fixed an issue where an error occurred in certain situations 
+- Fixed an issue where certain MP3 lyrics could not be displayed 
+- Fixed an issue where certain subtitle backgrounds were cut off 
+- Fixed an issue where rotation of certain images could not be handled
+- Improved damaged MKV playback function
+
+----------------------------------------------------------
+[250514]
+----------------------------------------------------------
++ Added ability to change subtitle font handling
+
+- Improved handling of Whisper additional options
+- Improved D3D11 H/W HDR handling
+- Fixed issue where black screen appeared under certain conditions
+
+----------------------------------------------------------
+[250313]
+----------------------------------------------------------
+- Fixed an issue where certain PCs would stop playing 10-bit HEVC video
+- Fixed an issue where whisper faster would not work on NVIDIA 5000 series GPUs
+- Fixed an issue where certain ASS/SSA subtitles would not work properly
+
+----------------------------------------------------------
+[250226]
+----------------------------------------------------------
++ Added the ability to output ASS/SSA subtitles using libass
++ Added Faster-Whisper-XXL to the Whisper engine
++ Added the ability to update the Whisper engine
++ Added the ability to save subtitles with the same name as the video when generating voices with subtitles
+
+- Fixed the issue where the screen color was strange in certain situations when capturing video
+- Fixed the issue where memory leaks occurred in certain situations
+
+----------------------------------------------------------
 [241211]
 ----------------------------------------------------------
 + Added the ability to generate subtitles from voice using Whisper

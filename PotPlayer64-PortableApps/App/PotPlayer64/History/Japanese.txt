@@ -2,49 +2,86 @@
 PotPlayer 更新履歴
 
 ----------------------------------------------------------
-[241211]
+[250625]
 ----------------------------------------------------------
-+ Added the ability to generate subtitles from voice using Whisper
-+ Added the ability to open audio together in command line options
-+ Added the ability to set monitor luminance in HDR 2084
++ Added ability to select HDR tone mapping type 
++ Added VAD function to Whisper 
 
-- Fixed an issue where WEBP image files could not be played
-- Fixed an issue where certain MP3 lyrics did not appear
-- Fixed an issue where certain MPEG TS files were playing slowly
-- Fixed an issue where certain files were displayed in black when playing.
-
-----------------------------------------------------------
-[241015]
-----------------------------------------------------------
-+ Added the ability to adjust playback speed when pressing the mouse button
-
-- Fixed an issue where certain MPEG TS playback times were abnormal
-- Fixed the problem of screen breaking when playing certain MPEG TS
-- Fixed the problem of certain ASS/SSA subtitles appearing strangely
-- Fixed an issue that caused abnormal operation when playing very long files.
+- Fixed an issue where an error occurred in certain situations 
+- Fixed an issue where certain MP3 lyrics could not be displayed 
+- Fixed an issue where certain subtitle backgrounds were cut off 
+- Fixed an issue where rotation of certain images could not be handled
+- Improved damaged MKV playback function
 
 ----------------------------------------------------------
-[240827]
+[250514]
 ----------------------------------------------------------
-+ Added WEBP to video capture 
-+ Added ability to set delay time to seconds or less in image source filter 
-+ Added auto-run feature when system starts
++ Added ability to change subtitle font handling
 
-- Fixed an issue where the size settings of the shortcut icon were not reflected. 
-- Fixed an issue where the Do not add duplicate files setting was reset in certain situations. 
-- Fixed an issue where the video was recognized as interlaced when playing with a specific codec. 
-- Fixed an error issue when decoding with libVPX 8/9
-- Fixed an issue where navigation occurred abnormally when playing MP4 streaming.
-- Fixed an issue where browsing certain FLV files was slow
-- Improved subtitle display speed
+- Improved handling of Whisper additional options
+- Improved D3D11 H/W HDR handling
+- Fixed issue where black screen appeared under certain conditions
 
 -----------------------------------------------------------------------
-2024/06/20				[240618 / 1.7.22260]
+2025/03/14				[250313 / 1.7.22508]
+-----------------------------------------------------------------------
+・ 10bit HEVC 再生が特定のPCで停止した問題を修正
+・ NVIDIA RTX50 シリーズのGPUで Whisper-Faster が動作しなかった問題を修正
+・ 特定のASS／SSA字幕の処理が異常だった問題を修正
+
+-----------------------------------------------------------------------
+2025/03/11				[250226 / 1.7.22503]
+-----------------------------------------------------------------------
+＋ 字幕設定で、ASS／SSAの字幕レンダラーとして libass を使用する項目を追加
+＋ 文字起こしパネルで、Whisperエンジンとして Faster-Whisper-XXL を追加
+＋ 文字起こしパネルで、既存のWhisperエンジンの更新に対応
+＋ 文字起こしパネルで、生成した字幕を同名で自動保存する設定を追加
+・ 特定の状況でメモリーリークが発生していた問題を修正
+・ 特定のASS／SSA字幕の色が異常出力されていた問題を修正
+・ ASS／SSA字幕のレンダリング速度を改善
+
+-----------------------------------------------------------------------
+2024/12/16				[241216 / 1.7.22398]
+-----------------------------------------------------------------------
+＋ 字幕のメインメニューに、音声から字幕を生成する文字起こし機能を追加
+＋ コマンドラインオプションに、外部音声を指定する /aud="～" を追加
+＋ ピクセルシェーダーの設定に、HDRをSDRに変換した場合の輝度調整を追加
+・ WEBP画像が再生できなかった問題を修正
+・ MP3で特定の内蔵歌詞が表示されなかった問題を修正
+・ 特定のMPEG-TSで再生処理が遅かった問題を修正
+・ 特定のファイル再生で映像が出力しなかった問題を修正
+・ ディスプレイ領域入力で画面表示が異常だった問題を修正（16日版）
+
+-----------------------------------------------------------------------
+2024/10/16				[241015 / 1.7.22347]
+-----------------------------------------------------------------------
+＋ マウス設定でボタン押下中だけ再生速度を変更する項目を追加
+・ 特定の MPEG TS で再生時間が不正だった問題を修正
+・ 特定の MPEG TS で映像が異常出力していた問題を修正
+・ 特定のASS／SSA字幕が異常出力していた問題を修正
+・ 再生時間が非常に長時間のファイルで再生が異常だった問題を修正
+
+-----------------------------------------------------------------------
+2024/09/10				[240827 / 1.7.22319]
+-----------------------------------------------------------------------
+＋ 画像保存の形式にWEBPを追加
+＋ 内部ソース・スプリッタの設定で、画像ファイル再生の表示時間を0.1秒単位で設定できるように変更
+＋ 全般設定で、Windows起動時にPotPlayerを自動実行する項目を追加
+・ ショートカットアイコンのサイズ設定が反映されていなかった問題を修正
+・ プレイリストの設定で、重複したクリップを追加しない設定が特定の状況で初期化される問題を修正
+・ 特定のコーデックでインターレース映像と誤認される問題を修正
+・ 内部デコーダでLibVPXを使用すると、VP8／VP9のデコードに失敗した問題を修正
+・ MP4ストリーミング再生でシーク時に異常動作していた問題を修正
+・ 特定のFLVファイルの読み込みが遅かった問題を修正
+・ 字幕出力速度を向上
+
+-----------------------------------------------------------------------
+2024/06/27				[240618 / 1.7.22266]
 -----------------------------------------------------------------------
 ＋ 画面表示情報の設定で、詳細情報のフォントを分離
 ＋ 環境構成の管理設定で、自動切換条件にPotPlayerのアルバム名を追加
 ＋ 映像設定に垂直同期(VSync)の待機処理に関する項目を追加
-＋ 全般設定で、Windowsのロック画面にPotPlayerで再生中のUIを表示する項目を追加（SMTC対応）
+＋ 全般設定に、システムメディアトランスポートコントロール(SMTC)に対応する項目を追加
 ・ Windows標準のウィンドウ枠を持つスキンで、タイトルバーを持たない上部枠の表示を改善
 ・ 内蔵字幕の名前に字幕形式の表記を追加
 ・ 内蔵の映像レンダラでフレーム送りが不安定だった問題を修正
@@ -52,9 +89,10 @@ PotPlayer 更新履歴
 -----------------------------------------------------------------------
 2024/05/28				[240509 / 1.7.22233]
 -----------------------------------------------------------------------
+＋ HDR再生で Dolby Vision に対応
 ＋ 区間リピートのメニューに、複数区間における次／前への移動コマンドを追加（28日版）
 ・ 特定のMP4ファイル再生で映像が出力しなかった問題を修正
-・ 内蔵D3D9映像レンダラの安定性を改善
+・ 内蔵D3D9映像レンダラの安定性を向上
 ・ 圧縮ファイル内の特定のメディアファイル再生に失敗することがあった問題を修正
 ・ 特定のMPEG2をD3D9デコーダで再生時、シークすると映像が破綻することがあった問題を修正
 

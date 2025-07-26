@@ -93,8 +93,8 @@ array<string> GetDstLangs()
 
 string Translate(string Text, string &in SrcLang, string &in DstLang)
 {		
-	string SendHeader = "X-Naver-Client-Id: " + client_id + "\r\n";
-	SendHeader += "X-Naver-Client-Secret: " + client_secret + "\r\n";
+	string SendHeader = "X-NCP-APIGW-API-KEY-ID: " + client_id + "\r\n";
+	SendHeader += "X-NCP-APIGW-API-KEY: " + client_secret + "\r\n";
 	SendHeader += "Content-Type: application/x-www-form-urlencoded; charset=UTF-8 \r\n";
 	
 	if (SrcLang.length() <= 0) SrcLang = "en";	

@@ -14,11 +14,11 @@ if not exist %TEMPDIR% (md %TEMPDIR%)
 echo "Downloading PotPlayerSetup64.exe"
 if exist %WORKDIR%PotPlayerSetup64.exe (del /q /s /f %WORKDIR%PotPlayerSetup64.exe)
 if "%SOURCE%"=="Dev" (%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/beta/PotPlayerSetup64.exe)
-if "%SOURCE%"=="Public" (%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetup64.exe)
+if "%SOURCE%"=="Public" (%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotPlayer/Version/250625/PotPlayerSetup64.exe)
 
 echo "Downloading OpenCodecSetup64.exe"
 if exist %WORKDIR%OpenCodecSetup64.exe (del /q /s /f %WORKDIR%OpenCodecSetup64.exe)
-%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotPlayer/Codec/v3/OpenCodecSetup64.exe
+%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotPlayer/Codec/v4/OpenCodecSetup64.exe
 
 echo "Extracting PotPlayerSetup64.exe"
 %BINDIR%\7z.exe x %WORKDIR%PotPlayerSetup64.exe -o%TEMPDIR%\PotPlayer64 -y

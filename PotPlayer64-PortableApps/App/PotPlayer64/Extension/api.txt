@@ -15,10 +15,10 @@ int HostGetAPIVersion()
 void HostOpenConsole()
 	Open debug console
 
-void HostPrintUTF8(const string &in)
+void HostPrintUTF8(const string &in log)
 	Print UTF8 string
 
-void HostPrintUTF16(const string &in)
+void HostPrintUTF16(const string &in log)
 	Print UTF16 string
 
 string HostGetVersion()
@@ -42,28 +42,57 @@ void HostIncTimeOut(int ms)
 bool HostCheckMediaFile(const string &in filename, bool Video, bool Audio, bool Playlist)
 	Check filename is Video or Audio or Playlist
 
+bool HostFileExist(const string &in fn)
+	Check file is exist
+
+bool HostFolderExist(const string &in fn)
+	Check folder is exist
+
+bool HostFolderCreate(const string &in fn)
+	Create folder in config folder
+	Releative path(..) is not allow
+	abs path is not allow
+
+bool HostFolderDelete(const string &in fn)
+	Delete empty folder in config folder
+	Releative path(..) is not allow
+	abs path is not allow
+	Can delete only folder is empty
+
+string HostGetScriptFolder()
+	Get current script folder
+
+string HostGetExtensionFolder()
+	Get script root folder
+
 string HostGetTempFolder()
 	Get temp folder
 
-string HostGetExtension(const string &in)
+string HostGetConfigFolder()
+	Get config folder
+
+string HostGetExecuteFolder()
+	Get PotPlayer's EXE folder
+
+string HostGetExtension(const string &in fn)
 	Get file extension
 
-string HostMBCSToUTF8(const string &in)
+string HostMBCSToUTF8(const string &in str)
 	Convert multibyte to UTF8
 
-string HostMBCSToUTF16(const string &in)
+string HostMBCSToUTF16(const string &in str)
 	Convert multibyte to UTF16
 
-string HostUTF8ToMBCS(const string &in)
+string HostUTF8ToMBCS(const string &in str)
 	Convert UTF8 to multibyte
 
-string HostUTF16ToMBCS(const string &in)
+string HostUTF16ToMBCS(const string &in str)
 	Convert UTF16 to multibyte
 
-string HostUTF8ToUTF16(const string &in)
+string HostUTF8ToUTF16(const string &in str)
 	Convert UTF8 to UTF16
 
-string HostUTF16ToUTF8(const string &in)
+string HostUTF16ToUTF8(const string &in str)
 	Convert UTF16 to UTF8
 
 string HostUrlGetString(const string &in url, const string &in UserAgent = "", const string &in Header = "", const string &in PostData = "", bool NoCookie = false)
@@ -91,7 +120,17 @@ void HostCloseHTTP(uintptr http)
 	Close http
 
 uintptr HostFileOpen(const string &in filename)
-	Open local file
+	Open local file for read
+
+uintptr HostFileCreate(const string &in filename)
+	Create or Open local file for write in config folder
+	Releative path(..) is not allow
+	abs path is not allow
+
+bool HostFileDelete(const string& fn)
+	Delete local file for write in config folder
+	Releative path(..) is not allow
+	abs path is not allow
 
 void HostFileClose(uintptr fp)
 	Close local file
@@ -101,6 +140,9 @@ int64 HostFileSeek(uintptr fp, int64 offset, int from = 0)
 
 int64 HostFileLength(uintptr fp)
 	Get file length
+
+int64_t HostFileSetLength(uintptr fp, int64 size)
+	Set file length and return new size
 
 uint8 HostFileReadBYTE(uintptr fp)
 	Read uint8
@@ -116,6 +158,21 @@ uint64 HostFileReadQWORD(uintptr fp)
 
 string HostFileRead(uintptr fp, int len)
 	Read string by len
+
+int HostFileWriteBYTE(uintptr fp, uint8 data)
+	Write uint8
+
+int HostFileWriteWORD(uintptr fp, uint16_t data)
+	Write uint16
+
+int HostFileWriteDWORD(uintptr fp, uint32_t data)
+	Write uint32
+
+int HostFileWriteQWORD(uintptr fp, uint64_t data)
+	Write uint64
+
+int HostFileWrite(uintptr fp, string data)
+	Write string
 
 string HostUrlEncode(const string &in url)
 	Encode Url escape
@@ -227,12 +284,22 @@ uintptr HostString2UIntPtr(const string &in var)
 string HostUIntPtr2String(uintptr ptr)
 	C string(char *) to script string
 
+string HostExecuteProgram(const string &in ExeName, const string &in ExeParam)
+	Execute file and return result
+
+string HostFormatBitrate(int64 offset)
+	Make bitrate string
+
 void HostSetUrlUserAgentHTTP(const string &url, const string &userAgent)
 	Set useragent for HTTP url
 
 void HostSetUrlHeaderHTTP(const string &url, const string &header)
 	Set http header for HTTP url
 
+void HostMessageBox(const string& content, const string& title = "", int iconType = 3, int btnType = 1)
+	Show message box
+	iconType : 0->!, 1->?, 2->i, 3->x
+	btnType : 0->OK, 1->Close, 2->Yes
 
 ------------------------PotPlayer's builtin class----------------------------------
 ------------------------string
@@ -240,8 +307,8 @@ void HostSetUrlHeaderHTTP(const string &url, const string &header)
 	string Right(int Count) const
 	string Left(int Count) const
 	string TrimRight(const string &in str = "") const
-	string TrimLeft(const string &in = "") const
-	string Trim(const string &in = "") const
+	string TrimLeft(const string &in str = "") const
+	string Trim(const string &in str = "") const
 	string MakeLower() const
 	string MakeUpper() const
 
@@ -346,3 +413,36 @@ void HostSetUrlHeaderHTTP(const string &url, const string &header)
 ------XmlRpcClient
 	bool execute(const string &in cmd, const XmlRpcValue &in param, XmlRpcValue &out result)
 
+------------------------IniFile
+	bool Open(const string &in)
+	bool OpenString(const string &in)
+	bool Save(const string &in)
+		Save ini to config folder
+		Releative path(..) is not allow
+		abs path is not allow
+	bool IsEmpty()
+	void Clear()
+	bool ClearSection(const string &in)
+	bool DeleteItem(const string &in, const string &in)
+	int GetSectionCount()
+	int GetSections(array<string> &out)
+	int GetItemCount(const string &in)
+	int GetItems(const string &in, array<string> &out)
+	int GetProfileInt(const string &in, const string &in, int, bool &out)
+	bool WriteProfileInt(const string &in, const string &in, int)
+	string GetProfileString(const string &in, const string &in, const string &in, bool &out)
+	bool WriteProfileString(const string &in, const string &in, const string &in)
+
+------------------------FileVersion
+	bool Open(const string &in)
+	void Close()
+	string GetFileDescription()
+	string GetFileVersion()
+	string GetInternalName()
+	string GetCompanyName()
+	string GetLegalCopyright()
+	string GetOriginalFilename()
+	string GetProductName()
+	string GetProductVersion()
+	string GetFixedVersion()
+	string GetFixedProductVersion()
