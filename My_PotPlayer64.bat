@@ -14,7 +14,7 @@ if not exist %TEMPDIR% (md %TEMPDIR%)
 echo "Downloading PotPlayerSetup64.exe"
 if exist %WORKDIR%PotPlayerSetup64.exe (del /q /s /f %WORKDIR%PotPlayerSetup64.exe)
 if "%SOURCE%"=="Dev" (%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/beta/PotPlayerSetup64.exe)
-if "%SOURCE%"=="Public" (%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotPlayer/Version/250625/PotPlayerSetup64.exe)
+if "%SOURCE%"=="Public" (%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotPlayer/Version/260114/PotPlayerSetup64.exe)
 
 echo "Downloading OpenCodecSetup64.exe"
 if exist %WORKDIR%OpenCodecSetup64.exe (del /q /s /f %WORKDIR%OpenCodecSetup64.exe)
@@ -34,7 +34,7 @@ for /d /r %TEMPDIR%\PotPlayer64 %%i in ($*) do (
 )
 
 echo "Renaming folders"
-move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg60 %TEMPDIR%\PotPlayer64\Module\FFmpeg61
+move /y %TEMPDIR%\PotPlayer64\Module\FFmpeg60 %TEMPDIR%\PotPlayer64\Module\FFmpeg62
 
 echo "Deleting unneeded folders"
 for /f "delims=" %%i in (%WORKDIR%unneeded-folders.txt) do (
