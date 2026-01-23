@@ -1,4 +1,4 @@
-﻿/*
+/*
 	subtitle search by opensubtitle
 */
 

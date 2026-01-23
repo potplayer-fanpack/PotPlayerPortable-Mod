@@ -2,6 +2,28 @@
 PotPlayer'ın Versiyon Geçmişi
 
 ----------------------------------------------------------
+[260114]
+----------------------------------------------------------
++ Added APV decoding functionality
+
+- Improved subtitle character set handling
+- Fixed an issue where the real-time audio subtitle generation feature would not sync during live streaming playback
+- Fixed an issue where playback would not finish when playing certain MKV files
+- Fixed an issue where playback of certain MP4 files was slow.
+
+----------------------------------------------------------
+[250909]
+----------------------------------------------------------
++ Added real-time subtitle generation from audio.
+
+- Fixed a screen corruption issue when using WMV3/VC1 IDCT DXVA.
+- Fixed a black screen issue under certain conditions when using DXVA.
+- Fixed an issue where certain MKV files would open slowly.
+- Fixed an issue where embedded subtitles would not display in certain MKV files.
+- Fixed a black screen issue when playing certain AV1 files.
+- Fixed an issue where certain subtitle text would not appear.
+
+----------------------------------------------------------
 [250625]
 ----------------------------------------------------------
 + Added ability to select HDR tone mapping type 

@@ -2,6 +2,28 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
+[260114]
+----------------------------------------------------------
++ Dodano funkcję dekodowania APV
+
+- Poprawiono obsługę zestawów znaków w napisach 
+- Naprawiono problem powodujący, że napisy generowane z audio w czasie rzeczywistym podczas odtwarzania strumieniowego na żywo nie były zsynchronizowane
+- Naprawiono problem, w wyniku którego nie można było zakończyć odtwarzania niektórych plików MKV
+- Naprawiono problem powodujący powolne odtwarzanie niektórych plików MP4
+
+----------------------------------------------------------
+[250909]
+----------------------------------------------------------
++ Dodano funkcję generowania napisów z audio w czasie rzeczywistym
+
+- Naprawiono błąd, który powodował zawieszanie się ekranu podczas korzystania z WMV3/VC1 IDCT DXVA
+- Naprawiono błąd, który powodował pojawianie się czarnego ekranu podczas korzystania z DXVA w określonych warunkach
+- Naprawiono błąd, który powodował powolne otwieranie niektórych plików MKV
+- Naprawiono błąd, który powodował w niektórych plikach MKV nie wyświetlanie osadzonych napisów
+- Naprawiono błąd, który powodował pojawianie się czarnego ekranu podczas odtwarzania niektórych plików AV1
+- Naprawiono błąd, który powodował, że niektóre napisy nie były wyświetlane
+
+----------------------------------------------------------
 [250625]
 ----------------------------------------------------------
 + Dodano funkcję umożliwiającą wybór metody mapowania tonów HDR
@@ -14,7 +36,7 @@ Historia wersji PotPlayer
 - Ulepszono funkcję odtwarzania uszkodzonych plików MKV
 
 ----------------------------------------------------------
-[250514]
+[250512]
 ----------------------------------------------------------
 + Dodano możliwość zmiany obsługi czcionki napisów
 

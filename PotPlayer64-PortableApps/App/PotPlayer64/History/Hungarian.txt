@@ -2,71 +2,94 @@
 PotPlayer verzióelőzmények
 
 ----------------------------------------------------------
+[260114]
+----------------------------------------------------------
++ Added APV decoding functionality
+
+- Improved subtitle character set handling
+- Fixed an issue where the real-time audio subtitle generation feature would not sync during live streaming playback
+- Fixed an issue where playback would not finish when playing certain MKV files
+- Fixed an issue where playback of certain MP4 files was slow.
+
+----------------------------------------------------------
+[250909]
+----------------------------------------------------------
++ Hozzáadva valós idejű feliratgenerálás hangból.
+
+- Javítva a képernyőtorzulás problémája WMV3/VC1 IDCT DXVA használatakor.
+- Javítva a fekete képernyő problémája bizonyos feltételek mellett DXVA használatakor.
+- Javítva, hogy bizonyos MKV fájlok lassan nyíltak meg.
+- Javítva, hogy beágyazott feliratok nem jelentek meg bizonyos MKV fájlokban.
+- Javítva a fekete képernyő problémája bizonyos AV1 fájlok lejátszásakor.
+- Javítva, hogy bizonyos feliratszövegek nem jelentek meg.
+
+----------------------------------------------------------
 [250625]
 ----------------------------------------------------------
-+ Added ability to select HDR tone mapping type 
-+ Added VAD function to Whisper 
++ Hozzáadva HDR hangleképezés típusának kiválasztási lehetősége
++ Hozzáadva VAD funkció a Whisperhez
 
-- Fixed an issue where an error occurred in certain situations 
-- Fixed an issue where certain MP3 lyrics could not be displayed 
-- Fixed an issue where certain subtitle backgrounds were cut off 
-- Fixed an issue where rotation of certain images could not be handled
-- Improved damaged MKV playback function
+- Javítva bizonyos helyzetekben jelentkező hiba
+- Javítva, hogy bizonyos MP3 dalszövegek nem jelentek meg
+- Javítva bizonyos felirat hátterek levágása
+- Javítva, hogy bizonyos képek elforgatását nem kezelte a rendszer
+- Javítva a sérült MKV lejátszásának funkcionalitása
 
 ----------------------------------------------------------
 [250514]
 ----------------------------------------------------------
-+ Added ability to change subtitle font handling
++ Hozzáadva felirat betűtípus kezelésének módosítási lehetősége
 
-- Improved handling of Whisper additional options
-- Improved D3D11 H/W HDR handling
-- Fixed issue where black screen appeared under certain conditions
+- Javítva a Whisper kiegészítő opcióinak kezelése
+- Javítva a D3D11 H/W HDR kezelése
+- Javítva a fekete képernyő problémája bizonyos feltételek mellett
 
 ----------------------------------------------------------
 [250313]
 ----------------------------------------------------------
-- Fixed an issue where certain PCs would stop playing 10-bit HEVC video
-- Fixed an issue where whisper faster would not work on NVIDIA 5000 series GPUs
-- Fixed an issue where certain ASS/SSA subtitles would not work properly
+- Javítva, hogy bizonyos PC-ken leállt a 10-bites HEVC videó lejátszása
+- Javítva, hogy a Whisper Faster nem működött NVIDIA 5000 sorozatú GPU-kon
+- Javítva, hogy bizonyos ASS/SSA feliratok nem működtek megfelelően
 
 ----------------------------------------------------------
 [250226]
 ----------------------------------------------------------
-+ Added the ability to output ASS/SSA subtitles using libass
-+ Added Faster-Whisper-XXL to the Whisper engine
-+ Added the ability to update the Whisper engine
-+ Added the ability to save subtitles with the same name as the video when generating voices with subtitles
++ Hozzáadva az ASS/SSA feliratok libass-szal történő kimeneti lehetősége
++ Hozzáadva Faster-Whisper-XXL a Whisper motorhoz
++ Hozzáadva a Whisper motor frissítésének lehetősége
++ Hozzáadva a feliratok mentése ugyanazzal a névvel, mint a videó, ha hangot generál felirattal
 
-- Fixed the issue where the screen color was strange in certain situations when capturing video
-- Fixed the issue where memory leaks occurred in certain situations
+- Javítva, hogy bizonyos helyzetekben a képernyő színe furcsa volt videórögzítés közben
+- Javítva, hogy bizonyos helyzetekben memóriaszivárgás történt
 
 ----------------------------------------------------------
 [241211]
 ----------------------------------------------------------
-+ Added the ability to generate subtitles from voice using Whisper
-+ Added the ability to open audio together in command line options
-+ Added the ability to set monitor luminance in HDR 2084
++ Hozzáadva a feliratok generálása hangból Whisper segítségével
++ Hozzáadva az audió megnyitásának lehetősége parancssori opciókkal
++ Hozzáadva a monitor fényerejének beállítása HDR 2084 esetén
 
-- Fixed an issue where WEBP image files could not be played
-- Fixed an issue where certain MP3 lyrics did not appear
-- Fixed an issue where certain MPEG TS files were playing slowly
-- Fixed an issue where certain files were displayed in black when playing.
+- Javítva, hogy WEBP képfájlok nem játszhatók le
+- Javítva, hogy bizonyos MP3 dalszövegek nem jelentek meg
+- Javítva, hogy bizonyos MPEG TS fájlok lassan játszódtak le
+- Javítva, hogy bizonyos fájlok fekete képernyővel jelentek meg lejátszáskor
 
 ----------------------------------------------------------
 [241015]
 ----------------------------------------------------------
-+ Added the ability to adjust playback speed when pressing the mouse button
++ Hozzáadva lejátszási sebesség beállítása egérgomb megnyomásakor
 
-- Fixed an issue where certain MPEG TS playback times were abnormal
-- Fixed the problem of screen breaking when playing certain MPEG TS
-- Fixed the problem of certain ASS/SSA subtitles appearing strangely
-- Fixed an issue that caused abnormal operation when playing very long files.
+- Javítva, hogy bizonyos MPEG TS lejátszási idők rendellenesek voltak
+- Javítva a képernyő megszakítás bizonyos MPEG TS lejátszásakor
+- Javítva, hogy bizonyos ASS/SSA feliratok furcsán jelentek meg
+- Javítva a rendellenes működés problémája nagyon hosszú fájlok lejátszásakor
 
 ----------------------------------------------------------
 [240827]
 ----------------------------------------------------------
 + WEBP hozzáadása a videórögzítéshez
 + Új lehetőség a késleltetési idő másodpercre vagy annál rövidebbre állítására a képforrásszűrőben 
++ Hozzáadva az automatikus indítás funkció a rendszer indításakor
 
 - Kijavítottunk egy hibát, amely miatt a parancsikon méretbeállításai nem tükröződtek 
 - Kijavítottunk egy hibát, amely miatt a Ne adjon hozzá fájlmásolatokat beállítás bizonyos helyzetekben visszaállt
@@ -74,6 +97,7 @@ PotPlayer verzióelőzmények
 - Kijavítottuk a libVPX 8/9-es dekódolás során jelentkező hibát
 - Kijavítottunk egy hibát, amely miatt a navigáció rendellenesen működött az MP4 streamelés során
 - Kijavítottunk egy hibát, amely miatt bizonyos FLV-fájlok böngészése lassú volt
+- Javított felirat megjelenítési sebesség
 
 ----------------------------------------------------------
 [240618]

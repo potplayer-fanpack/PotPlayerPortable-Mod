@@ -111,7 +111,7 @@ $}
 命令列用法 : PotPlayerMini64.exe "檔案路徑" [選項]
 
 "特殊檔名"
--	  	  : 播放標準輸入 (pipe) 的串流媒體
+-	  	  : 播放來自標準輸入 (Pipe) 的串流媒體
 
 [選項]
 /filedlg		  : 開啟檔案對話方塊
@@ -125,28 +125,28 @@ $}
 /dvd		  : 預設 DVD 裝置
 /cd[:drive]	  : CD 光碟機
 /add		  : 新增到播放清單的最底位置
-/insert		  : 新增到播放清單中正在播放檔案的下一個位置
-/autoplay	  : 自動播放
+/insert		  : 插入到播放清單中正在播放檔案的下一個位置
+/autoplay		  : 自動播放
 /same		  : 播放所有項目
 /sort		  : 依名稱排序
 /randomize	  : 隨機排序
 /new		  : 執行新的 PotPlayer (無視禁止多重執行選項)
-/current		  : 執行目前 PotPlayer (無視禁止多重執行選項)
+/current		  : 執行目前的 PotPlayer (無視禁止多重執行選項)
 /clipboard	  : 將剪貼簿中的項目貼上到播放清單中並立即開始播放
-/seek=hh:mm:ss.ms	  : 指定時間開始播放
-/sub=["]字幕檔案["] : 指定要一起開啟的字幕檔案
-/user_agent=["]字串["] : 開啟 http(s) 時使用的代理
-/referer=["]字串["] : 開啟 http(s) 時使用的參考
-/headers=["]字串["] : 開啟 http(s) 時使用的標頭
-/title=["]字串["] : 使用指定的標題
-/volume=["]數字["] : 使用指定的卷
-config="配置名稱"  : 選擇指定配置
+/seek=hh:mm:ss.ms	: 指定時間開始播放
+/sub=["]字幕檔案["]	: 指定要一起開啟的字幕檔案
+/user_agent=["]字串["]	: 開啟 http(s) 時使用的 User Agent (使用者代理)
+/referer=["]字串["]		: 開啟 http(s) 時使用的 Referer (參照位址)
+/headers=["]字串["]		: 開啟 http(s) 時使用的標頭資訊
+/title=["]字串["]		: 指定標題名稱
+/volume=["]數字["]		: 指定要使用的磁碟區
+config="配置名稱"		: 選擇指定配置(設定檔)
 
 使用方法舉例 : 
 PotPlayerMini64.exe "D:\刺激1995.mkv"	: 直接播放指定的檔案
 PotPlayerMini64.exe "D:\刺激1995.mkv" /add	: 將指定的檔案新增到清單中
 PotPlayerMini64.exe /dvd			: 開啟預設 DVD 裝置的檔案
-PotPlayerMini64.exe config="設定檔 1"	: 啟動指定的配置
+PotPlayerMini64.exe config="設定檔1"		: 啟動指定的配置(設定檔)
 $}
 {$CATALAN=
 
