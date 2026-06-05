@@ -1,4 +1,3 @@
 $0
 $PLUGINSDIR
-AviSynth
 Html
