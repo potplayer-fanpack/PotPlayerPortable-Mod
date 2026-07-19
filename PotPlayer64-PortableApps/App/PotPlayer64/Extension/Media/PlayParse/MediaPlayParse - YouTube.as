@@ -14,11 +14,18 @@
 // string ServerCheck(string User, string Pass) 		-> server check
 // string ServerLogin(string User, string Pass) 		-> login
 // void ServerLogout() 									-> logout
+// string GetWebAccountUrl()							-> login process by WebBrowser
+// string GetWebAccountDomain()							-> transport cookie domain for login
 //------------------------------------------------------------------------------------------------
 // bool PlayitemCheck(const string &in)					-> check playitem
 // array<dictionary> PlayitemParse(const string &in)	-> parse playitem
+// void PlayitemCancel()								-> cancel playitem
 // bool PlaylistCheck(const string &in)					-> check playlist
 // array<dictionary> PlaylistParse(const string &in)	-> parse playlist
+// void PlaylistCancel()								-> cancel playlist
+// string GetStatus()									-> display status
+// string GetBroadcastListUrl()							-> get broadcast list url
+// string GetBroadcastListScript()						-> for WebView2::AddScriptToExecuteOnDocumentCreated for script process
 
 string GetTitle()
 {
@@ -35,35 +42,383 @@ string GetDesc()
 	return "https://www.youtube.com/";
 }
 
-string YOUTUBE_MP_URL		= "://www.youtube.com/";
-string YOUTUBE_PL_URL		= "://www.youtube.com/playlist?";
-string YOUTUBE_USER_URL    	= "://www.youtube.com/user/";
+string GetWebAccountUrl()
+{
+	return "https://accounts.google.com/ServiceLogin?service=youtube";
+}
+
+string GetWebAccountDomain()
+{
+	return "www.google.com;www.youtube.com";
+}
+
+string GetBroadcastListUrl()
+{
+	return "https://www.youtube.com/;https://m.youtube.com/";
+}
+
+string GetBroadcastListScript()
+{
+	return "(() => {\n"
+		"  if (window.__potPlayerClickBlocker) return;\n"
+		"  if (!window.chrome || !chrome.webview) return;\n"
+		"  window.__potPlayerClickBlocker = true;\n"
+		"\n"
+		"  const messageType = 'potPlayer.video-click';\n"
+		"  const pageHost = location.hostname.toLowerCase().replace(/^www\\./, '');\n"
+		"  const isYouTubePage = pageHost === 'youtube.com' || pageHost.endsWith('.youtube.com');\n"
+		"  const videoAttributes = ['href', 'data-href', 'data-url'];\n"
+		"  const channelSelector = [\n"
+		"    'ytd-channel-name',\n"
+		"    'ytm-channel-name',\n"
+		"    'ytm-badge-and-byline-renderer',\n"
+		"    'ytm-channel-thumbnail-with-link-renderer',\n"
+		"    '.compact-media-item-byline',\n"
+		"    '.media-item-byline',\n"
+		"    '.ytm-badge-and-byline-item-byline',\n"
+		"    '.ytm-badge-and-byline-item',\n"
+		"    '#channel-name',\n"
+		"    '#byline',\n"
+		"    'a[href^=\"/@\"]',\n"
+		"    'a[href^=\"/channel/\"]',\n"
+		"    'a[href^=\"/c/\"]',\n"
+		"    'a[href^=\"/user/\"]'\n"
+		"  ].join(',');\n"
+		"  const preferredSelector = [\n"
+		"    'a[href*=\"/watch\"]',\n"
+		"    'a[href*=\"/shorts/\"]',\n"
+		"    'a[href*=\"/live/\"]',\n"
+		"    'a[href*=\"youtu.be/\"]',\n"
+		"    '[data-href*=\"/watch\"]',\n"
+		"    '[data-href*=\"/shorts/\"]',\n"
+		"    '[data-href*=\"/live/\"]',\n"
+		"    '[data-url*=\"/watch\"]',\n"
+		"    '[data-url*=\"/shorts/\"]',\n"
+		"    '[data-url*=\"/live/\"]'\n"
+		"  ].join(',');\n"
+		"  const cardSelector = [\n"
+		"    'ytd-rich-item-renderer',\n"
+		"    'ytd-video-renderer',\n"
+		"    'ytd-compact-video-renderer',\n"
+		"    'ytd-grid-video-renderer',\n"
+		"    'ytd-playlist-video-renderer',\n"
+		"    'ytm-video-with-context-renderer',\n"
+		"    'ytm-compact-video-renderer',\n"
+		"    'ytm-rich-item-renderer'\n"
+		"  ].join(',');\n"
+		"  const playerSelector = [\n"
+		"    '#movie_player',\n"
+		"    '.html5-video-player',\n"
+		"    'ytd-player'\n"
+		"  ].join(',');\n"
+		"\n"
+		"  const seekControlSelector = [\n"
+		"    '[role=\"slider\"]',\n"
+		"    '[role=\"progressbar\"]',\n"
+		"    '[role=\"scrollbar\"]',\n"
+		"    '[aria-valuemin][aria-valuemax]',\n"
+		"    '.ytp-progress-bar',\n"
+		"    '.ytp-progress-list',\n"
+		"    '.ytp-scrubber-container',\n"
+		"    '.ytp-hover-progress',\n"
+		"    '.ytp-play-progress',\n"
+		"    '.ytp-load-progress',\n"
+		"    '.ytp-chapter-hover-container',\n"
+		"    '.ytp-timed-markers-container',\n"
+		"    'tp-yt-paper-slider',\n"
+		"    'paper-slider',\n"
+		"    'yt-thumbnail-overlay-progress-bar-view-model',\n"
+		"    'ytd-thumbnail-overlay-resume-playback-renderer',\n"
+		"    'ytm-thumbnail-overlay-resume-playback-renderer'\n"
+		"  ].join(',');\n"
+		"\n"
+		"  function parseVideoUrl(value) {\n"
+		"    try {\n"
+		"      const u = new URL(value, location.href);\n"
+		"      const host = u.hostname.toLowerCase().replace(/^www\\./, '');\n"
+		"\n"
+		"      if (host === 'youtu.be' && u.pathname.length > 1) return { url: u.href, score: 100 };\n"
+		"      if (host === 'youtube.com' || host === 'm.youtube.com' || host === 'youtube-nocookie.com') {\n"
+		"        const embedMatch = u.pathname.match(/^\\/embed\\/([^/?#]+)/);\n"
+		"        if (embedMatch) return { url: 'https://www.youtube.com/watch?v=' + encodeURIComponent(embedMatch[1]), score: 100 };\n"
+		"        if (u.pathname === '/watch' && u.searchParams.get('v')) return { url: u.href, score: 100 };\n"
+		"        if (u.pathname.startsWith('/shorts/') && u.pathname.length > 8) return { url: u.href, score: 100 };\n"
+		"        if (u.pathname.startsWith('/live/') && u.pathname.length > 6) return { url: u.href, score: 100 };\n"
+		"      }\n"
+		"    } catch (e) {\n"
+		"    }\n"
+		"    return null;\n"
+		"  }\n"
+		"\n"
+		"  function isYouTubeChannelUrl(value) {\n"
+		"    try {\n"
+		"      const u = new URL(value, location.href);\n"
+		"      const host = u.hostname.toLowerCase().replace(/^www\\./, '');\n"
+		"      if (host !== 'youtube.com' && host !== 'm.youtube.com') return false;\n"
+		"\n"
+		"      const parts = u.pathname.split('/').filter(Boolean);\n"
+		"      if (!parts.length) return false;\n"
+		"\n"
+		"      const first = decodeURIComponent(parts[0]).toLowerCase();\n"
+		"      return first.startsWith('@') ||\n"
+		"        ((first === 'channel' || first === 'c' || first === 'user') && parts.length > 1);\n"
+		"    } catch (e) {\n"
+		"    }\n"
+		"    return false;\n"
+		"  }\n"
+		"\n"
+		"  function getVideoUrl(value) {\n"
+		"    const result = parseVideoUrl(value);\n"
+		"    return result ? result.url : '';\n"
+		"  }\n"
+		"\n"
+		"  function firstElement(target) {\n"
+		"    return target && target.nodeType === Node.TEXT_NODE ? target.parentElement : target;\n"
+		"  }\n"
+		"\n"
+		"  function getEventElements(e) {\n"
+		"    const path = e.composedPath ? e.composedPath() : null;\n"
+		"    if (path && path.length) return path.filter(node => node && node.nodeType === Node.ELEMENT_NODE);\n"
+		"\n"
+		"    const elements = [];\n"
+		"    for (let node = firstElement(e.target); node && node !== document; node = node.parentElement) {\n"
+		"      elements.push(node);\n"
+		"    }\n"
+		"    return elements;\n"
+		"  }\n"
+		"\n"
+		"  function getNodeVideoResult(node) {\n"
+		"    if (!node) return null;\n"
+		"\n"
+		"    if (node.href) {\n"
+		"      const result = parseVideoUrl(node.href);\n"
+		"      if (result) return result;\n"
+		"    }\n"
+		"\n"
+		"    if (node.getAttribute) {\n"
+		"      for (const attr of videoAttributes) {\n"
+		"        const value = node.getAttribute(attr);\n"
+		"        if (!value) continue;\n"
+		"\n"
+		"        const result = parseVideoUrl(value);\n"
+		"        if (result) return result;\n"
+		"      }\n"
+		"\n"
+		"      const videoId = node.getAttribute('data-video-id') || node.getAttribute('video-id');\n"
+		"      if (videoId && /^[a-z0-9_-]{6,}$/i.test(videoId) && isYouTubePage) {\n"
+		"        return { url: 'https://www.youtube.com/watch?v=' + encodeURIComponent(videoId), score: 95 };\n"
+		"      }\n"
+		"    }\n"
+		"\n"
+		"    return null;\n"
+		"  }\n"
+		"\n"
+		"  function findDescendantVideoResult(node) {\n"
+		"    if (!node || !node.querySelector) return null;\n"
+		"\n"
+		"    const preferred = node.querySelector(preferredSelector);\n"
+		"    if (preferred) {\n"
+		"      const result = getNodeVideoResult(preferred);\n"
+		"      if (result) return result;\n"
+		"    }\n"
+		"\n"
+		"    if (!node.querySelectorAll) return null;\n"
+		"\n"
+		"    let best = null;\n"
+		"    let scanned = 0;\n"
+		"    const links = node.querySelectorAll('a[href], [data-href], [data-url]');\n"
+		"    for (const link of links) {\n"
+		"      const result = getNodeVideoResult(link);\n"
+		"      if (result && (!best || result.score > best.score)) {\n"
+		"        best = result;\n"
+		"        if (best.score >= 100) break;\n"
+		"      }\n"
+		"\n"
+		"      scanned++;\n"
+		"      if (scanned >= 32) break;\n"
+		"    }\n"
+		"    return best;\n"
+		"  }\n"
+		"\n"
+		"  function isSeekControlElement(node) {\n"
+		"    if (!node || !node.tagName) return false;\n"
+		"    if (node.tagName === 'PROGRESS') return true;\n"
+		"\n"
+		"    const role = node.getAttribute && node.getAttribute('role');\n"
+		"    if (role === 'slider' || role === 'progressbar' || role === 'scrollbar') return true;\n"
+		"\n"
+		"    return !!(node.matches && node.matches(seekControlSelector));\n"
+		"  }\n"
+		"\n"
+		"  function isControlElement(node) {\n"
+		"    if (!node || !node.tagName) return false;\n"
+		"    if (isSeekControlElement(node)) return true;\n"
+		"\n"
+		"    const tag = node.tagName;\n"
+		"    if (tag === 'BUTTON' || tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA' || tag === 'SUMMARY') return true;\n"
+		"\n"
+		"    const role = node.getAttribute && node.getAttribute('role');\n"
+		"    return role === 'button' || role === 'menuitem' || role === 'checkbox' || role === 'radio' || role === 'switch';\n"
+		"  }\n"
+		"\n"
+		"  function isYouTubeChannelElement(node) {\n"
+		"    if (!node || !node.getAttribute) return false;\n"
+		"    if (node.href && isYouTubeChannelUrl(node.href)) return true;\n"
+		"\n"
+		"    for (const attr of videoAttributes) {\n"
+		"      const value = node.getAttribute(attr);\n"
+		"      if (value && isYouTubeChannelUrl(value)) return true;\n"
+		"    }\n"
+		"\n"
+		"    return !!(node.matches && node.matches(channelSelector)) ||\n"
+		"      !!(node.closest && node.closest(channelSelector));\n"
+		"  }\n"
+		"\n"
+		"  function isPlayerNode(node) {\n"
+		"    if (!node) return false;\n"
+		"    if (node.tagName === 'VIDEO') return true;\n"
+		"    return !!(node.matches && node.matches(playerSelector));\n"
+		"  }\n"
+		"\n"
+		"  function findVideoUrl(elements) {\n"
+		"    let allowCardLookup = true;\n"
+		"\n"
+		"    for (const node of elements) {\n"
+		"      const result = getNodeVideoResult(node);\n"
+		"      if (result) return result.url;\n"
+		"\n"
+		"      if (isControlElement(node) && !isPlayerNode(node)) allowCardLookup = false;\n"
+		"      if (allowCardLookup && node.matches && node.matches(cardSelector)) {\n"
+		"        const childResult = findDescendantVideoResult(node);\n"
+		"        if (childResult) return childResult.url;\n"
+		"      }\n"
+		"    }\n"
+		"    return '';\n"
+		"  }\n"
+		"\n"
+		"  let lastPostedUrl = '';\n"
+		"  let lastPostedTime = 0;\n"
+		"  let activeUrl = '';\n"
+		"  let activeUntil = 0;\n"
+		"  let activeX = 0;\n"
+		"  let activeY = 0;\n"
+		"\n"
+		"  function getEventPoint(e) {\n"
+		"    if (typeof e.clientX === 'number' && typeof e.clientY === 'number') return { x: e.clientX, y: e.clientY };\n"
+		"    if (e.changedTouches && e.changedTouches.length) return { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };\n"
+		"    if (e.touches && e.touches.length) return { x: e.touches[0].clientX, y: e.touches[0].clientY };\n"
+		"    return null;\n"
+		"  }\n"
+		"\n"
+		"  function canUseActiveUrl(e, now) {\n"
+		"    if (!(e.type === 'pointerup' || e.type === 'mouseup' || e.type === 'touchend' ||\n"
+		"      e.type === 'click' || e.type === 'auxclick' || e.type === 'dblclick')) return false;\n"
+		"    if (!activeUrl || now >= activeUntil) return false;\n"
+		"\n"
+		"    const point = getEventPoint(e);\n"
+		"    if (!point) return false;\n"
+		"\n"
+		"    const dx = point.x - activeX;\n"
+		"    const dy = point.y - activeY;\n"
+		"    return dx * dx + dy * dy <= 100;\n"
+		"  }\n"
+		"\n"
+		"  function getClickedVideoUrl(e) {\n"
+		"    const elements = getEventElements(e);\n"
+		"    if (elements.some(isSeekControlElement)) {\n"
+		"      activeUrl = '';\n"
+		"      activeUntil = 0;\n"
+		"      return '';\n"
+		"    }\n"
+		"    if (elements.some(isYouTubeChannelElement)) {\n"
+		"      activeUrl = '';\n"
+		"      activeUntil = 0;\n"
+		"      return '';\n"
+		"    }\n"
+		"\n"
+		"    let url = findVideoUrl(elements);\n"
+		"    const now = Date.now();\n"
+		"\n"
+		"    if (!url && canUseActiveUrl(e, now)) url = activeUrl;\n"
+		"    if (!url && elements.some(isPlayerNode)) url = getVideoUrl(location.href);\n"
+		"    if (url) {\n"
+		"      const point = getEventPoint(e);\n"
+		"\n"
+		"      activeUrl = url;\n"
+		"      activeUntil = now + 400;\n"
+		"      if (point) {\n"
+		"        activeX = point.x;\n"
+		"        activeY = point.y;\n"
+		"      }\n"
+		"    }\n"
+		"    return url;\n"
+		"  }\n"
+		"\n"
+		"  function postVideoUrl(url) {\n"
+		"    const now = Date.now();\n"
+		"    if (url === lastPostedUrl && now - lastPostedTime < 500) return;\n"
+		"\n"
+		"    lastPostedUrl = url;\n"
+		"    lastPostedTime = now;\n"
+		"    chrome.webview.postMessage({\n"
+		"      type: messageType,\n"
+		"      url: url\n"
+		"    });\n"
+		"  }\n"
+		"\n"
+		"  function blockVideoEvent(e) {\n"
+		"    e.preventDefault();\n"
+		"    e.stopPropagation();\n"
+		"    e.stopImmediatePropagation();\n"
+		"  }\n"
+		"\n"
+		"  function onVideoInput(e) {\n"
+		"    if (typeof e.button === 'number' && e.button === 2) return;\n"
+		"\n"
+		"    const url = getClickedVideoUrl(e);\n"
+		"    if (!url) return;\n"
+		"\n"
+		"    blockVideoEvent(e);\n"
+		"    postVideoUrl(url);\n"
+		"  }\n"
+		"\n"
+		"  const eventOptions = { capture: true, passive: false };\n"
+		"  for (const eventName of ['pointerdown', 'pointerup', 'mousedown', 'mouseup', 'touchstart', 'touchend', 'click', 'auxclick', 'dblclick']) {\n"
+		"    window.addEventListener(eventName, onVideoInput, eventOptions);\n"
+		"    document.addEventListener(eventName, onVideoInput, eventOptions);\n"
+		"  }\n"
+		"})();\n";
+}
+
+string YOUTUBE_MP_URL			= "://www.youtube.com/";
+string YOUTUBE_PL_URL			= "://www.youtube.com/playlist?";
+string YOUTUBE_USER_URL    		= "://www.youtube.com/user/";
 string YOUTUBE_USER_SHORT_URL	= "://www.youtube.com/c/";
-string YOUTUBE_CHANNEL_URL	= "://www.youtube.com/channel/";
-string YOUTUBE_URL_LIBRARY	= "youtube.com/@";
-string YOUTUBE_URL		= "://www.youtube.com/watch?";
-string YOUTUBE_URL2		= "://www.youtube.com/v/";
-string YOUTUBE_URL3		= "://www.youtube.com/embed/";
-string YOUTUBE_URL4		= "://www.youtube.com/attribution_link?a=";
-string YOUTUBE_URL5		= "://www.youtube.com/shorts";
-string YOUTUBE_URL6		= "://www.youtube.com/clip";
-string YOUTU_BE_URL1		= "://youtu.be/";
-string YOUTU_BE_URL2		= "://youtube.com/";
-string YOUTU_BE_URL3		= "://m.youtube.com/";
-string YOUTU_BE_URL4		= "://gaming.youtube.com/";
-string YOUTU_BE_URL5		= "://music.youtube.com/";
-string VIMEO_URL		= "://vimeo.com/";
+string YOUTUBE_CHANNEL_URL		= "://www.youtube.com/channel/";
+string YOUTUBE_URL_LIBRARY		= "youtube.com/@";
+string YOUTUBE_URL				= "://www.youtube.com/watch?";
+string YOUTUBE_URL2				= "://www.youtube.com/v/";
+string YOUTUBE_URL3				= "://www.youtube.com/embed/";
+string YOUTUBE_URL4				= "://www.youtube.com/attribution_link?a=";
+string YOUTUBE_URL5				= "://www.youtube.com/shorts";
+string YOUTUBE_URL6				= "://www.youtube.com/clip";
+string YOUTU_BE_URL1			= "://youtu.be/";
+string YOUTU_BE_URL2			= "://youtube.com/";
+string YOUTU_BE_URL3			= "://m.youtube.com/";
+string YOUTU_BE_URL4			= "://gaming.youtube.com/";
+string YOUTU_BE_URL5			= "://music.youtube.com/";
+string VIMEO_URL				= "://vimeo.com/";
 
 string MATCH_STREAM_MAP_START		= "\"url_encoded_fmt_stream_map\"";
 string MATCH_STREAM_MAP_START2		= "url_encoded_fmt_stream_map=";
 string MATCH_ADAPTIVE_FMTS_START	= "\"adaptive_fmts\"";
 string MATCH_ADAPTIVE_FMTS_START2	= "adaptive_fmts=";
-string MATCH_HLSMPD_START		= "\"hlsManifestUrl\"";
-string MATCH_DASHMPD_START		= "\"dashManifestUrl\"";
-string MATCH_WIDTH_START		= "meta property=\"og:video:width\" content=\"";
-string MATCH_JS_START			= "\"js\":";
-string MATCH_JS_START_2			= "'PREFETCH_JS_RESOURCES': [\"";
-string MATCH_JS_START_3			= "\"PLAYER_JS_URL\":\"";
+string MATCH_HLSMPD_START			= "\"hlsManifestUrl\"";
+string MATCH_DASHMPD_START			= "\"dashManifestUrl\"";
+string MATCH_WIDTH_START			= "meta property=\"og:video:width\" content=\"";
+string MATCH_JS_START				= "\"js\":";
+string MATCH_JS_START_2				= "'PREFETCH_JS_RESOURCES': [\"";
+string MATCH_JS_START_3				= "\"PLAYER_JS_URL\":\"";
 string MATCH_END					= "\"";
 
 string MATCH_PLAYER_RESPONSE       = "\"player_response\":\"";
@@ -1107,45 +1462,46 @@ string GetVideoJson(string videoId, string ytcfg, bool isLive)
 
 	if (true)
 	{
-		userAgent = "com.google.android.apps.youtube.vr.oculus/1.71.26 (Linux; U; Android 12L; eureka-user Build/SQ3A.220605.009.A1) gzip";
+		// ANDROID_VR (Client 28) with version 1.65.10 for JS-LESS compatibility.
+		userAgent = "com.google.android.apps.youtube.vr.oculus/1.65.10 (Linux; U; Android 12L; eureka-user Build/SQ3A.220605.009.A1) gzip";
 		headers = "X-YouTube-Client-Name: 28\r\n"
-			"X-YouTube-Client-Version: 1.71.26\r\n"
+			"X-YouTube-Client-Version: 1.65.10\r\n"
 			"Origin: https://www.youtube.com\r\n"
 			"Content-Type: application/json\r\n";
 		if (isLive)
 		{
-			postData = "{\"context\": {\"client\": {\"clientName\": \"ANDROID_VR\", \"clientVersion\": \"1.71.26\", \"deviceMake\": \"Oculus\", \"deviceModel\": \"Quest 3\", \"clientScreen\": \"EMBED\"}, "
+			postData = "{\"context\": {\"client\": {\"clientName\": \"ANDROID_VR\", \"clientVersion\": \"1.65.10\", \"deviceMake\": \"Oculus\", \"deviceModel\": \"Quest 3\", \"clientScreen\": \"EMBED\"}, "
 				"\"thirdParty\": {\"embedUrl\": \"https://google.com\"}}, \"videoId\": \"" + videoId + "\", \"params\": \"wgYCCAA=\", \"contentCheckOk\": true, \"racyCheckOk\": true}";
 		}
 		else
 		{
-			postData = "{\"context\": {\"client\": {\"clientName\": \"ANDROID_VR\", \"clientVersion\": \"1.71.26\", \"deviceMake\": \"Oculus\", \"deviceModel\": \"Quest 3\", \"hl\": \"" + HostIso639LangName() + "\"}}, "
-				"\"videoId\": \"" + videoId + "\", \"params\": \"wgYCCAA=\", \"playbackContext\": {\"contentPlaybackContext\": {\"html5Preference\": \"HTML5_PREF_WANTS\"}}, \"contentCheckOk\": true, \"racyCheckOk\": true}";
+			postData = "{\"context\": {\"client\": {\"clientName\": \"ANDROID_VR\", \"clientVersion\": \"1.65.10\", \"deviceMake\": \"Oculus\", \"deviceModel\": \"Quest 3\", \"hl\": \"" + HostIso639LangName() + "\", \"androidSdkVersion\": 32, \"osName\": \"Android\", \"osVersion\": \"12L\"}}, "
+				"\"videoId\": \"" + videoId + "\", \"params\": \"wgYCCAA=\", \"playbackContext\": {\"contentPlaybackContext\": {\"html5Preference\": \"HTML5_PREF_WANTS\", \"signatureTimestamp\": 20432}}, \"contentCheckOk\": true, \"racyCheckOk\": true}";
 		}
 	}
 	else
 	{
 		if (isLive)
 		{
-			postData = "{\"contentCheckOk\": true, \"context\": {\"client\": {\"clientName\": \"MWEB\", \"clientVersion\": \"2.20260115.01.00\", "
-				"\"hl\": \"" + HostIso639LangName() + "\", \"timeZone\": \"UTC\", \"utcOffsetMinutes\": 0}}, \"playbackContext\": {\"contentPlaybackContext\": {\"html5Preference\": \"HTML5_PREF_WANTS\"}}, "
-				"\"racyCheckOk\": true, \"videoId\": \"" + videoId + "\"}";
+			userAgent = "Mozilla/5.0 (iPad; CPU OS 16_7_10 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1,gzip(gfe)";
 			headers = "X-YouTube-Client-Name: 2\r\n"
 				"X-YouTube-Client-Version: 2.20260115.01.00\r\n"
 				"Origin: https://www.youtube.com\r\n"
 				"Content-Type: application/json\r\n";
-			userAgent = "Mozilla/5.0 (iPad; CPU OS 16_7_10 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1,gzip(gfe)";
+			postData = "{\"contentCheckOk\": true, \"context\": {\"client\": {\"clientName\": \"MWEB\", \"clientVersion\": \"2.20260115.01.00\", "
+				"\"hl\": \"" + HostIso639LangName() + "\", \"timeZone\": \"UTC\", \"utcOffsetMinutes\": 0}}, \"playbackContext\": {\"contentPlaybackContext\": {\"html5Preference\": \"HTML5_PREF_WANTS\"}}, "
+				"\"racyCheckOk\": true, \"videoId\": \"" + videoId + "\"}";
 		}
 		else
 		{
-			postData = "{\"contentCheckOk\": true, \"context\": {\"client\": {\"clientName\": \"ANDROID\", \"clientVersion\": \"21.02.35\", "
-				"\"hl\": \"" + HostIso639LangName() + "\", \"osName\": \"Android\", \"osVersion\": \"11\", "
-				"\"timeZone\": \"UTC\", \"utcOffsetMinutes\": 0}}, \"playbackContext\": {\"contentPlaybackContext\": {\"html5Preference\": \"HTML5_PREF_WANTS\"}}, \"racyCheckOk\" : true, \"videoId\" : \"" + videoId + "\"}";
+			userAgent = "com.google.android.youtube/21.02.35 (Linux; U; Android 11) gzip";		
 			headers = "X-YouTube-Client-Name: 3\r\n"
 				"X-YouTube-Client-Version: 21.02.35\r\n"
 				"Origin: https://www.youtube.com\r\n"
 				"Content-Type: application/json\r\n";
-			userAgent = "com.google.android.youtube/21.02.35 (Linux; U; Android 11) gzip";
+			postData = "{\"contentCheckOk\": true, \"context\": {\"client\": {\"clientName\": \"ANDROID\", \"clientVersion\": \"21.02.35\", "
+				"\"hl\": \"" + HostIso639LangName() + "\", \"osName\": \"Android\", \"osVersion\": \"11\", "
+				"\"timeZone\": \"UTC\", \"utcOffsetMinutes\": 0}}, \"playbackContext\": {\"contentPlaybackContext\": {\"html5Preference\": \"HTML5_PREF_WANTS\"}}, \"racyCheckOk\" : true, \"videoId\" : \"" + videoId + "\"}";
 		}
 	}
 
@@ -1185,7 +1541,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 		string WebData;
 		string JSData;
 
-		linkWeb += "&gl=US&hl=en&has_verified=1&bpctr=9999999999";
+		linkWeb += "&has_verified=1&bpctr=9999999999";
 		WebData = HostUrlGetString(linkWeb, GetUserAgent());
 		if (ytcfg.empty()) ytcfg = ParseYTCFG(WebData);
 
@@ -1414,38 +1770,40 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 			}
 		}
 
-		bool isDash = adaptive_fmts_start <= 0 && (dashmpd_len > 0 && hlsmpd_len > 0); // 일단 live만 mpd 지원되게 하자...
-		if (isDash || hlsmpd_len > 0)
+		string liveUrl;
+		if (okJson)
 		{
-			string url;
-
-			if (okJson)
+			JsonValue streamingData = root["streamingData"];
+			if (streamingData.isObject())
 			{
-				JsonValue streamingData = root["streamingData"];
-				if (streamingData.isObject())
+				JsonValue ManifestUrl = streamingData["dashManifestUrl"];
+				if (ManifestUrl.isString()) liveUrl = ManifestUrl.asString();
+				else
 				{
-					JsonValue ManifestUrl = streamingData[isDash ? "dashManifestUrl" : "hlsManifestUrl"];
-					if (ManifestUrl.isString()) url = ManifestUrl.asString();
+					ManifestUrl = streamingData["hlsManifestUrl"];
+					if (ManifestUrl.isString()) liveUrl = ManifestUrl.asString();
 				}
 			}
-			if (url.empty())
+		}
+		if (liveUrl.empty())
+		{
+			if (dashmpd_len > 0) liveUrl = WebData.substr(dashmpd_start, dashmpd_len);
+			else if (hlsmpd_len > 0) liveUrl = WebData.substr(hlsmpd_start, hlsmpd_len);
+		}
+		if (!liveUrl.empty())
+		{
+			liveUrl = HostUrlDecode(HostUrlDecode(liveUrl));
+			liveUrl.replace("\\/", "/");
+			liveUrl = CorrectURL(liveUrl);
+			if (liveUrl.find("/s/") > 0)
 			{
-				if (isDash) url = WebData.substr(dashmpd_start, dashmpd_len);
-				else url = WebData.substr(hlsmpd_start, hlsmpd_len);
-			}
-
-			url = HostUrlDecode(HostUrlDecode(url));
-			url.replace("\\/", "/");
-			url = CorrectURL(url);
-			if (url.find("/s/") > 0)
-			{
-				string tmp = url;
+				string tmp = liveUrl;
 				string signature = HostRegExpParse(tmp, "/s/([0-9A-Z]+.[0-9A-Z]+)");
 
-				if (!signature.empty()) url = SignatureDecode(tmp, signature, "/signature/", WebData, JSData, JSFuncs, JSFuncArgs);
+				if (!signature.empty()) liveUrl = SignatureDecode(tmp, signature, "/signature/", WebData, JSData, JSFuncs, JSFuncArgs);
 			}
-			url += "?ForceBHD";
-			final_url = url;
+			liveUrl += "?ForceBHD";
+			final_url = liveUrl;
 			final_ext = "mp4";
 			if (@MetaData !is null) MetaData["chatUrl"] = "https://www.youtube.com/live_chat?v=" + videoId + "&is_popout=1";
 		}
@@ -2111,6 +2469,7 @@ string PlayitemParse(const string &in path, dictionary &MetaData, array<dictiona
 									item["url"] = s5;
 									subtitle.insertLast(item);
 								}
+								// track = track.NextSiblingElement("track");
 								track = track.NextSiblingElement();
 							}
 						}
@@ -2432,86 +2791,6 @@ string ParserPlaylistItem(string html, int start, int len, string vid, array<dic
 	return data_video_id;
 }
 
-string ParserPlaylistItem(JsonValue object, array<dictionary> &pls, string vid)
-{
-	JsonValue videoId = object["videoId"];
-	string lastvideoId;
-
-	if (videoId.isString())
-	{
-		string url = "https://www.youtube.com/watch?v=" + videoId.asString();
-		if (IsArrayExist(pls, url)) return lastvideoId;
-
-		JsonValue title = object["title"];
-		if (title.isObject())
-		{
-			JsonValue simpleText = title["simpleText"];
-
-			if (!simpleText.isString())
-			{
-				JsonValue runs = title["runs"];
-
-				if (runs.isObject())
-				{
-					JsonValue zero = runs["0"];
-
-					if (zero.isObject()) simpleText = zero["text"];
-				}
-				else if (runs.isArray())
-				{
-					JsonValue zero = runs[0];
-
-					if (zero.isObject()) simpleText = zero["text"];
-				}
-			}
-			if (simpleText.isString())
-			{
-				string duration;
-				JsonValue lengthSeconds = object["lengthSeconds"];
-				JsonValue lengthText = object["lengthText"];
-
-				if (lengthSeconds.isUInt()) duration = lengthSeconds.asString();
-				else if (lengthText.isObject())
-				{
-					JsonValue simpleText = lengthText["simpleText"];
-
-					if (simpleText.isString()) duration = simpleText.asString();
-				}
-
-				string thumb;
-				JsonValue thumbnail = object["thumbnail"];
-				if (thumbnail.isObject())
-				{
-					JsonValue thumbnails = thumbnail["thumbnails"];
-
-					if (thumbnails.isArray())
-					{
-						JsonValue th = thumbnails[0];
-
-						if (th.isObject())
-						{
-							JsonValue url = th["url"];
-
-							if (url.isString()) thumb = url.asString();
-						}
-					}
-				}
-
-				lastvideoId = videoId.asString();
-
-				dictionary item;
-				item["url"] = url;
-				item["title"] = simpleText.asString();
-				item["duration"] = duration;
-				if (!thumb.empty()) item["thumbnail"] = thumb;
-				if (lastvideoId == vid) item["current"] = "1";
-				pls.insertLast(item);
-			}
-		}
-	}
-	return lastvideoId;
-}
-
 JsonValue GetJsonPath(JsonValue object, string path)
 {
 	JsonValue ret;
@@ -2543,6 +2822,75 @@ JsonValue GetJsonPath(JsonValue object, string path)
 		}
 	}
 	return ret;
+}
+
+string ParserPlaylistItem(JsonValue object, array<dictionary> &pls, string vid)
+{
+	JsonValue contentId = object["contentId"];
+	string lastvideoId;
+
+	if (contentId.isString())
+	{
+		string url = "https://www.youtube.com/watch?v=" + contentId.asString();
+		if (IsArrayExist(pls, url)) return lastvideoId;
+
+		JsonValue content = GetJsonPath(object, "/metadata/lockupMetadataViewModel/title/content");
+		if (content.isString())
+		{
+			string duration;
+			JsonValue durationText = GetJsonPath(object, "/contentImage/thumbnailViewModel/overlays/0/thumbnailBottomOverlayViewModel/badges/0/thumbnailBadgeViewModel/text");
+			if (durationText.isString()) duration = durationText.asString();
+		
+			string thumb;
+			JsonValue thumbnail = GetJsonPath(object, "/contentImage/thumbnailViewModel/image/sources/0/url");
+			if (thumbnail.isString()) thumb = thumbnail.asString();
+	
+			lastvideoId = contentId.asString();
+
+			dictionary item;
+			item["url"] = url;
+			item["title"] = content.asString();
+			item["duration"] = duration;
+			if (!thumb.empty()) item["thumbnail"] = thumb;
+			if (lastvideoId == vid) item["current"] = "1";
+			pls.insertLast(item);
+		}
+	}
+	else
+	{
+		JsonValue videoId = object["videoId"];
+
+		if (videoId.isString())
+		{
+			string url = "https://www.youtube.com/watch?v=" + videoId.asString();
+			if (IsArrayExist(pls, url)) return lastvideoId;
+
+			JsonValue title = GetJsonPath(object, "/title/simpleText");
+			if (!title.isString()) title = GetJsonPath(object, "/title/runs/0/text");
+			if (title.isString())
+			{
+				JsonValue simpleText = GetJsonPath(object, "/lengthText/simpleText");
+				string duration;
+
+				if (simpleText.isString()) duration = simpleText.asString();
+
+				string thumb;
+				JsonValue thumbnail = GetJsonPath(object, "/thumbnail/thumbnails/0/url");
+				if (thumbnail.isString()) thumb = thumbnail.asString();
+
+				lastvideoId = videoId.asString();
+
+				dictionary item;
+				item["url"] = url;
+				item["title"] = title.asString();
+				item["duration"] = duration;
+				if (!thumb.empty()) item["thumbnail"] = thumb;
+				if (lastvideoId == vid) item["current"] = "1";
+				pls.insertLast(item);
+			}
+		}
+	}
+	return lastvideoId;
 }
 
 
@@ -2606,22 +2954,44 @@ array<dictionary> PlaylistParse(const string &in path)
 				jsonEntry += "}";
 				if (reader.parse(jsonEntry, root) && root.isObject())
 				{
-					JsonValue contents = GetJsonPath(root, "contents/twoColumnBrowseResultsRenderer/tabs/0/tabRenderer/content/sectionListRenderer/contents/0/itemSectionRenderer/contents/0/playlistVideoListRenderer/contents");
-					if (!contents.isArray()) contents = GetJsonPath(root, "contents/twoColumnWatchNextResults/playlist/playlist/contents");
+					JsonValue contents = GetJsonPath(root, "/contents/twoColumnBrowseResultsRenderer/tabs/0/tabRenderer/content/sectionListRenderer/contents/0/itemSectionRenderer/contents");
 
+					if (!contents.isArray()) contents = GetJsonPath(root, "/contents/twoColumnWatchNextResults/playlist/playlist/contents");
 					if (contents.isArray())
 					{
-						for(int j = 0, len = contents.size(); j < len; j++)
+						for (int j = 0, len = contents.size(); j < len; j++)
 						{
 							JsonValue content = contents[j];
 
 							if (content.isObject())
 							{
-								JsonValue playlistPanelVideoRenderer = content["playlistPanelVideoRenderer"];
-								JsonValue playlistVideoRenderer = content["playlistVideoRenderer"];
+								JsonValue lockupViewModel = content["lockupViewModel"];
 
-								if (playlistPanelVideoRenderer.isObject()) lastvideoId = ParserPlaylistItem(playlistPanelVideoRenderer, ret, vid);
-								else if (playlistVideoRenderer.isObject()) lastvideoId = ParserPlaylistItem(playlistVideoRenderer, ret, vid);
+								if (lockupViewModel.isObject()) lastvideoId = ParserPlaylistItem(lockupViewModel, ret, vid);
+								else
+								{
+									JsonValue playlistPanelVideoRenderer = content["playlistPanelVideoRenderer"];
+									if (playlistPanelVideoRenderer.isObject()) lastvideoId = ParserPlaylistItem(playlistPanelVideoRenderer, ret, vid);
+									else
+									{
+										JsonValue contents2 = GetJsonPath(content, "/playlistVideoListRenderer/contents");
+
+										if (contents2.isArray())
+										{
+											for (int k = 0, len = contents2.size(); k < len; k++)
+											{
+												JsonValue content2 = contents2[k];
+												if (content2.isObject())
+												{
+													JsonValue playlistVideoRenderer = content2["playlistVideoRenderer"];
+
+													if (playlistVideoRenderer.isObject()) lastvideoId = ParserPlaylistItem(playlistVideoRenderer, ret, vid);
+												}
+											}
+										}
+									}
+								
+								}
 								HostIncTimeOut(5000);
 							}
 						}

@@ -2,6 +2,35 @@
 PotPlayer'ın Versiyon Geçmişi
 
 ----------------------------------------------------------
+[260716]
+----------------------------------------------------------
+
+----------------------------------------------------------
+[260622]
+----------------------------------------------------------
+* Removed Kakao TV
+
++ Added pause function when navigating via the navigation bar
+
+- Significantly improved internal stability
+- Fixed an issue where colors appeared strange during RGB24 processing
+- Improved playback for some HTTP streams
+- Improved sync processing for the built-in audio renderer
+- Fixed an issue where certain MP4 files behaved abnormally during playback
+
+----------------------------------------------------------
+[260401]
+----------------------------------------------------------
++ Added the ability to output subtitles using libass
++ Added the ability to handle HLS/Dash playback using built-in modules
+
+- Improved subtitle output speed
+- Improved speed for some video filters
+- Fixed an issue where external audio could not be connected when multiple audio files were present
+- Fixed an issue where certain Unicode characters were displayed incorrectly
+- Fixed an issue where playback always started from the beginning upon completion in the temporary playback queue
+
+----------------------------------------------------------
 [260114]
 ----------------------------------------------------------
 + Added APV decoding functionality

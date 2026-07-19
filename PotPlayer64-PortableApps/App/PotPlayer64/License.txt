@@ -18,6 +18,7 @@
  - 이 프로그램에 사용된 Script 라이브러리는 http://www.angelcode.com/angelscript에서 사용하였습니다.
  - 이 프로그램에 사용된 json 라이브러리는 http://jsoncpp.sourceforge.net에서 사용하였습니다.
  - 이 프로그램에 사용된 base64 라이브러리는 https://github.com/ReneNyffenegger/cpp-base64에서 사용하였으며, 라이센스는 'zlib License'를 따릅니다.
+ - 이 프로그램에 사용된 whisper/llama 라이브러리는 https://github.com/ggml-org에서 사용하였으며, 라이센스는 'MIT License'를 따릅니다. 
  - 이 프로그램에 사용된 글꼴 출력은 FreeType(http://www.freetype.org)를 사용 하였습니다.
  - 이 프로그램의 설치 파일은 NSIS(http://nsis.sourceforge.net)를 사용하여 제작되었으며, NSIS의 라이센스는 'zlib/libpng License'를 따릅니다.
  - 이 프로그램의 저작권은 (주)카카오(http://www.kakao.com)에 있습니다.
@@ -43,8 +44,8 @@ $}
  - 本程序使用的 Database 资料库是直接从 http://www.sqlite.org 下载的。
  - 本程序使用的 Script 资料库是直接从 http://www.angelcode.com/angelscript 下载的。
  - 本程序使用的 json 资料库是直接从 http://jsoncpp.sourceforge.net 下载的。
- - 本程序使用的 json 资料库是直接从 https://github.com/Tencent/rapidjson 下载的，并遵循 MIT License 公共许可协议。
  - 本程序使用的 base64 资料库是直接从 https://github.com/ReneNyffenegger/cpp-base64 下载的，并遵循 zlib License 公共许可协议。
+ - 本程序使用的 whisper/llama 资料库是直接从 https://github.com/ggml-org 下载的，并遵循 MIT License 公共许可协议。
  - 本程序使用的 ATextOut 字串渲染插件是直接从 FreeType (http://www.freetype.org) 下载的源码。
  - 本程序使用的安装程序是从 NSIS (http://nsis.sourceforge.net) 下载的，并遵循 NSIS 的 zlib/libpng License 公共许可协议。
  - 本程序著作权归 Kakao 公司 (http://www.kakao.com) 所有。
@@ -70,8 +71,8 @@ $}
  - 本程式使用的 Database 資料庫是直接從 http://www.sqlite.org 下載的。
  - 本程式使用的 Script 資料庫是直接從 http://www.angelcode.com/angelscript 下載的。
  - 本程式使用的 json 資料庫是直接從 http://jsoncpp.sourceforge.net 下載的。
- - 本程式使用的 json 資料庫是直接從 https://github.com/Tencent/rapidjson 下載的，並遵循 MIT License 的授權條款。
  - 本程式使用的 base64 資料庫是直接從 https://github.com/ReneNyffenegger/cpp-base64 下載的，並遵循 zlib License 的授權條款。
+ - 本程式使用的 whisper/llama 資料庫是直接從 https://github.com/ggml-org 下載的，並遵循 MIT License 的授權條款。
  - 本程式使用的 ATextOut 字串渲染外掛是直接從 FreeType (http://www.freetype.org) 下載的原始碼。
  - 本程式使用的安裝程式是從 NSIS (http://nsis.sourceforge.net) 下載的，並遵循 NSIS 的 zlib/libpng License 的授權條款。
  - 本程式著作權屬於 Kakao 公司 (http://www.kakao.com) 所有。
@@ -110,7 +111,7 @@ $}
  - Program ten bez zgody właściciela praw autorskich nie może być wykorzystywany do celów komercyjnych w jakiejkolwiek postaci.
 
 * Informacja o prawach autorskich
- - Program zawiera dekoder FFmpeg (http://ffmpeg.org) i jest on używany zgodnie z licencją LGPL. Plik licencji LGPL.TXT znajduje się w folderze instalacyjnym. Zmodyfikowane źródła FFmpeg można pobrać z https://t1.daumcdn.net/potplayer/PotPlayer/Codec/ffmpeg.zip
+ - Program zawiera dekoder FFmpeg (http://ffmpeg.org) i jest on używany zgodnie z licencją LGPL. Plik licencji LGPL.TXT znajduje się w folderze instalacyjnym. Zmodyfikowane źródła FFmpeg można pobrać z http://get.daum.net/devel/ffmpeg.zip
  - Używana w tym programie biblioteka kompresji zlib opiera się na opublikowanych plikach źródłowych (http://www.zlib.net) zgodnie z licencją 'zlib License'.
  - Program ten korzysta z publicznego źródła biblioteki rar z http://www.rarlab.com
  - Program wykorzystuje do png bibliotekę libpng (http://www.libpng.org) zgodnie z licencją 'zlib/png License'.
@@ -119,11 +120,12 @@ $}
  - Program wykorzystuje bibliotekę MediaInfo z (http://mediaarea.net)
  - Program wykorzystuje bibliotekę Database z http://www.sqlite.org
  - Program wykorzystuje bibliotekę Angel Script z http://www.angelcode.com/angelscript
- - Program wykorzystuje bibliotekę json z http://jsoncpp.sourceforge.net.
+ - Program wykorzystuje bibliotekę JsonCpp z http://jsoncpp.sourceforge.net.
  - Program wykorzystuje bibliotekę base64 pochodzącą z https://github.com/ReneNyffenegger/cpp-base64, a licencja jest zgodna z 'zlib License'.
+ - Program wykorzystuje bibliotekę whisper/llama licencjonowaną na podstawie licencji MIT. (https://github.com/ggml-org)
  - Program wykorzystuje bibliotekę renderowania czcionek FreeType z (http://www.freetype.org)
  - Pliki instalacyjne tego programu zostały wykonane przy pomocy NSIS (http://nsis.sourceforge.net) zgodnie z licencją NSIS 'zlib / libpng License'.
- - Autorem tłumaczenia na język polski jest Adam Malich (https://potplayerclub.pl)
+ - Autorem tłumaczenia na język polski jest Adam Malich (http://potplayerclub.pl)
  - Prawa autorskie (C) do tego oprogramowania należą do Kakao Co., Ltd. (http://www.kakao.com)
 $}
 {$RUSSIAN=
@@ -208,7 +210,6 @@ Ez a szoftver egy freeware termék, amely szabadon használható otthoni/céges/
  - Ez a szoftver SQLite (http://www.sqlite.org) eljárástárat használ.
  - Ez a szoftver AngelScript (http://www.angelcode.com/angelscript) eljárástárat használ.
  - Ez a szoftver json (http://jsoncpp.sourceforge.net) eljárástárat használ.
- - Ez a szoftver json (https://github.com/Tencent/rapidjson) eljárástárat használ, amely MIT licenc alapján van engedélyezve.
  - Ez a szoftver base64 (https://github.com/ReneNyffenegger/cpp-base64) eljárástárat használ, amely zlib licenc alapján van engedélyezve.
  - Ez a szoftver FreeType (http://www.freetype.org) betűtípus megjelenítő eljárástárat használ.
  - Ez a szoftver egy zlib/libpng licenc alatt álló NSIS (http://nsis.sourceforge.net) programmal létrehozott telepítőt használ.
@@ -450,7 +451,6 @@ http://get.daum.net/devel/MP3Lame.zip.
 - Тази програма използва библиотеката SQLite (http://www.sqlite.org)
 - Тази програма използва библиотеката AngelScript (http://www.angelcode.com/angelscript)
 - Тази програма използва библиотеката JsonCpp и е лицензирана под лиценза на MIT. (https://github.com/open-source-parsers/jsoncpp)
-- Тази програма използва библиотеката RapidJSON и е лицензирана под лиценза на MIT.(https://github.com/Tencent/rapidjson)
 - Тази програма използва библиотеката base64 и е лицензирана под лиценза на zlib.(https://github.com/ReneNyffenegger/cpp-base64)
 - Тази програма използва библиотеката FreeType за представяне на шрифтове
 (http://www.freetype.org)
@@ -499,7 +499,6 @@ Bu yazılım, ticari olmayan amaçlarla olduğu sürece medya dosyalarını oyna
  - Bu yazılım SQLite arşivini kullanır.(http://www.sqlite.org)
  - Bu yazılım AngelScript arşivini kullanır.(http://www.angelcode.com/angelscript)
  - Bu yazılım MIT lisansı altında lisanslanan JsonCpp arşivini kullanır.(https://github.com/open-source-parsers/jsoncpp)
- - Bu yazılım MIT lisansı altında lisanslanan RapidJSON arşivini kullanır.(https://github.com/Tencent/rapidjson)
  - Bu yazılım zlib lisansı altında lisanslanan base64 arşivini kullanır.(https://github.com/ReneNyffenegger/cpp-base64)
  - Bu yazılım FreeType yazıtipi oluşturucu arşivini kullanır.(http://www.freetype.org)
  - Bu yazılımın yükleyicisi zlib/libpng lisansı altında lisanslanan NSIS programı kullanılarak yapılmıştır.(http://nsis.sourceforge.net)
@@ -525,8 +524,8 @@ This software is a freeware product, which can be used freely by individual/comp
  - This software uses SQLite library.(http://www.sqlite.org)
  - This software uses AngelScript library.(http://www.angelcode.com/angelscript)
  - This software uses JsonCpp library which is licensed under MIT license.(https://github.com/open-source-parsers/jsoncpp)
- - This software uses RapidJSON library which is licensed under MIT license.(https://github.com/Tencent/rapidjson)
  - This software uses base64 library which is licensed under zlib license.(https://github.com/ReneNyffenegger/cpp-base64)
+ - This software uses whisper/llama library which is licensed under MIT license.(https://github.com/ggml-org)
  - This software uses FreeType font renderer library.(http://www.freetype.org)
  - This software's installer was made using NSIS program which is licensed under zlib/libpng license.(http://nsis.sourceforge.net)
  - This software was translated into English by DVB Support.(http://www.dvbsupport.net)
