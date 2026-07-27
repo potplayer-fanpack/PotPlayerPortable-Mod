@@ -1,4 +1,4 @@
-PotPlayerPortable 64-bit v26.07.16.0 (1.7.23006) + OpenCodec + AviSynth+ & Svp + yt-dlp + Deno + ffmpeg + ffprobe + dodatkowe skrypty
+PotPlayer 64-bit Portable v26.07.27.0 (1.7.230021) + OpenCodec + AviSynth+ & Svp + yt-dlp + Deno + ffmpeg + ffprobe + dodatkowe skrypty
 
 Zgodnoœæ: 7 SP1 / 8 / 8.1 / 10 / 11
 

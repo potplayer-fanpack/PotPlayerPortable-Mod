@@ -3,16 +3,18 @@ Historia wersji PotPlayer
 
 
 ----------------------------------------------------------
-[260716]
+[260727]
 ----------------------------------------------------------
 * Wdrożenie kompilacji ARM64
   https://t1.daumcdn.net/potplayer/beta/PotPlayerSetupARM64.exe
 
 + Dodano funkcję umożliwiającą indywidualne ustawienie działań dla lewego/prawego obszaru po dwukrotnym kliknięciu myszką
 + Dodano funkcję umożliwiającą użytkownikom ustawienie adresu listy broadcast
++ Dodano możliwość sortowania list odtwarzania według daty premiery
 
 - Naprawiono problem uniemożliwiający odtwarzanie wideo o bardzo wysokiej rozdzielczości
 - Naprawiono problem z brakiem synchronizacji wbudowanego renderera dźwięku w określonych sytuacjach
+- Wprowadzono poprawkę umożliwiającą wyświetlanie kolorowych emotikonów w napisach
 
 ----------------------------------------------------------
 [260618]
