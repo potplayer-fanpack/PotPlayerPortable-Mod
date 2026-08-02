@@ -1,4 +1,4 @@
-PotPlayer 64-bit Portable v26.07.29.0 (1.7.23040.0) + OpenCodec + AviSynth+ & Svp + yt-dlp + Deno + ffmpeg + ffprobe + dodatkowe skrypty
+﻿PotPlayer 64-bit Portable v26.07.30.0 (1.7.23046.0) + OpenCodec + AviSynth+ & Svp + yt-dlp + Deno + ffmpeg + ffprobe + dodatkowe skrypty
 
 Zgodność: 7 SP1 / 8 / 8.1 / 10 / 11
 
@@ -14,7 +14,7 @@ Copyright (C) 2006-2026 Kakao Corporation
 
 https://potplayer.daum.net/
 
-Install package updated on 2026-07-29
+Install package updated on 2026-07-30
 
 ===========================================
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""

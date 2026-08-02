@@ -12,8 +12,8 @@ Historia wersji PotPlayer
 + Dodano funkcję umożliwiającą użytkownikom ustawienie adresu listy broadcast
 + Dodano możliwość sortowania list odtwarzania według daty premiery
 
-- Naprawiono problem uniemożliwiający odtwarzanie wideo o bardzo wysokiej rozdzielczości
-- Naprawiono problem z brakiem synchronizacji wbudowanego renderera dźwięku w określonych sytuacjach
+- Naprawiono problem z odtwarzaniem filmów w ultrawysokiej rozdzielczości
+- Naprawiono problem z brakiem synchronizacji wbudowanego renderera audio w niektórych przypadkach
 - Wprowadzono poprawkę umożliwiającą wyświetlanie kolorowych emotikonów w napisach
 
 ----------------------------------------------------------
