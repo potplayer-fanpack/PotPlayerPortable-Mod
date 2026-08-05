@@ -2,8 +2,18 @@
 Version History of the PotPlayer
 
 ----------------------------------------------------------
-[260727]
+[260805]
 ----------------------------------------------------------
+* ARM64 Build Released
+  https://t1.daumcdn.net/potplayer/beta/PotPlayerSetupARM64.exe
+
++ Added the ability to individually configure actions for the left and right areas upon double-clicking
++ Added the ability for users to set the address of the broadcast list
++ Added the ability to sort playlists based on media release date
+
+- Fixed an issue where playing very high-resolution videos would fail
+- Fixed an issue where the built-in audio renderer was out of sync in certain situations
+- Modified to allow display of color emojis in subtitles
 
 ----------------------------------------------------------
 [260622]
