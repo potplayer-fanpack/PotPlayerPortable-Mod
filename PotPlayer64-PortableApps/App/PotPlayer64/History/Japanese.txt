@@ -3,9 +3,22 @@ PotPlayer 更新履歴
 
 ※正確な日付は PotPlayer(64).dll のファイル署名タイムスタンプで確認してください
 
+----------------------------------------------------------
+[260811]
+----------------------------------------------------------
+* ARM64 Build Released
+  https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
+
++ Added the ability to individually configure actions for the left and right areas upon double-clicking
++ Added the ability for users to set the address of the broadcast list
++ Added the ability to sort playlists based on media release date
+
+- Fixed an issue where playing very high-resolution videos would fail
+- Fixed an issue where the built-in audio renderer was out of sync in certain situations
+- Modified to allow display of color emojis in subtitles
 
 -----------------------------------------------------------------------
-[260805]				[260630 / 1. 7.22980]
+[260622]				[260622 / 1. 7.22980]
 -----------------------------------------------------------------------
 ＊ KakaoTV関連機能を PotPlayer(64).exe から削除
 ＋ シークバー上でマウスを押しながらシークする場合、途中で再生を抑止する項目を再生設定に追加
