@@ -3,7 +3,7 @@ Historia wersji PotPlayer
 
 
 ----------------------------------------------------------
-[260811]
+[260812]
 ----------------------------------------------------------
 * Wydano kompilację ARM64
   https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
@@ -15,6 +15,7 @@ Historia wersji PotPlayer
 - Naprawiono problem z odtwarzaniem filmów w ultrawysokiej rozdzielczości
 - Naprawiono problem z brakiem synchronizacji wbudowanego renderera audio w niektórych przypadkach
 - Wprowadzono poprawkę umożliwiającą wyświetlanie kolorowych emotikonów w napisach
+- Zmodyfikowano funkcję wyszukiwania w liście odtwarzania tak, aby można było ją przeszukiwać za pomocą filtrowania
 
 ----------------------------------------------------------
 [260618]
