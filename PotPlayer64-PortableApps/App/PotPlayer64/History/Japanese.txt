@@ -16,6 +16,7 @@ PotPlayer 更新履歴
 - Fixed an issue where playing very high-resolution videos would fail
 - Fixed an issue where the built-in audio renderer was out of sync in certain situations
 - Modified to allow display of color emojis in subtitles
+- Modified the playlist search function to operate as a filter.
 
 -----------------------------------------------------------------------
 [260622]				[260622 / 1. 7.22980]
