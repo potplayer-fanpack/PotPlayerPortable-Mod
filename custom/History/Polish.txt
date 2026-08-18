@@ -15,7 +15,7 @@ Historia wersji PotPlayer
 - Naprawiono problem z odtwarzaniem filmów w ultrawysokiej rozdzielczości
 - Naprawiono problem z brakiem synchronizacji wbudowanego renderera audio w niektórych przypadkach
 - Wprowadzono poprawkę umożliwiającą wyświetlanie kolorowych emotikonów w napisach
-- Zmodyfikowano funkcję przeszukiwania list odtwarzania tak, aby działała jako filtr
+- Zmieniono funkcję wyszukiwania w listach odtwarzania na tryb filtrowania
 
 ----------------------------------------------------------
 [260618]
