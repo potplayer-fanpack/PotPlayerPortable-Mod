@@ -1,12 +1,11 @@
 ﻿
 Historia wersji PotPlayer
 
-
 ----------------------------------------------------------
-[260814]
+[260819]
 ----------------------------------------------------------
 * Wydano kompilację ARM64
-  https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
+  https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
 
 + Dodano funkcję umożliwiającą indywidualne ustawienie działań dla lewego/prawego obszaru po dwukrotnym kliknięciu myszką
 + Dodano funkcję umożliwiającą użytkownikom ustawienie adresu listy broadcast
@@ -31,7 +30,7 @@ Historia wersji PotPlayer
 - Naprawiono problem z nieprawidłowym odtwarzaniem niektórych plików MP4
 
 ----------------------------------------------------------
-[260331]
+[260401]
 ----------------------------------------------------------
 + Dodano możliwość wyświetlania napisów przy użyciu biblioteki libass
 + Dodano możliwość obsługi odtwarzania HLS/Dash za pomocą wbudowanych modułów

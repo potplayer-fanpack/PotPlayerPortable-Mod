@@ -2,10 +2,10 @@
 История на версиите на PotPlayer
 
 ----------------------------------------------------------
-[260811]
+[260819]
 ----------------------------------------------------------
 * ARM64 Build Released	Пусната е ARM64 Build версия
-  https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
+  https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
 
 + Добавена е възможност за индивидуална настройка на действията за лявата и дясната зона при двоен клик
 + Добавена е възможност за потребителите да задават адреса на списъка за излъчване

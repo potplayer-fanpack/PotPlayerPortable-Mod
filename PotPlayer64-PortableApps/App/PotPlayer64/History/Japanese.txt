@@ -4,10 +4,10 @@ PotPlayer 更新履歴
 ※正確な日付は PotPlayer(64).dll のファイル署名タイムスタンプで確認してください
 
 ----------------------------------------------------------
-[260811]
+[260819]
 ----------------------------------------------------------
 * ARM64 Build Released
-  https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
+  https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
 
 + Added the ability to individually configure actions for the left and right areas upon double-clicking
 + Added the ability for users to set the address of the broadcast list

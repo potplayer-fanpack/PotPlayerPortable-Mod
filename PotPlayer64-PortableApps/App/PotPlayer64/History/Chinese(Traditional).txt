@@ -2,10 +2,10 @@
 PotPlayer 版本更新日誌
 
 ------------------------------------------------------------------------
-[260811]
+[260819]
 ------------------------------------------------------------------------
 * ARM64 版本发布
-  https://t1.daumcdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
+  https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
 
 + 新增在左/右側區域連按兩下滑鼠時，可個別設定動作的功能
 + 新增使用者可自訂直播清單網址的功能

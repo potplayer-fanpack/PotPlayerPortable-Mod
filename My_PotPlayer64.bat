@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: Dev/Public
-set SOURCE=Dev
+set SOURCE=Public
 
 set WORKDIR=%~dp0
 set TEMPDIR=%WORKDIR%temp
@@ -14,7 +14,7 @@ if not exist %TEMPDIR% (md %TEMPDIR%)
 echo "Downloading PotPlayerSetup64.exe"
 if exist %WORKDIR%PotPlayerSetup64.exe (del /q /s /f %WORKDIR%PotPlayerSetup64.exe)
 if "%SOURCE%"=="Dev" (%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/beta/PotPlayerSetup64.exe)
-if "%SOURCE%"=="Public" (%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotPlayer/Version/260622/PotPlayerSetup64.exe)
+if "%SOURCE%"=="Public" (%BINDIR%\wget.exe https://t1.daumcdn.net/potplayer/PotPlayer/Version/260819/PotPlayerSetup64.exe)
 
 echo "Downloading OpenCodecSetup64.exe"
 if exist %WORKDIR%OpenCodecSetup64.exe (del /q /s /f %WORKDIR%OpenCodecSetup64.exe)
