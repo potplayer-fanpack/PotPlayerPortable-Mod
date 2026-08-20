@@ -1,4 +1,4 @@
-﻿PotPlayer 64-bit Portable v26.8.19.0 (1.7.23119.0) + OpenCodec + AviSynth+ & Svp + yt-dlp + Deno + ffmpeg + ffprobe + dodatkowe skrypty
+﻿PotPlayer 64-bit Portable v26.8.19.0 (1.7.23120.0) + OpenCodec + AviSynth+ & Svp + yt-dlp + Deno + ffmpeg + ffprobe + dodatkowe skrypty
 
 Zgodność: 7 SP1 / 8 / 8.1 / 10 / 11
 
