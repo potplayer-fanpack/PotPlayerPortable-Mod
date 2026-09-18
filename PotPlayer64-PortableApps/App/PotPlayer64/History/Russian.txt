@@ -4,17 +4,17 @@
 ----------------------------------------------------------
 [260819]
 ----------------------------------------------------------
-* ARM64 Build Released
-  https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
+* Выпущена сборка для ARM64
+https://t1.kakaocdn.net/potplayer/PotPlayer/Version/Latest/PotPlayerSetupARM64.exe
 
-+ Added the ability to individually configure actions for the left and right areas upon double-clicking
-+ Added the ability for users to set the address of the broadcast list
-+ Added the ability to sort playlists based on media release date
++ Добавлена ​​возможность индивидуальной настройки действий для левой и правой областей при двойном щелчке
++ Добавлена ​​возможность для пользователей устанавливать адрес списка трансляций
++ Добавлена ​​возможность сортировки плей-листов по дате выпуска медиафайлов
 
-- Fixed an issue where playing very high-resolution videos would fail
-- Fixed an issue where the built-in audio renderer was out of sync in certain situations
-- Modified to allow display of color emojis in subtitles
-- Modified the playlist search function to operate as a filter.
+- Исправлена ​​ошибка рассинхронизации встроенного аудиорендера в некоторых ситуациях
+- Исправлена ​​ошибка воспроизведения видео с максимально высоким разрешением
+- Функция поиска по плей-листам изменена для работы в качестве фильтра
+- Изменено для отображения цветных эмодзи в субтитрах
 
 ----------------------------------------------------------
 [260622]
@@ -26,7 +26,7 @@
 - Значительно улучшена внутренняя стабильность
 - Улучшено воспроизведение некоторых HTTP-потоков
 - Улучшена синхронизация встроенного аудиорендерера
-- Исправлена ​​ошибка некоррентного воспроизведения некоторых файлов MP4
+- Исправлена ​​ошибка некорректного воспроизведения некоторых файлов MP4
 - Исправлена ​​ошибка некорректного отображения цветов при обработке RGB24
 
 ----------------------------------------------------------
