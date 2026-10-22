@@ -2,6 +2,22 @@
 Historia wersji PotPlayer
 
 ----------------------------------------------------------
+[261021]
+----------------------------------------------------------
+* Zmieniono domyślne moduły renderujące (D3D11 dla wideo, WASAPI dla audio)
+
++ Dodano obsługę MPEG4 DXVA
++ Dodano możliwość odtwarzania strumieni HLS/DASH z plików lokalnych
++ Dodano możliwość konfiguracji przez użytkownika sposobu przeszukiwania list odtwarzania
++ Dodano możliwość odtwarzania wideo 180 stopni
++ Dodano obsługę Replay Gain
+
+- Naprawiono problem z niską prędkością kodowania plików WebP
+- Naprawiono problem uniemożliwiający odtwarzanie niektórych plików MPEG TS
+- Poprawiono jakość obrazu w trybie podwajania liczby klatek (double-frame)
+- Naprawiono błąd występujący podczas odtwarzania niektórych plików MP4
+
+----------------------------------------------------------
 [260819]
 ----------------------------------------------------------
 * Wydano kompilację ARM64
